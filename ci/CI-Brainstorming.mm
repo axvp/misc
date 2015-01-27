@@ -344,7 +344,45 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1421747787739" ID="ID_1787650794" MODIFIED="1421747927118" TEXT="3.1 Old school&#x201d; software &#x4;integration">
+<node CREATED="1421747787739" ID="ID_1787650794" MODIFIED="1422355921067" TEXT="3.1 Old school&#x201d; software &#x4;integration">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      https://books.google.de/books?id=kt2YT6fR5H0C&amp;pg=PA269&amp;lpg=PA269&amp;dq=old+school+software+integration&amp;source=bl&amp;ots=k1V2tP45NW&amp;sig=_xxWsUcYbFuR04ZVz2Ivom1XJLs&amp;hl=en&amp;sa=X&amp;ei=rWnHVLfcEcrCywPG9oLICQ&amp;ved=0CCcQ6AEwAQ#v=onepage&amp;q=old%20school%20software%20integration&amp;f=false
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      - Requirements in Word or in another non traceable format
+    </p>
+    <p>
+      - Introducing the waterfall:
+    </p>
+    <p>
+      &#160;&#160;&#160;- Requirements
+    </p>
+    <p>
+      &#160;&#160;&#160;- Design
+    </p>
+    <p>
+      &#160;&#160;&#160;- Implementation
+    </p>
+    <p>
+      &#160;&#160;&#160;- Verification
+    </p>
+    <p>
+      &#160;&#160;&#160;- Maintenance
+    </p>
+  </body>
+</html>
+</richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1421747819755" ID="ID_175329032" MODIFIED="1421748325114" TEXT="3.2. Continuous software integration">
