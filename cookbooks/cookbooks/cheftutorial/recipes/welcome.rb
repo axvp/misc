@@ -10,3 +10,7 @@
 log "Hello #{ENV['USER']}" do
   level :info
 end
+
+log "Hello #{node['cheftutorial']['name']}" do
+  level :info
+end
