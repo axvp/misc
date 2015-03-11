@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+
+driver_config:
+  http_proxy:  <%= ENV['http_proxy'] %>
+  https_proxy:  <%= ENV['https_proxy'] %>
+  no_proxy:  <%= ENV['no_proxy'] %>
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[myfirstcookbook::default]
+    attributes:
