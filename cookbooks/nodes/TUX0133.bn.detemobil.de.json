@@ -1,0 +1,5337 @@
+{
+  "name": "TUX0133.bn.detemobil.de",
+  "normal": {
+    "tags": [
+
+    ]
+  },
+  "default": {
+    "cheftutorial": {
+      "name": "tom1299"
+    }
+  },
+  "automatic": {
+    "languages": {
+      "ruby": {
+        "platform": "x86_64-linux",
+        "version": "2.0.0",
+        "release_date": "2013-06-27",
+        "target": "x86_64-redhat-linux-gnu",
+        "target_cpu": "x86_64",
+        "target_vendor": "redhat",
+        "target_os": "linux",
+        "host": "x86_64-redhat-linux-gnu",
+        "host_cpu": "x86_64",
+        "host_os": "linux-gnu",
+        "host_vendor": "redhat",
+        "bin_dir": "/usr/bin",
+        "ruby_bin": "/usr/bin/ruby",
+        "gems_dir": "/home/reuhl/.gem/ruby",
+        "gem_bin": "/usr/bin/gem"
+      },
+      "python": {
+        "version": "2.7.5",
+        "builddate": "Nov 12 2013, 16:45:54"
+      },
+      "perl": {
+        "version": "5.18.1",
+        "archname": "x86_64-linux-thread-multi"
+      },
+      "java": {
+        "version": "1.7.0_45",
+        "hotspot": {
+          "name": "OpenJDK 64-Bit Server VM",
+          "build": "24.45-b08, mixed mode"
+        }
+      },
+      "c": {
+        "gcc": {
+          "version": "4.8.2",
+          "description": "gcc version 4.8.2 20131017 (Red Hat 4.8.2-1) (GCC) "
+        },
+        "glibc": {
+          "version": "2.18",
+          "description": "GNU C Library (GNU libc) stable release version 2.18, by Roland McGrath et al."
+        }
+      },
+      "groovy": {
+        "version": "1.8.9"
+      }
+    },
+    "network": {
+      "interfaces": {
+        "lo": {
+          "mtu": "65536",
+          "flags": [
+            "LOOPBACK",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Loopback",
+          "addresses": {
+            "127.0.0.1": {
+              "family": "inet",
+              "prefixlen": "8",
+              "netmask": "255.0.0.0",
+              "scope": "Node"
+            },
+            "::1": {
+              "family": "inet6",
+              "prefixlen": "128",
+              "scope": "Node"
+            }
+          },
+          "state": "unknown"
+        },
+        "wwp0s20u7c2i12": {
+          "type": "wwp0s20u7c2i1",
+          "number": "2",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "NOARP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "D2:3A:09:AE:CA:71": {
+              "family": "lladdr"
+            }
+          },
+          "state": "down"
+        },
+        "em1": {
+          "type": "em",
+          "number": "1",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "EC:F4:BB:67:9B:FD": {
+              "family": "lladdr"
+            },
+            "10.1.195.133": {
+              "family": "inet",
+              "prefixlen": "24",
+              "netmask": "255.255.255.0",
+              "scope": "Global"
+            },
+            "fe80::eef4:bbff:fe67:9bfd": {
+              "family": "inet6",
+              "prefixlen": "64",
+              "scope": "Link"
+            }
+          },
+          "state": "up",
+          "arp": {
+            "10.1.195.1": "00:15:17:3e:dd:ff"
+          },
+          "routes": [
+            {
+              "destination": "default",
+              "family": "inet",
+              "via": "10.1.195.1",
+              "metric": "1024",
+              "proto": "static"
+            },
+            {
+              "destination": "10.1.195.0/24",
+              "family": "inet",
+              "scope": "link",
+              "proto": "kernel",
+              "src": "10.1.195.133"
+            },
+            {
+              "destination": "fe80::/64",
+              "family": "inet6",
+              "metric": "256",
+              "proto": "kernel"
+            }
+          ]
+        },
+        "wlp2s0": {
+          "type": "wlp2s",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "F8:16:54:AE:67:3A": {
+              "family": "lladdr"
+            },
+            "10.53.168.199": {
+              "family": "inet",
+              "prefixlen": "21",
+              "netmask": "255.255.248.0",
+              "scope": "Global"
+            },
+            "fe80::fa16:54ff:feae:673a": {
+              "family": "inet6",
+              "prefixlen": "64",
+              "scope": "Link"
+            }
+          },
+          "state": "up",
+          "arp": {
+            "10.53.175.252": "50:57:a8:ad:15:82"
+          },
+          "routes": [
+            {
+              "destination": "10.53.168.0/21",
+              "family": "inet",
+              "scope": "link",
+              "proto": "kernel",
+              "src": "10.53.168.199"
+            },
+            {
+              "destination": "fe80::/64",
+              "family": "inet6",
+              "metric": "256",
+              "proto": "kernel"
+            }
+          ]
+        },
+        "virbr0": {
+          "type": "virbr",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "9E:97:0B:D9:C2:34": {
+              "family": "lladdr"
+            },
+            "192.168.122.1": {
+              "family": "inet",
+              "prefixlen": "24",
+              "netmask": "255.255.255.0",
+              "broadcast": "192.168.122.255",
+              "scope": "Global"
+            }
+          },
+          "state": "down",
+          "routes": [
+            {
+              "destination": "192.168.122.0/24",
+              "family": "inet",
+              "scope": "link",
+              "proto": "kernel",
+              "src": "192.168.122.1"
+            }
+          ]
+        }
+      },
+      "default_interface": "em1",
+      "default_gateway": "10.1.195.1"
+    },
+    "counters": {
+      "network": {
+        "interfaces": {
+          "lo": {
+            "rx": {
+              "bytes": "6360637",
+              "packets": "8604",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            },
+            "tx": {
+              "bytes": "6360637",
+              "packets": "8604",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            }
+          },
+          "wwp0s20u7c2i12": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
+          },
+          "em1": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "12307542",
+              "packets": "53234",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "86311807",
+              "packets": "146745",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
+          },
+          "wlp2s0": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "165317",
+              "packets": "1948",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "285172",
+              "packets": "6428",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
+          },
+          "virbr0": {
+            "rx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            },
+            "tx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            }
+          }
+        }
+      }
+    },
+    "ipaddress": "10.1.195.133",
+    "macaddress": "EC:F4:BB:67:9B:FD",
+    "ip6address": "fe80::eef4:bbff:fe67:9bfd",
+    "kernel": {
+      "name": "Linux",
+      "release": "3.11.10-301.fc20.x86_64",
+      "version": "#1 SMP Thu Dec 5 14:01:17 UTC 2013",
+      "machine": "x86_64",
+      "os": "GNU/Linux",
+      "modules": {
+        "tcp_lp": {
+          "size": "12663",
+          "refcount": "0"
+        },
+        "nfsv3": {
+          "size": "39326",
+          "refcount": "1"
+        },
+        "nfsv4": {
+          "size": "251490",
+          "refcount": "0"
+        },
+        "dns_resolver": {
+          "size": "13096",
+          "refcount": "1"
+        },
+        "nfs": {
+          "size": "169149",
+          "refcount": "3"
+        },
+        "fscache": {
+          "size": "61532",
+          "refcount": "2"
+        },
+        "fuse": {
+          "size": "82599",
+          "refcount": "2"
+        },
+        "ipt_MASQUERADE": {
+          "size": "12880",
+          "refcount": "3"
+        },
+        "iptable_nat": {
+          "size": "13011",
+          "refcount": "1"
+        },
+        "nf_nat_ipv4": {
+          "size": "13199",
+          "refcount": "1"
+        },
+        "nf_nat": {
+          "size": "25743",
+          "refcount": "3"
+        },
+        "nf_conntrack_ipv4": {
+          "size": "14808",
+          "refcount": "2"
+        },
+        "nf_defrag_ipv4": {
+          "size": "12673",
+          "refcount": "1"
+        },
+        "xt_conntrack": {
+          "size": "12760",
+          "refcount": "1"
+        },
+        "nf_conntrack": {
+          "size": "86430",
+          "refcount": "6"
+        },
+        "xt_CHECKSUM": {
+          "size": "12549",
+          "refcount": "1"
+        },
+        "iptable_mangle": {
+          "size": "12695",
+          "refcount": "1"
+        },
+        "bridge": {
+          "size": "110624",
+          "refcount": "0"
+        },
+        "stp": {
+          "size": "12868",
+          "refcount": "1"
+        },
+        "llc": {
+          "size": "14045",
+          "refcount": "2"
+        },
+        "ip6table_filter": {
+          "size": "12815",
+          "refcount": "0"
+        },
+        "ip6_tables": {
+          "size": "26808",
+          "refcount": "1"
+        },
+        "ebtable_nat": {
+          "size": "12807",
+          "refcount": "0"
+        },
+        "ebtables": {
+          "size": "30758",
+          "refcount": "1"
+        },
+        "vboxpci": {
+          "size": "23194",
+          "refcount": "0"
+        },
+        "vboxnetadp": {
+          "size": "25670",
+          "refcount": "0"
+        },
+        "vboxnetflt": {
+          "size": "27613",
+          "refcount": "0"
+        },
+        "vboxdrv": {
+          "size": "381050",
+          "refcount": "3"
+        },
+        "arc4": {
+          "size": "12608",
+          "refcount": "2"
+        },
+        "pn544_mei": {
+          "size": "12787",
+          "refcount": "0"
+        },
+        "mei_phy": {
+          "size": "13574",
+          "refcount": "1"
+        },
+        "pn544": {
+          "size": "17848",
+          "refcount": "1"
+        },
+        "hci": {
+          "size": "43298",
+          "refcount": "2"
+        },
+        "nfc": {
+          "size": "97730",
+          "refcount": "2"
+        },
+        "snd_hda_codec_realtek": {
+          "size": "55704",
+          "refcount": "1"
+        },
+        "iTCO_wdt": {
+          "size": "13480",
+          "refcount": "0"
+        },
+        "iTCO_vendor_support": {
+          "size": "13419",
+          "refcount": "1"
+        },
+        "snd_hda_codec_hdmi": {
+          "size": "41117",
+          "refcount": "1"
+        },
+        "dell_wmi": {
+          "size": "12681",
+          "refcount": "0"
+        },
+        "sparse_keymap": {
+          "size": "13584",
+          "refcount": "1"
+        },
+        "ppdev": {
+          "size": "17635",
+          "refcount": "0"
+        },
+        "x86_pkg_temp_thermal": {
+          "size": "14162",
+          "refcount": "0"
+        },
+        "coretemp": {
+          "size": "13435",
+          "refcount": "0"
+        },
+        "kvm_intel": {
+          "size": "138528",
+          "refcount": "0"
+        },
+        "dell_laptop": {
+          "size": "18168",
+          "refcount": "0"
+        },
+        "dcdbas": {
+          "size": "14794",
+          "refcount": "1"
+        },
+        "kvm": {
+          "size": "421021",
+          "refcount": "1"
+        },
+        "btusb": {
+          "size": "28170",
+          "refcount": "0"
+        },
+        "microcode": {
+          "size": "23527",
+          "refcount": "0"
+        },
+        "bluetooth": {
+          "size": "361772",
+          "refcount": "2"
+        },
+        "uvcvideo": {
+          "size": "80968",
+          "refcount": "0"
+        },
+        "videobuf2_vmalloc": {
+          "size": "13163",
+          "refcount": "1"
+        },
+        "videobuf2_memops": {
+          "size": "13161",
+          "refcount": "1"
+        },
+        "videobuf2_core": {
+          "size": "38773",
+          "refcount": "1"
+        },
+        "videodev": {
+          "size": "132348",
+          "refcount": "2"
+        },
+        "joydev": {
+          "size": "17332",
+          "refcount": "0"
+        },
+        "media": {
+          "size": "20840",
+          "refcount": "2"
+        },
+        "cdc_mbim": {
+          "size": "13176",
+          "refcount": "0"
+        },
+        "cdc_ncm": {
+          "size": "19689",
+          "refcount": "1"
+        },
+        "cdc_wdm": {
+          "size": "18864",
+          "refcount": "1"
+        },
+        "usbnet": {
+          "size": "37645",
+          "refcount": "2"
+        },
+        "mii": {
+          "size": "13527",
+          "refcount": "1"
+        },
+        "iwlmvm": {
+          "size": "161198",
+          "refcount": "0"
+        },
+        "mac80211": {
+          "size": "564847",
+          "refcount": "1"
+        },
+        "serio_raw": {
+          "size": "13413",
+          "refcount": "0"
+        },
+        "i2c_i801": {
+          "size": "18136",
+          "refcount": "0"
+        },
+        "snd_hda_intel": {
+          "size": "44075",
+          "refcount": "7"
+        },
+        "snd_hda_codec": {
+          "size": "179171",
+          "refcount": "3"
+        },
+        "snd_hwdep": {
+          "size": "13554",
+          "refcount": "1"
+        },
+        "snd_seq": {
+          "size": "60752",
+          "refcount": "0"
+        },
+        "iwlwifi": {
+          "size": "111996",
+          "refcount": "1"
+        },
+        "snd_seq_device": {
+          "size": "14136",
+          "refcount": "1"
+        },
+        "lpc_ich": {
+          "size": "21080",
+          "refcount": "0"
+        },
+        "mfd_core": {
+          "size": "13182",
+          "refcount": "1"
+        },
+        "cfg80211": {
+          "size": "460310",
+          "refcount": "3"
+        },
+        "snd_pcm": {
+          "size": "98071",
+          "refcount": "3"
+        },
+        "sdhci_pci": {
+          "size": "18927",
+          "refcount": "0"
+        },
+        "mei_me": {
+          "size": "18421",
+          "refcount": "0"
+        },
+        "sdhci": {
+          "size": "38255",
+          "refcount": "1"
+        },
+        "e1000e": {
+          "size": "250189",
+          "refcount": "0"
+        },
+        "mmc_core": {
+          "size": "112289",
+          "refcount": "1"
+        },
+        "ptp": {
+          "size": "18372",
+          "refcount": "1"
+        },
+        "mei": {
+          "size": "76745",
+          "refcount": "3"
+        },
+        "rfkill": {
+          "size": "21694",
+          "refcount": "7"
+        },
+        "pps_core": {
+          "size": "18854",
+          "refcount": "1"
+        },
+        "shpchp": {
+          "size": "37032",
+          "refcount": "0"
+        },
+        "snd_page_alloc": {
+          "size": "18268",
+          "refcount": "2"
+        },
+        "snd_timer": {
+          "size": "28698",
+          "refcount": "2"
+        },
+        "tpm_tis": {
+          "size": "19123",
+          "refcount": "0"
+        },
+        "snd": {
+          "size": "75313",
+          "refcount": "23"
+        },
+        "tpm": {
+          "size": "25869",
+          "refcount": "1"
+        },
+        "soundcore": {
+          "size": "14491",
+          "refcount": "1"
+        },
+        "tpm_bios": {
+          "size": "18688",
+          "refcount": "1"
+        },
+        "wmi": {
+          "size": "18697",
+          "refcount": "1"
+        },
+        "parport_pc": {
+          "size": "28048",
+          "refcount": "0"
+        },
+        "parport": {
+          "size": "40425",
+          "refcount": "2"
+        },
+        "acpi_cpufreq": {
+          "size": "19790",
+          "refcount": "0"
+        },
+        "mperf": {
+          "size": "12607",
+          "refcount": "1"
+        },
+        "nfsd": {
+          "size": "279847",
+          "refcount": "1"
+        },
+        "auth_rpcgss": {
+          "size": "54254",
+          "refcount": "1"
+        },
+        "nfs_acl": {
+          "size": "12741",
+          "refcount": "2"
+        },
+        "lockd": {
+          "size": "93436",
+          "refcount": "3"
+        },
+        "binfmt_misc": {
+          "size": "17431",
+          "refcount": "1"
+        },
+        "sunrpc": {
+          "size": "253362",
+          "refcount": "12"
+        },
+        "dm_crypt": {
+          "size": "22793",
+          "refcount": "1"
+        },
+        "crc32_pclmul": {
+          "size": "13113",
+          "refcount": "0"
+        },
+        "crc32c_intel": {
+          "size": "22079",
+          "refcount": "0"
+        },
+        "i915": {
+          "size": "656126",
+          "refcount": "6"
+        },
+        "ghash_clmulni_intel": {
+          "size": "13259",
+          "refcount": "0"
+        },
+        "i2c_algo_bit": {
+          "size": "13257",
+          "refcount": "1"
+        },
+        "drm_kms_helper": {
+          "size": "50239",
+          "refcount": "1"
+        },
+        "drm": {
+          "size": "278576",
+          "refcount": "5"
+        },
+        "i2c_core": {
+          "size": "34242",
+          "refcount": "6"
+        },
+        "video": {
+          "size": "19104",
+          "refcount": "1"
+        }
+      }
+    },
+    "os": "linux",
+    "os_version": "3.11.10-301.fc20.x86_64",
+    "lsb": {
+      "id": "Fedora",
+      "description": "Fedora release 20 (Heisenbug)",
+      "release": "20",
+      "codename": "Heisenbug"
+    },
+    "platform": "fedora",
+    "platform_version": "20",
+    "platform_family": "fedora",
+    "init_package": "systemd",
+    "virtualization": {
+      "systems": {
+        "kvm": "host"
+      },
+      "system": "kvm",
+      "role": "host"
+    },
+    "cloud_v2": null,
+    "chef_packages": {
+      "ohai": {
+        "version": "8.0.1",
+        "ohai_root": "/opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.0.1/lib/ohai"
+      },
+      "chef": {
+        "version": "12.0.3",
+        "chef_root": "/opt/chefdk/embedded/apps/chef/lib"
+      }
+    },
+    "hostname": "TUX0133",
+    "machinename": "TUX0133.bn.detemobil.de",
+    "fqdn": "TUX0133.bn.detemobil.de",
+    "domain": "bn.detemobil.de",
+    "cpu": {
+      "0": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "69",
+        "model_name": "Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz",
+        "stepping": "1",
+        "mhz": "756.000",
+        "cache_size": "4096 KB",
+        "physical_id": "0",
+        "core_id": "0",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "pdpe1gb",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "smx",
+          "est",
+          "tm2",
+          "ssse3",
+          "fma",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "movbe",
+          "popcnt",
+          "tsc_deadline_timer",
+          "aes",
+          "xsave",
+          "avx",
+          "f16c",
+          "rdrand",
+          "lahf_lm",
+          "abm",
+          "ida",
+          "arat",
+          "epb",
+          "xsaveopt",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "fsgsbase",
+          "tsc_adjust",
+          "bmi1",
+          "hle",
+          "avx2",
+          "smep",
+          "bmi2",
+          "erms",
+          "invpcid",
+          "rtm"
+        ]
+      },
+      "1": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "69",
+        "model_name": "Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz",
+        "stepping": "1",
+        "mhz": "2701.000",
+        "cache_size": "4096 KB",
+        "physical_id": "0",
+        "core_id": "1",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "pdpe1gb",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "smx",
+          "est",
+          "tm2",
+          "ssse3",
+          "fma",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "movbe",
+          "popcnt",
+          "tsc_deadline_timer",
+          "aes",
+          "xsave",
+          "avx",
+          "f16c",
+          "rdrand",
+          "lahf_lm",
+          "abm",
+          "ida",
+          "arat",
+          "epb",
+          "xsaveopt",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "fsgsbase",
+          "tsc_adjust",
+          "bmi1",
+          "hle",
+          "avx2",
+          "smep",
+          "bmi2",
+          "erms",
+          "invpcid",
+          "rtm"
+        ]
+      },
+      "2": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "69",
+        "model_name": "Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz",
+        "stepping": "1",
+        "mhz": "756.000",
+        "cache_size": "4096 KB",
+        "physical_id": "0",
+        "core_id": "0",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "pdpe1gb",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "smx",
+          "est",
+          "tm2",
+          "ssse3",
+          "fma",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "movbe",
+          "popcnt",
+          "tsc_deadline_timer",
+          "aes",
+          "xsave",
+          "avx",
+          "f16c",
+          "rdrand",
+          "lahf_lm",
+          "abm",
+          "ida",
+          "arat",
+          "epb",
+          "xsaveopt",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "fsgsbase",
+          "tsc_adjust",
+          "bmi1",
+          "hle",
+          "avx2",
+          "smep",
+          "bmi2",
+          "erms",
+          "invpcid",
+          "rtm"
+        ]
+      },
+      "3": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "69",
+        "model_name": "Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz",
+        "stepping": "1",
+        "mhz": "756.000",
+        "cache_size": "4096 KB",
+        "physical_id": "0",
+        "core_id": "1",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "pdpe1gb",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "smx",
+          "est",
+          "tm2",
+          "ssse3",
+          "fma",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "movbe",
+          "popcnt",
+          "tsc_deadline_timer",
+          "aes",
+          "xsave",
+          "avx",
+          "f16c",
+          "rdrand",
+          "lahf_lm",
+          "abm",
+          "ida",
+          "arat",
+          "epb",
+          "xsaveopt",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "fsgsbase",
+          "tsc_adjust",
+          "bmi1",
+          "hle",
+          "avx2",
+          "smep",
+          "bmi2",
+          "erms",
+          "invpcid",
+          "rtm"
+        ]
+      },
+      "total": 4,
+      "real": 1
+    },
+    "memory": {
+      "swap": {
+        "cached": "0kB",
+        "total": "25165820kB",
+        "free": "25165820kB"
+      },
+      "total": "16339480kB",
+      "free": "11231196kB",
+      "buffers": "247052kB",
+      "cached": "2784488kB",
+      "active": "2740984kB",
+      "inactive": "1890752kB",
+      "dirty": "584kB",
+      "writeback": "0kB",
+      "anon_pages": "1600344kB",
+      "mapped": "325332kB",
+      "slab": "241160kB",
+      "slab_reclaimable": "206908kB",
+      "slab_unreclaim": "34252kB",
+      "page_tables": "57656kB",
+      "nfs_unstable": "0kB",
+      "bounce": "0kB",
+      "commit_limit": "33335560kB",
+      "committed_as": "6492720kB",
+      "vmalloc_total": "34359738367kB",
+      "vmalloc_used": "407600kB",
+      "vmalloc_chunk": "34359327840kB"
+    },
+    "filesystem": {
+      "/dev/dm-0": {
+        "kb_size": "220713724",
+        "kb_used": "41011092",
+        "kb_available": "168467972",
+        "percent_used": "20%",
+        "mount": "/",
+        "total_inodes": "14024704",
+        "inodes_used": "381258",
+        "inodes_available": "13643446",
+        "inodes_percent_used": "3%"
+      },
+      "devtmpfs": {
+        "kb_size": "8162068",
+        "kb_used": "0",
+        "kb_available": "8162068",
+        "percent_used": "0%",
+        "mount": "/dev",
+        "total_inodes": "2040517",
+        "inodes_used": "482",
+        "inodes_available": "2040035",
+        "inodes_percent_used": "1%",
+        "fs_type": "devtmpfs",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "size=8162068k",
+          "nr_inodes=2040517",
+          "mode=755"
+        ]
+      },
+      "tmpfs": {
+        "kb_size": "8169740",
+        "kb_used": "276",
+        "kb_available": "8169464",
+        "percent_used": "1%",
+        "mount": "/tmp",
+        "total_inodes": "2042435",
+        "inodes_used": "77",
+        "inodes_available": "2042358",
+        "inodes_percent_used": "1%",
+        "fs_type": "tmpfs",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "/dev/sda1": {
+        "kb_size": "499656",
+        "kb_used": "77072",
+        "kb_available": "385888",
+        "percent_used": "17%",
+        "mount": "/boot",
+        "total_inodes": "32768",
+        "inodes_used": "310",
+        "inodes_available": "32458",
+        "inodes_percent_used": "1%",
+        "fs_type": "ext4",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "data=ordered"
+        ],
+        "uuid": "97d214f7-7e23-4a2f-8467-d11aec2179c5"
+      },
+      "dxcs8v:/nfsdisk1/ascpub": {
+        "kb_size": "1415517184",
+        "kb_used": "960445440",
+        "kb_available": "440916992",
+        "percent_used": "69%",
+        "mount": "/ascpub",
+        "total_inodes": "705116160",
+        "inodes_used": "2556216",
+        "inodes_available": "702559944",
+        "inodes_percent_used": "1%",
+        "fs_type": "nfs",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "vers=3",
+          "rsize=1048576",
+          "wsize=1048576",
+          "namlen=255",
+          "hard",
+          "nolock",
+          "proto=tcp",
+          "timeo=600",
+          "retrans=2",
+          "sec=sys",
+          "mountaddr=10.1.180.204",
+          "mountvers=3",
+          "mountport=32786",
+          "mountproto=udp",
+          "local_lock=all",
+          "addr=10.1.180.204"
+        ]
+      },
+      "proc": {
+        "mount": "/proc",
+        "fs_type": "proc",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime"
+        ]
+      },
+      "sysfs": {
+        "mount": "/sys",
+        "fs_type": "sysfs",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime"
+        ]
+      },
+      "securityfs": {
+        "mount": "/sys/kernel/security",
+        "fs_type": "securityfs",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime"
+        ]
+      },
+      "devpts": {
+        "mount": "/dev/pts",
+        "fs_type": "devpts",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "noexec",
+          "relatime",
+          "gid=5",
+          "mode=620",
+          "ptmxmode=000"
+        ]
+      },
+      "cgroup": {
+        "mount": "/sys/fs/cgroup/hugetlb",
+        "fs_type": "cgroup",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime",
+          "hugetlb"
+        ]
+      },
+      "pstore": {
+        "mount": "/sys/fs/pstore",
+        "fs_type": "pstore",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime"
+        ]
+      },
+      "/dev/mapper/luks-1978b25e-b792-4caf-a84d-0e2facefdf2f": {
+        "mount": "/",
+        "fs_type": "ext4",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "data=ordered"
+        ],
+        "uuid": "845d3916-d41b-4ff6-83da-ad945f2976da"
+      },
+      "systemd-1": {
+        "mount": "/proc/sys/fs/binfmt_misc",
+        "fs_type": "autofs",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "fd=37",
+          "pgrp=1",
+          "timeout=300",
+          "minproto=5",
+          "maxproto=5",
+          "direct"
+        ]
+      },
+      "hugetlbfs": {
+        "mount": "/dev/hugepages",
+        "fs_type": "hugetlbfs",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "mqueue": {
+        "mount": "/dev/mqueue",
+        "fs_type": "mqueue",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "debugfs": {
+        "mount": "/sys/kernel/debug",
+        "fs_type": "debugfs",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "configfs": {
+        "mount": "/sys/kernel/config",
+        "fs_type": "configfs",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "sunrpc": {
+        "mount": "/proc/fs/nfsd",
+        "fs_type": "nfsd",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "binfmt_misc": {
+        "mount": "/proc/sys/fs/binfmt_misc",
+        "fs_type": "binfmt_misc",
+        "mount_options": [
+          "rw",
+          "relatime"
+        ]
+      },
+      "gvfsd-fuse": {
+        "mount": "/run/user/3094/gvfs",
+        "fs_type": "fuse.gvfsd-fuse",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "relatime",
+          "user_id=3094",
+          "group_id=500"
+        ]
+      },
+      "/dev/sda2": {
+        "fs_type": "swap",
+        "uuid": "ccad91d0-c2d6-4b19-9708-502cbdf346db"
+      },
+      "/dev/sda3": {
+        "fs_type": "crypto_LUKS",
+        "uuid": "1978b25e-b792-4caf-a84d-0e2facefdf2f"
+      },
+      "rootfs": {
+        "mount": "/",
+        "fs_type": "rootfs",
+        "mount_options": [
+          "rw"
+        ]
+      }
+    },
+    "command": {
+      "ps": "ps -ef"
+    },
+    "keys": {
+      "ssh": {
+
+      }
+    },
+    "dmi": {
+      "dmidecode_version": "2.12"
+    },
+    "uptime_seconds": 18473,
+    "uptime": "5 hours 07 minutes 53 seconds",
+    "idletime_seconds": 69504,
+    "idletime": "19 hours 18 minutes 24 seconds",
+    "etc": {
+      "passwd": {
+        "root": {
+          "dir": "/root",
+          "gid": 0,
+          "uid": 0,
+          "shell": "/bin/bash",
+          "gecos": "root"
+        },
+        "bin": {
+          "dir": "/bin",
+          "gid": 1,
+          "uid": 1,
+          "shell": "/sbin/nologin",
+          "gecos": "bin"
+        },
+        "daemon": {
+          "dir": "/sbin",
+          "gid": 2,
+          "uid": 2,
+          "shell": "/sbin/nologin",
+          "gecos": "daemon"
+        },
+        "adm": {
+          "dir": "/var/adm",
+          "gid": 4,
+          "uid": 3,
+          "shell": "/sbin/nologin",
+          "gecos": "adm"
+        },
+        "lp": {
+          "dir": "/var/spool/lpd",
+          "gid": 7,
+          "uid": 4,
+          "shell": "/sbin/nologin",
+          "gecos": "lp"
+        },
+        "sync": {
+          "dir": "/sbin",
+          "gid": 0,
+          "uid": 5,
+          "shell": "/bin/sync",
+          "gecos": "sync"
+        },
+        "shutdown": {
+          "dir": "/sbin",
+          "gid": 0,
+          "uid": 6,
+          "shell": "/sbin/shutdown",
+          "gecos": "shutdown"
+        },
+        "halt": {
+          "dir": "/sbin",
+          "gid": 0,
+          "uid": 7,
+          "shell": "/sbin/halt",
+          "gecos": "halt"
+        },
+        "mail": {
+          "dir": "/var/spool/mail",
+          "gid": 12,
+          "uid": 8,
+          "shell": "/sbin/nologin",
+          "gecos": "mail"
+        },
+        "operator": {
+          "dir": "/root",
+          "gid": 0,
+          "uid": 11,
+          "shell": "/sbin/nologin",
+          "gecos": "operator"
+        },
+        "games": {
+          "dir": "/usr/games",
+          "gid": 100,
+          "uid": 12,
+          "shell": "/sbin/nologin",
+          "gecos": "games"
+        },
+        "ftp": {
+          "dir": "/var/ftp",
+          "gid": 50,
+          "uid": 14,
+          "shell": "/sbin/nologin",
+          "gecos": "FTP User"
+        },
+        "nobody": {
+          "dir": "/",
+          "gid": 99,
+          "uid": 99,
+          "shell": "/sbin/nologin",
+          "gecos": "Nobody"
+        },
+        "avahi-autoipd": {
+          "dir": "/var/lib/avahi-autoipd",
+          "gid": 170,
+          "uid": 170,
+          "shell": "/sbin/nologin",
+          "gecos": "Avahi IPv4LL Stack"
+        },
+        "dbus": {
+          "dir": "/",
+          "gid": 81,
+          "uid": 81,
+          "shell": "/sbin/nologin",
+          "gecos": "System message bus"
+        },
+        "polkitd": {
+          "dir": "/",
+          "gid": 999,
+          "uid": 999,
+          "shell": "/sbin/nologin",
+          "gecos": "User for polkitd"
+        },
+        "abrt": {
+          "dir": "/etc/abrt",
+          "gid": 173,
+          "uid": 173,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "usbmuxd": {
+          "dir": "/",
+          "gid": 113,
+          "uid": 113,
+          "shell": "/sbin/nologin",
+          "gecos": "usbmuxd user"
+        },
+        "colord": {
+          "dir": "/var/lib/colord",
+          "gid": 998,
+          "uid": 998,
+          "shell": "/sbin/nologin",
+          "gecos": "User for colord"
+        },
+        "geoclue": {
+          "dir": "/var/lib/geoclue",
+          "gid": 997,
+          "uid": 997,
+          "shell": "/sbin/nologin",
+          "gecos": "User for geoclue"
+        },
+        "rpc": {
+          "dir": "/var/lib/rpcbind",
+          "gid": 32,
+          "uid": 32,
+          "shell": "/sbin/nologin",
+          "gecos": "Rpcbind Daemon"
+        },
+        "rpcuser": {
+          "dir": "/var/lib/nfs",
+          "gid": 29,
+          "uid": 29,
+          "shell": "/sbin/nologin",
+          "gecos": "RPC Service User"
+        },
+        "nfsnobody": {
+          "dir": "/var/lib/nfs",
+          "gid": 65534,
+          "uid": 65534,
+          "shell": "/sbin/nologin",
+          "gecos": "Anonymous NFS User"
+        },
+        "qemu": {
+          "dir": "/",
+          "gid": 107,
+          "uid": 107,
+          "shell": "/sbin/nologin",
+          "gecos": "qemu user"
+        },
+        "rtkit": {
+          "dir": "/proc",
+          "gid": 172,
+          "uid": 172,
+          "shell": "/sbin/nologin",
+          "gecos": "RealtimeKit"
+        },
+        "radvd": {
+          "dir": "/",
+          "gid": 75,
+          "uid": 75,
+          "shell": "/sbin/nologin",
+          "gecos": "radvd user"
+        },
+        "tss": {
+          "dir": "/dev/null",
+          "gid": 59,
+          "uid": 59,
+          "shell": "/sbin/nologin",
+          "gecos": "Account used by the trousers package to sandbox the tcsd daemon"
+        },
+        "unbound": {
+          "dir": "/etc/unbound",
+          "gid": 995,
+          "uid": 996,
+          "shell": "/sbin/nologin",
+          "gecos": "Unbound DNS resolver"
+        },
+        "openvpn": {
+          "dir": "/etc/openvpn",
+          "gid": 994,
+          "uid": 995,
+          "shell": "/sbin/nologin",
+          "gecos": "OpenVPN"
+        },
+        "saslauth": {
+          "dir": "/run/saslauthd",
+          "gid": 76,
+          "uid": 994,
+          "shell": "/sbin/nologin",
+          "gecos": "\"Saslauthd user\""
+        },
+        "avahi": {
+          "dir": "/var/run/avahi-daemon",
+          "gid": 70,
+          "uid": 70,
+          "shell": "/sbin/nologin",
+          "gecos": "Avahi mDNS/DNS-SD Stack"
+        },
+        "pulse": {
+          "dir": "/var/run/pulse",
+          "gid": 992,
+          "uid": 993,
+          "shell": "/sbin/nologin",
+          "gecos": "PulseAudio System Daemon"
+        },
+        "gdm": {
+          "dir": "/var/lib/gdm",
+          "gid": 42,
+          "uid": 42,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "gnome-initial-setup": {
+          "dir": "/run/gnome-initial-setup/",
+          "gid": 990,
+          "uid": 992,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "nm-openconnect": {
+          "dir": "/",
+          "gid": 989,
+          "uid": 991,
+          "shell": "/sbin/nologin",
+          "gecos": "NetworkManager user for OpenConnect"
+        },
+        "sshd": {
+          "dir": "/var/empty/sshd",
+          "gid": 74,
+          "uid": 74,
+          "shell": "/sbin/nologin",
+          "gecos": "Privilege-separated SSH"
+        },
+        "chrony": {
+          "dir": "/var/lib/chrony",
+          "gid": 988,
+          "uid": 990,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "tcpdump": {
+          "dir": "/",
+          "gid": 72,
+          "uid": 72,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "sgr": {
+          "dir": "/home/sgr",
+          "gid": 500,
+          "uid": 2000,
+          "shell": "/bin/bash",
+          "gecos": "Karl Seeger, T226"
+        },
+        "hunter": {
+          "dir": "/home/hunter",
+          "gid": 500,
+          "uid": 2006,
+          "shell": "/bin/bash",
+          "gecos": "Hugh Hunter, T226"
+        },
+        "botzet": {
+          "dir": "/home/botzet",
+          "gid": 500,
+          "uid": 2007,
+          "shell": "/bin/bash",
+          "gecos": "Roland Botzet, T226"
+        },
+        "seggew": {
+          "dir": "/home/seggew",
+          "gid": 500,
+          "uid": 2009,
+          "shell": "/bin/bash",
+          "gecos": "Gerald Seggewies, T226"
+        },
+        "schumach": {
+          "dir": "/home/schumach",
+          "gid": 500,
+          "uid": 2010,
+          "shell": "/bin/bash",
+          "gecos": "Torsten Schumacher, T226"
+        },
+        "srothg": {
+          "dir": "/home/srothg",
+          "gid": 500,
+          "uid": 2011,
+          "shell": "/bin/bash",
+          "gecos": "Silke Rothgaenger, PD233"
+        },
+        "kehr": {
+          "dir": "/home/kehr",
+          "gid": 500,
+          "uid": 2013,
+          "shell": "/bin/bash",
+          "gecos": "Klaus Kehr, T226"
+        },
+        "hofmann": {
+          "dir": "/home/hofmann",
+          "gid": 500,
+          "uid": 2015,
+          "shell": "/bin/bash",
+          "gecos": "Georg Hofmann, T226"
+        },
+        "gordon": {
+          "dir": "/home/gordon",
+          "gid": 500,
+          "uid": 2016,
+          "shell": "/bin/bash",
+          "gecos": "Gordon Dove, IT21"
+        },
+        "hellebra": {
+          "dir": "/home/hellebra",
+          "gid": 500,
+          "uid": 2031,
+          "shell": "/bin/bash",
+          "gecos": "Hellebrandt, T226"
+        },
+        "florath": {
+          "dir": "/home/florath",
+          "gid": 500,
+          "uid": 2033,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Florath, E14"
+        },
+        "diete": {
+          "dir": "/home/diete",
+          "gid": 500,
+          "uid": 2044,
+          "shell": "/bin/bash",
+          "gecos": "Michael Diete, T226"
+        },
+        "markusw": {
+          "dir": "/home/markusw",
+          "gid": 500,
+          "uid": 2046,
+          "shell": "/bin/bash",
+          "gecos": "Markus Wasserschaff, T226"
+        },
+        "toex": {
+          "dir": "/home/toex",
+          "gid": 500,
+          "uid": 2051,
+          "shell": "/bin/bash",
+          "gecos": "Rheinhold Toex, T226"
+        },
+        "schulz": {
+          "dir": "/home/schulz",
+          "gid": 500,
+          "uid": 2100,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Schulz, E14"
+        },
+        "fuchs": {
+          "dir": "/home/fuchs",
+          "gid": 500,
+          "uid": 2107,
+          "shell": "/bin/bash",
+          "gecos": "Georg Fuchs, T226"
+        },
+        "kramer": {
+          "dir": "/home/kramer",
+          "gid": 500,
+          "uid": 2111,
+          "shell": "/bin/bash",
+          "gecos": "Georg Kramer, T226"
+        },
+        "hager": {
+          "dir": "/home/hager",
+          "gid": 500,
+          "uid": 2118,
+          "shell": "/bin/bash",
+          "gecos": "Rolf Hager, T226"
+        },
+        "joppich": {
+          "dir": "/home/joppich",
+          "gid": 500,
+          "uid": 2124,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Joppich, PD12"
+        },
+        "potenski": {
+          "dir": "/home/potenski",
+          "gid": 500,
+          "uid": 2140,
+          "shell": "/bin/bash",
+          "gecos": "Norbert Potenski, E14"
+        },
+        "espop": {
+          "dir": "/home/espop",
+          "gid": 500,
+          "uid": 2142,
+          "shell": "/bin/bash",
+          "gecos": "Emil Pop, E14"
+        },
+        "kretschm": {
+          "dir": "/home/kretschm",
+          "gid": 500,
+          "uid": 2154,
+          "shell": "/bin/bash",
+          "gecos": "Frank Kretschmer, E142"
+        },
+        "schaub": {
+          "dir": "/home/schaub",
+          "gid": 500,
+          "uid": 2160,
+          "shell": "/bin/bash",
+          "gecos": "Alexander schaub. E143"
+        },
+        "hirsch": {
+          "dir": "/home/hirsch",
+          "gid": 500,
+          "uid": 2180,
+          "shell": "/bin/bash",
+          "gecos": "Colin Hirsch"
+        },
+        "mause": {
+          "dir": "/home/mause",
+          "gid": 500,
+          "uid": 2182,
+          "shell": "/bin/bash",
+          "gecos": "Christoph Mause"
+        },
+        "kotulla": {
+          "dir": "/home/kotulla",
+          "gid": 500,
+          "uid": 2184,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Kotulla, IT212"
+        },
+        "junglas": {
+          "dir": "/home/junglas",
+          "gid": 500,
+          "uid": 2192,
+          "shell": "/bin/bash",
+          "gecos": "Junglas Florian, IT211"
+        },
+        "brunne": {
+          "dir": "/home/brunne",
+          "gid": 500,
+          "uid": 2199,
+          "shell": "/bin/bash",
+          "gecos": "Hajo Brunne, IT211"
+        },
+        "koelsch": {
+          "dir": "/home/koelsch",
+          "gid": 500,
+          "uid": 2202,
+          "shell": "/bin/bash",
+          "gecos": "Tobias Koelsch, IT211"
+        },
+        "kukush": {
+          "dir": "/home/kukush",
+          "gid": 500,
+          "uid": 2204,
+          "shell": "/bin/bash",
+          "gecos": "Dmitri Kukushkin, TDEV 142"
+        },
+        "lindem": {
+          "dir": "/home/lindem",
+          "gid": 500,
+          "uid": 2206,
+          "shell": "/bin/bash",
+          "gecos": "Markus Lindemann, TDEV123"
+        },
+        "koenig": {
+          "dir": "/home/koenig",
+          "gid": 500,
+          "uid": 2210,
+          "shell": "/bin/bash",
+          "gecos": "Harold Koenig, TDEV141"
+        },
+        "baden": {
+          "dir": "/home/baden",
+          "gid": 500,
+          "uid": 2212,
+          "shell": "/bin/bash",
+          "gecos": "Michael Baden, TDEV141"
+        },
+        "dirk": {
+          "dir": "/home/dirk",
+          "gid": 500,
+          "uid": 2214,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Moermans, TDEV 141"
+        },
+        "bader": {
+          "dir": "/home/bader",
+          "gid": 500,
+          "uid": 2216,
+          "shell": "/bin/bash",
+          "gecos": "Markus Bader, TDEV141"
+        },
+        "wilhelm": {
+          "dir": "/home/wilhelm",
+          "gid": 500,
+          "uid": 2218,
+          "shell": "/bin/bash",
+          "gecos": "Marc Wilhelm, TDEV 141"
+        },
+        "moeller": {
+          "dir": "/home/moeller",
+          "gid": 500,
+          "uid": 2320,
+          "shell": "/bin/bash",
+          "gecos": "Olaf Moeller, TDEV141"
+        },
+        "bhide": {
+          "dir": "/home/bhide",
+          "gid": 500,
+          "uid": 2322,
+          "shell": "/bin/bash",
+          "gecos": "Sudarshan Bhide, TDEV142, OSP"
+        },
+        "rao": {
+          "dir": "/home/rao",
+          "gid": 500,
+          "uid": 2324,
+          "shell": "/bin/bash",
+          "gecos": "Bolur Raghavendra Rao, TDEV142, OSP"
+        },
+        "rayasa": {
+          "dir": "/home/rayasa",
+          "gid": 500,
+          "uid": 2326,
+          "shell": "/bin/bash",
+          "gecos": "Mruthyunjaya Subrahmanya Rayasamudra, OSP"
+        },
+        "vishnoi": {
+          "dir": "/home/vishnoi",
+          "gid": 500,
+          "uid": 2328,
+          "shell": "/bin/bash",
+          "gecos": "Vartika Vishnoi, TDEV 142, OSP"
+        },
+        "taneja": {
+          "dir": "/home/taneja",
+          "gid": 500,
+          "uid": 2330,
+          "shell": "/bin/bash",
+          "gecos": "Vibhav Taneja, TDEV 142, OSP"
+        },
+        "ganapa": {
+          "dir": "/home/ganapa",
+          "gid": 500,
+          "uid": 2332,
+          "shell": "/bin/bash",
+          "gecos": "Krishnamurthi Ganapathi, TDEV 142, OSP"
+        },
+        "rama": {
+          "dir": "/home/rama",
+          "gid": 500,
+          "uid": 2334,
+          "shell": "/bin/bash",
+          "gecos": "Makkithaya Ramamoorthy, TDEV142, OSP"
+        },
+        "saxena": {
+          "dir": "/home/saxena",
+          "gid": 500,
+          "uid": 2336,
+          "shell": "/bin/bash",
+          "gecos": "Vibha Saxena, TDEV142, OSP"
+        },
+        "kumar": {
+          "dir": "/home/kumar",
+          "gid": 500,
+          "uid": 2337,
+          "shell": "/bin/bash",
+          "gecos": "Sharath Kumar, TDEV142, OSP"
+        },
+        "andrew": {
+          "dir": "/home/andrew",
+          "gid": 500,
+          "uid": 2338,
+          "shell": "/bin/bash",
+          "gecos": "Andrew, TDEV 142"
+        },
+        "bstool": {
+          "dir": "/home/bstool",
+          "gid": 500,
+          "uid": 6666,
+          "shell": "/bin/bash",
+          "gecos": "Brainstormtool Testaccount, TDEV14"
+        },
+        "frey": {
+          "dir": "/home/frey",
+          "gid": 500,
+          "uid": 2340,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Frey, TDEV142"
+        },
+        "boyle": {
+          "dir": "/home/boyle",
+          "gid": 500,
+          "uid": 2342,
+          "shell": "/bin/bash",
+          "gecos": "paul boyle, TDEV142"
+        },
+        "ramsun": {
+          "dir": "/home/ramsun",
+          "gid": 500,
+          "uid": 2344,
+          "shell": "/bin/bash",
+          "gecos": "Ramsundar Kandasamy, TDEV143"
+        },
+        "winter": {
+          "dir": "/home/winter",
+          "gid": 500,
+          "uid": 2346,
+          "shell": "/bin/bash",
+          "gecos": "Bernd Winterstein, TDEV142"
+        },
+        "sell": {
+          "dir": "/home/sell",
+          "gid": 500,
+          "uid": 2348,
+          "shell": "/bin/bash",
+          "gecos": "Christian Sell, TDEV 142"
+        },
+        "jungh": {
+          "dir": "/home/jungh",
+          "gid": 500,
+          "uid": 2350,
+          "shell": "/bin/bash",
+          "gecos": "Klaus Junghärtchen, TDEV142"
+        },
+        "mbritsch": {
+          "dir": "/home/mbritsch",
+          "gid": 500,
+          "uid": 2352,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Britsch, TDEV14"
+        },
+        "alpay": {
+          "dir": "/home/alpay",
+          "gid": 500,
+          "uid": 2354,
+          "shell": "/bin/bash",
+          "gecos": "Altan Alpay, TDEV 141"
+        },
+        "przeczek": {
+          "dir": "/home/przeczek",
+          "gid": 500,
+          "uid": 2357,
+          "shell": "/bin/bash",
+          "gecos": "Marek Przeczek, TDEV142"
+        },
+        "zimmerm": {
+          "dir": "/home/zimmerm",
+          "gid": 500,
+          "uid": 2358,
+          "shell": "/bin/bash",
+          "gecos": "Steffen Zimmermann, TDEV142"
+        },
+        "wins": {
+          "dir": "/home/wins",
+          "gid": 500,
+          "uid": 2360,
+          "shell": "/bin/bash",
+          "gecos": "Michael Wins, TDEV143"
+        },
+        "ossowski": {
+          "dir": "/home/ossowski",
+          "gid": 500,
+          "uid": 2362,
+          "shell": "/bin/bash",
+          "gecos": "Joern Ossowski, TDEV 142"
+        },
+        "satish": {
+          "dir": "/home/satish",
+          "gid": 500,
+          "uid": 2364,
+          "shell": "/bin/bash",
+          "gecos": "Satisch Kini, TDEV 143"
+        },
+        "fakas": {
+          "dir": "/home/fakas",
+          "gid": 500,
+          "uid": 2366,
+          "shell": "/bin/bash",
+          "gecos": "Anastasios Fakas, TDEV 143"
+        },
+        "viji": {
+          "dir": "/home/viji",
+          "gid": 500,
+          "uid": 2368,
+          "shell": "/bin/bash",
+          "gecos": "Vijayalakshi Mallenahalli Siddaia, TDEV 143"
+        },
+        "nugent": {
+          "dir": "/home/nugent",
+          "gid": 500,
+          "uid": 2370,
+          "shell": "/bin/bash",
+          "gecos": "Sean Nugent, TDEV 142"
+        },
+        "philip": {
+          "dir": "/home/philip",
+          "gid": 500,
+          "uid": 2372,
+          "shell": "/bin/bash",
+          "gecos": "Seena Philip from Infosys"
+        },
+        "prakash": {
+          "dir": "/home/prakash",
+          "gid": 500,
+          "uid": 2374,
+          "shell": "/bin/bash",
+          "gecos": "Lakshmi Prakash from Infosys"
+        },
+        "vlad": {
+          "dir": "/home/vlad",
+          "gid": 500,
+          "uid": 2376,
+          "shell": "/bin/bash",
+          "gecos": "Horatiu Eugen Vlad, PD41"
+        },
+        "balluru": {
+          "dir": "/home/balluru",
+          "gid": 500,
+          "uid": 2378,
+          "shell": "/bin/bash",
+          "gecos": "Smitha Balluru Vasudeva from INfosys"
+        },
+        "seggern": {
+          "dir": "/home/seggern",
+          "gid": 500,
+          "uid": 2382,
+          "shell": "/bin/bash",
+          "gecos": "Valentin von Seggern,PD232"
+        },
+        "cyriac": {
+          "dir": "/home/cyriac",
+          "gid": 500,
+          "uid": 2384,
+          "shell": "/bin/bash",
+          "gecos": "Neena Mary Cyriac, PD233"
+        },
+        "ghanathr": {
+          "dir": "/home/ghanathr",
+          "gid": 500,
+          "uid": 2386,
+          "shell": "/bin/bash",
+          "gecos": "Ravindra K Ghanather, PD233"
+        },
+        "saini": {
+          "dir": "/home/saini",
+          "gid": 500,
+          "uid": 2388,
+          "shell": "/bin/bash",
+          "gecos": "Priyanka Saini, PD233"
+        },
+        "scheel": {
+          "dir": "/home/scheel",
+          "gid": 500,
+          "uid": 2390,
+          "shell": "/bin/bash",
+          "gecos": "Bert Scheel, PD231"
+        },
+        "hardik": {
+          "dir": "/home/hardik",
+          "gid": 500,
+          "uid": 2392,
+          "shell": "/bin/bash",
+          "gecos": "Hardik Amarshibbai Patel, PD231"
+        },
+        "farag": {
+          "dir": "/home/farag",
+          "gid": 500,
+          "uid": 2394,
+          "shell": "/bin/bash",
+          "gecos": "Walid Farag, PD231"
+        },
+        "fassbndr": {
+          "dir": "/home/fassbndr",
+          "gid": 500,
+          "uid": 2396,
+          "shell": "/bin/bash",
+          "gecos": "Gereon Fassbender, PD232"
+        },
+        "beil": {
+          "dir": "/home/beil",
+          "gid": 500,
+          "uid": 2402,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Beil, PD233"
+        },
+        "riaz": {
+          "dir": "/home/riaz",
+          "gid": 500,
+          "uid": 2404,
+          "shell": "/bin/bash",
+          "gecos": "Riaz Shirsangi, PD231"
+        },
+        "budzyn": {
+          "dir": "/home/budzyn",
+          "gid": 500,
+          "uid": 2406,
+          "shell": "/bin/bash",
+          "gecos": "Michal Budzym, PD232"
+        },
+        "bourimi": {
+          "dir": "/home/bourimi",
+          "gid": 500,
+          "uid": 2408,
+          "shell": "/bin/bash",
+          "gecos": "Mohamed Bourimi, PD232"
+        },
+        "weyers": {
+          "dir": "/home/weyers",
+          "gid": 500,
+          "uid": 2410,
+          "shell": "/bin/bash",
+          "gecos": "Alfred Weyers, PD232"
+        },
+        "makrov": {
+          "dir": "/home/makrov",
+          "gid": 500,
+          "uid": 2412,
+          "shell": "/bin/bash",
+          "gecos": "Georgi Markov, PD232"
+        },
+        "leyssens": {
+          "dir": "/home/leyssens",
+          "gid": 500,
+          "uid": 2414,
+          "shell": "/bin/bash",
+          "gecos": "Eli-Jean Leyssens, PD233"
+        },
+        "afrey": {
+          "dir": "/home/afrey",
+          "gid": 500,
+          "uid": 2416,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Frey, PD233"
+        },
+        "bokeloh": {
+          "dir": "/home/bokeloh",
+          "gid": 500,
+          "uid": 2418,
+          "shell": "/bin/bash",
+          "gecos": "Carsten Bokeloh, PD233"
+        },
+        "antal": {
+          "dir": "/home/antal",
+          "gid": 500,
+          "uid": 2420,
+          "shell": "/bin/bash",
+          "gecos": "Gabor Antal, PD233"
+        },
+        "tzavella": {
+          "dir": "/home/tzavella",
+          "gid": 500,
+          "uid": 2422,
+          "shell": "/bin/bash",
+          "gecos": "Lau Tzavellas, PD233"
+        },
+        "visana": {
+          "dir": "/home/visana",
+          "gid": 500,
+          "uid": 2424,
+          "shell": "/bin/bash",
+          "gecos": "Visana, PD233"
+        },
+        "orrc": {
+          "dir": "/home/orrc",
+          "gid": 500,
+          "uid": 2426,
+          "shell": "/bin/bash",
+          "gecos": "Christian Orr, PD233"
+        },
+        "svensson": {
+          "dir": "/home/svensson",
+          "gid": 500,
+          "uid": 2428,
+          "shell": "/bin/bash",
+          "gecos": "Lennart Svensson, PD233"
+        },
+        "svhager": {
+          "dir": "/home/svhager",
+          "gid": 500,
+          "uid": 2430,
+          "shell": "/bin/bash",
+          "gecos": "Sven Hager, PD233"
+        },
+        "ilvonen": {
+          "dir": "/home/ilvonen",
+          "gid": 500,
+          "uid": 2432,
+          "shell": "/bin/bash",
+          "gecos": "henna Ilvonen, PD233"
+        },
+        "dahlen": {
+          "dir": "/home/dahlen",
+          "gid": 500,
+          "uid": 2434,
+          "shell": "/bin/bash",
+          "gecos": "Torbjoern Dahlen, PD11"
+        },
+        "mhofmann": {
+          "dir": "/home/mhofmann",
+          "gid": 500,
+          "uid": 2436,
+          "shell": "/bin/bash",
+          "gecos": "Markus Hofmann, PD233"
+        },
+        "sagrebin": {
+          "dir": "/home/sagrebin",
+          "gid": 500,
+          "uid": 2438,
+          "shell": "/bin/bash",
+          "gecos": "Alexander Sagrebin, PD231"
+        },
+        "kattner": {
+          "dir": "/home/kattner",
+          "gid": 500,
+          "uid": 2440,
+          "shell": "/bin/bash",
+          "gecos": "Frank Burkhardt, PD11"
+        },
+        "wang": {
+          "dir": "/home/wang",
+          "gid": 500,
+          "uid": 2442,
+          "shell": "/bin/bash",
+          "gecos": "Hao Wang, PD11"
+        },
+        "burkhard": {
+          "dir": "/home/burkhard",
+          "gid": 500,
+          "uid": 2444,
+          "shell": "/bin/bash",
+          "gecos": "Frank Burkhardt, PD11"
+        },
+        "li": {
+          "dir": "/home/li",
+          "gid": 500,
+          "uid": 2446,
+          "shell": "/bin/bash",
+          "gecos": "Xuan Li, PD233"
+        },
+        "haeber": {
+          "dir": "/home/haeber",
+          "gid": 500,
+          "uid": 2448,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Haeber, PD233"
+        },
+        "klinke": {
+          "dir": "/home/klinke",
+          "gid": 500,
+          "uid": 2450,
+          "shell": "/bin/bash",
+          "gecos": "Stefano Klinke, PD233"
+        },
+        "riede": {
+          "dir": "/home/riede",
+          "gid": 500,
+          "uid": 2452,
+          "shell": "/bin/bash",
+          "gecos": "Klaus Riede, PD234"
+        },
+        "sharpe": {
+          "dir": "/home/sharpe",
+          "gid": 500,
+          "uid": 2454,
+          "shell": "/bin/bash",
+          "gecos": "Greg Sharpe, PD235"
+        },
+        "keclik": {
+          "dir": "/home/keclik",
+          "gid": 500,
+          "uid": 2456,
+          "shell": "/bin/bash",
+          "gecos": "Stephan Keclik, PD141"
+        },
+        "feldhoff": {
+          "dir": "/home/feldhoff",
+          "gid": 500,
+          "uid": 2458,
+          "shell": "/bin/bash",
+          "gecos": "Roman feldhoff, PD232"
+        },
+        "agaev": {
+          "dir": "/home/agaev",
+          "gid": 500,
+          "uid": 2460,
+          "shell": "/bin/bash",
+          "gecos": "Dimitri Agaev, PD235"
+        },
+        "arungm": {
+          "dir": "/home/arungm",
+          "gid": 500,
+          "uid": 2462,
+          "shell": "/bin/bash",
+          "gecos": "Arun Muralidhara, Infosys"
+        },
+        "ashwinik": {
+          "dir": "/home/ashwinik",
+          "gid": 500,
+          "uid": 2464,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies"
+        },
+        "pavank": {
+          "dir": "/home/pavank",
+          "gid": 500,
+          "uid": 2466,
+          "shell": "/bin/bash",
+          "gecos": "Venkata Pavan Kumar Poluru"
+        },
+        "girishk": {
+          "dir": "/home/girishk",
+          "gid": 500,
+          "uid": 2468,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies"
+        },
+        "kunala": {
+          "dir": "/home/kunala",
+          "gid": 500,
+          "uid": 2470,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies"
+        },
+        "navin": {
+          "dir": "/home/navin",
+          "gid": 500,
+          "uid": 2472,
+          "shell": "/bin/bash",
+          "gecos": "Navin Ilavarasan, PD235"
+        },
+        "crueger": {
+          "dir": "/home/crueger",
+          "gid": 500,
+          "uid": 2474,
+          "shell": "/bin/bash",
+          "gecos": "Till Crueger, PD234"
+        },
+        "boyapati": {
+          "dir": "/home/boyapati",
+          "gid": 500,
+          "uid": 2476,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies, Boyapati Lakshmi Aparna"
+        },
+        "syedah": {
+          "dir": "/home/syedah",
+          "gid": 500,
+          "uid": 2478,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies, Syed Atif Husain"
+        },
+        "lukic": {
+          "dir": "/home/lukic",
+          "gid": 500,
+          "uid": 2480,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Lukic, PD235"
+        },
+        "chellap": {
+          "dir": "/home/chellap",
+          "gid": 500,
+          "uid": 2482,
+          "shell": "/bin/bash",
+          "gecos": "Kamakya Chellapan, from Comp. Infosys for Stefan Schulz"
+        },
+        "mfuchs": {
+          "dir": "/home/mfuchs",
+          "gid": 500,
+          "uid": 2484,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Fuchs, PD234"
+        },
+        "killig": {
+          "dir": "/home/killig",
+          "gid": 500,
+          "uid": 2486,
+          "shell": "/bin/bash",
+          "gecos": "Sven Killig, PD234"
+        },
+        "ppatel": {
+          "dir": "/home/ppatel",
+          "gid": 500,
+          "uid": 2488,
+          "shell": "/bin/bash",
+          "gecos": "Payal Patel, PD235"
+        },
+        "roske": {
+          "dir": "/home/roske",
+          "gid": 500,
+          "uid": 2490,
+          "shell": "/bin/bash",
+          "gecos": "Philip Roske, PD232"
+        },
+        "sonnenb": {
+          "dir": "/home/sonnenb",
+          "gid": 500,
+          "uid": 2492,
+          "shell": "/bin/bash",
+          "gecos": "Gerhard Sonnenberg, PD234"
+        },
+        "ritters": {
+          "dir": "/home/ritters",
+          "gid": 500,
+          "uid": 2494,
+          "shell": "/bin/bash",
+          "gecos": "Klaus Ruediger Ritters, PD232"
+        },
+        "karayel": {
+          "dir": "/home/karayel",
+          "gid": 500,
+          "uid": 2496,
+          "shell": "/bin/bash",
+          "gecos": "Ugurcan Karayel, PD234"
+        },
+        "birk": {
+          "dir": "/home/birk",
+          "gid": 500,
+          "uid": 2498,
+          "shell": "/bin/bash",
+          "gecos": "Lothar Birk, PD231"
+        },
+        "dabek": {
+          "dir": "/home/dabek",
+          "gid": 500,
+          "uid": 2500,
+          "shell": "/bin/bash",
+          "gecos": "Slawomir Dabek, PD231"
+        },
+        "richter": {
+          "dir": "/home/richter",
+          "gid": 500,
+          "uid": 2502,
+          "shell": "/bin/bash",
+          "gecos": "Karsten Richter, PD121"
+        },
+        "heinrich": {
+          "dir": "/home/heinrich",
+          "gid": 500,
+          "uid": 2504,
+          "shell": "/bin/bash",
+          "gecos": "Elvira Heinrich, PD233"
+        },
+        "lateef": {
+          "dir": "/home/lateef",
+          "gid": 500,
+          "uid": 2506,
+          "shell": "/bin/bash",
+          "gecos": "Shamim Lateef, PD231"
+        },
+        "madishet": {
+          "dir": "/home/madishet",
+          "gid": 500,
+          "uid": 2508,
+          "shell": "/bin/bash",
+          "gecos": "Muktheshwar Madishet, PD234"
+        },
+        "kreutzer": {
+          "dir": "/home/kreutzer",
+          "gid": 500,
+          "uid": 2510,
+          "shell": "/bin/bash",
+          "gecos": "Cornelia Kreutzer, PD235"
+        },
+        "dacila": {
+          "dir": "/home/dacila",
+          "gid": 500,
+          "uid": 2512,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Dacila, PD231"
+        },
+        "partham": {
+          "dir": "/home/partham",
+          "gid": 500,
+          "uid": 2514,
+          "shell": "/bin/bash",
+          "gecos": "Offsiteuser for G. Seggewies"
+        },
+        "moehlnh": {
+          "dir": "/home/moehlnh",
+          "gid": 500,
+          "uid": 2516,
+          "shell": "/bin/bash",
+          "gecos": "Thies Moehlenhof, PD235"
+        },
+        "gopal": {
+          "dir": "/home/gopal",
+          "gid": 500,
+          "uid": 2518,
+          "shell": "/bin/bash",
+          "gecos": "Gopal KR, PD4?"
+        },
+        "charym": {
+          "dir": "/home/charym",
+          "gid": 500,
+          "uid": 2520,
+          "shell": "/bin/bash",
+          "gecos": "Purushothama Chary Maringantani"
+        },
+        "krawietz": {
+          "dir": "/home/krawietz",
+          "gid": 500,
+          "uid": 2522,
+          "shell": "/bin/bash",
+          "gecos": "Thilo Krawietz, PD231"
+        },
+        "lorenz": {
+          "dir": "/home/lorenz",
+          "gid": 500,
+          "uid": 2524,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Lorenz, PD42"
+        },
+        "herren": {
+          "dir": "/home/herren",
+          "gid": 500,
+          "uid": 2526,
+          "shell": "/bin/bash",
+          "gecos": "Tim Herren, PD214"
+        },
+        "gerrit": {
+          "dir": "/home/gerrit",
+          "gid": 500,
+          "uid": 2527,
+          "shell": "/bin/bash",
+          "gecos": "Gerrit Voehringer"
+        },
+        "walton": {
+          "dir": "/home/walton",
+          "gid": 500,
+          "uid": 2528,
+          "shell": "/bin/bash",
+          "gecos": "Phil Walton, PI"
+        },
+        "vijayan": {
+          "dir": "/home/vijayan",
+          "gid": 500,
+          "uid": 2530,
+          "shell": "/bin/bash",
+          "gecos": "Vipin Vijayan, PI"
+        },
+        "klein": {
+          "dir": "/home/klein",
+          "gid": 500,
+          "uid": 2532,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Klein, PI"
+        },
+        "roderigo": {
+          "dir": "/home/roderigo",
+          "gid": 500,
+          "uid": 2534,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Roderigo, SM41"
+        },
+        "jaeger": {
+          "dir": "/home/jaeger",
+          "gid": 500,
+          "uid": 2536,
+          "shell": "/bin/bash",
+          "gecos": "Sebastian Jaeger, SM42"
+        },
+        "martyn": {
+          "dir": "/home/martyn",
+          "gid": 500,
+          "uid": 2538,
+          "shell": "/bin/bash",
+          "gecos": "Mathieu Martyn, DT UK PDC"
+        },
+        "vencek": {
+          "dir": "/home/vencek",
+          "gid": 500,
+          "uid": 2540,
+          "shell": "/bin/bash",
+          "gecos": "Radomir Vencek, PD15"
+        },
+        "moravek": {
+          "dir": "/home/moravek",
+          "gid": 500,
+          "uid": 2542,
+          "shell": "/bin/bash",
+          "gecos": "Petr Moravek, TMCZ"
+        },
+        "will": {
+          "dir": "/home/will",
+          "gid": 500,
+          "uid": 2544,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Will, PI"
+        },
+        "suchanko": {
+          "dir": "/home/suchanko",
+          "gid": 500,
+          "uid": 2546,
+          "shell": "/bin/bash",
+          "gecos": "Petra Suchankova, PD15"
+        },
+        "kleprlik": {
+          "dir": "/home/kleprlik",
+          "gid": 500,
+          "uid": 2548,
+          "shell": "/bin/bash",
+          "gecos": "Zuzana Kleprlikova, TMCZ"
+        },
+        "manjumk": {
+          "dir": "/home/manjumk",
+          "gid": 500,
+          "uid": 2550,
+          "shell": "/bin/bash",
+          "gecos": "Manjunath M K, Offsiteuser for G. Seggewies"
+        },
+        "chandrak": {
+          "dir": "/home/chandrak",
+          "gid": 500,
+          "uid": 2552,
+          "shell": "/bin/bash",
+          "gecos": "Chandrakanta Sahoo, PD45"
+        },
+        "akshay": {
+          "dir": "/home/akshay",
+          "gid": 500,
+          "uid": 2554,
+          "shell": "/bin/bash",
+          "gecos": "Akshay Laxminarayan, PD45"
+        },
+        "bhardwaj": {
+          "dir": "/home/bhardwaj",
+          "gid": 500,
+          "uid": 2556,
+          "shell": "/bin/bash",
+          "gecos": "Aman Bhardwaj, PD45"
+        },
+        "puri": {
+          "dir": "/home/puri",
+          "gid": 500,
+          "uid": 2558,
+          "shell": "/bin/bash",
+          "gecos": "Sanya Puri, PD45"
+        },
+        "mudaliar": {
+          "dir": "/home/mudaliar",
+          "gid": 500,
+          "uid": 2560,
+          "shell": "/bin/bash",
+          "gecos": "Ashwinikumar Mudaliar, PD45"
+        },
+        "sarika": {
+          "dir": "/home/sarika",
+          "gid": 500,
+          "uid": 2562,
+          "shell": "/bin/bash",
+          "gecos": "Sarika, PD45"
+        },
+        "wozniak": {
+          "dir": "/home/wozniak",
+          "gid": 500,
+          "uid": 2564,
+          "shell": "/bin/bash",
+          "gecos": "Margot Wozniak, PD45"
+        },
+        "zuemruet": {
+          "dir": "/home/zuemruet",
+          "gid": 500,
+          "uid": 2566,
+          "shell": "/bin/bash",
+          "gecos": "Zuemruet Celik, PDE"
+        },
+        "vipin": {
+          "dir": "/home/vipin",
+          "gid": 500,
+          "uid": 2568,
+          "shell": "/bin/bash",
+          "gecos": "Vipin Vijayan BN04"
+        },
+        "groninge": {
+          "dir": "/home/groninge",
+          "gid": 500,
+          "uid": 2570,
+          "shell": "/bin/bash",
+          "gecos": "Henri van Groningen, CT-AS-R"
+        },
+        "arora": {
+          "dir": "/home/arora",
+          "gid": 500,
+          "uid": 2572,
+          "shell": "/bin/bash",
+          "gecos": "Ajay Arora INFOSYS"
+        },
+        "johar": {
+          "dir": "/home/johar",
+          "gid": 500,
+          "uid": 2574,
+          "shell": "/bin/bash",
+          "gecos": "Gunjan Johar INFOSYS"
+        },
+        "sumit": {
+          "dir": "/home/sumit",
+          "gid": 500,
+          "uid": 2576,
+          "shell": "/bin/bash",
+          "gecos": "Sumit Kumar INFOSYS"
+        },
+        "plischke": {
+          "dir": "/home/plischke",
+          "gid": 500,
+          "uid": 2578,
+          "shell": "/bin/bash",
+          "gecos": "Carsten Plischke GTN-PD51"
+        },
+        "atta": {
+          "dir": "/home/atta",
+          "gid": 500,
+          "uid": 2580,
+          "shell": "/bin/bash",
+          "gecos": "Siva Atta INFOSYS"
+        },
+        "knethen": {
+          "dir": "/home/knethen",
+          "gid": 500,
+          "uid": 2582,
+          "shell": "/bin/bash",
+          "gecos": "Antje von Knethen, Telekom-IT TSI"
+        },
+        "heinze": {
+          "dir": "/home/heinze",
+          "gid": 500,
+          "uid": 2584,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Heinze,GTN-PD72"
+        },
+        "precek": {
+          "dir": "/home/precek",
+          "gid": 500,
+          "uid": 2586,
+          "shell": "/bin/bash",
+          "gecos": "Pavel Precek, TMCZ"
+        },
+        "loaiza": {
+          "dir": "/home/loaiza",
+          "gid": 500,
+          "uid": 2588,
+          "shell": "/bin/bash",
+          "gecos": "Carlos Loaiza , GTN PD23"
+        },
+        "kunal": {
+          "dir": "/home/kunal",
+          "gid": 500,
+          "uid": 2590,
+          "shell": "/bin/bash",
+          "gecos": "Kunal Akhaury, Infosys"
+        },
+        "strass": {
+          "dir": "/home/strass",
+          "gid": 500,
+          "uid": 2592,
+          "shell": "/bin/bash",
+          "gecos": "Marco Strass , GTN-PD51"
+        },
+        "patberg": {
+          "dir": "/home/patberg",
+          "gid": 500,
+          "uid": 2594,
+          "shell": "/bin/bash",
+          "gecos": "Reinhard Patberg,GTN-PD23"
+        },
+        "smollberg": {
+          "dir": "/home/smollberg",
+          "gid": 500,
+          "uid": 2596,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Mollberg , GTN-PD11"
+        },
+        "effelsberg": {
+          "dir": "/home/effelsberg",
+          "gid": 500,
+          "uid": 2598,
+          "shell": "/bin/bash",
+          "gecos": "Volker Effelsberg, GTN-PD11"
+        },
+        "kaminski": {
+          "dir": "/home/kaminski",
+          "gid": 500,
+          "uid": 2600,
+          "shell": "/bin/bash",
+          "gecos": "Michel Kaminski, GTN-PD41"
+        },
+        "calin": {
+          "dir": "/home/calin",
+          "gid": 500,
+          "uid": 2602,
+          "shell": "/bin/bash",
+          "gecos": "Marina Calin, GTN-PD41"
+        },
+        "narayan": {
+          "dir": "/home/narayan",
+          "gid": 500,
+          "uid": 2604,
+          "shell": "/bin/bash",
+          "gecos": "Thrilok Narayanappa, external INFOSYS"
+        },
+        "mitosink": {
+          "dir": "/home/mitosink",
+          "gid": 500,
+          "uid": 2606,
+          "shell": "/bin/bash",
+          "gecos": "milan mitosinka, External cleverance.com"
+        },
+        "sveda": {
+          "dir": "/home/sveda",
+          "gid": 500,
+          "uid": 2608,
+          "shell": "/bin/bash",
+          "gecos": "pavel sveda, External cleverance.com"
+        },
+        "tkotula": {
+          "dir": "/home/tkotula",
+          "gid": 500,
+          "uid": 2610,
+          "shell": "/bin/bash",
+          "gecos": "Tomas Kotula, External cleverance.com"
+        },
+        "aschenne": {
+          "dir": "/home/aschenne",
+          "gid": 500,
+          "uid": 2612,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Aschenneller, DT-Technik"
+        },
+        "mfiedler": {
+          "dir": "/home/mfiedler",
+          "gid": 500,
+          "uid": 2614,
+          "shell": "/bin/bash",
+          "gecos": "Marc Fiedler, DT-Technik"
+        },
+        "sgoss": {
+          "dir": "/home/sgoss",
+          "gid": 500,
+          "uid": 2616,
+          "shell": "/bin/bash",
+          "gecos": "Stuart Goss, PD12"
+        },
+        "mgroben": {
+          "dir": "/home/mgroben",
+          "gid": 500,
+          "uid": 2618,
+          "shell": "/bin/bash",
+          "gecos": "Markus Groben, PD53"
+        },
+        "uhausenbl": {
+          "dir": "/home/uhausenbl",
+          "gid": 500,
+          "uid": 2620,
+          "shell": "/bin/bash",
+          "gecos": "Uwe Hausenblass, DT-Technik"
+        },
+        "hoeppner": {
+          "dir": "/home/hoeppner",
+          "gid": 500,
+          "uid": 2622,
+          "shell": "/bin/bash",
+          "gecos": "harald Hoeppner,  PD51"
+        },
+        "bkohl": {
+          "dir": "/home/bkohl",
+          "gid": 500,
+          "uid": 2624,
+          "shell": "/bin/bash",
+          "gecos": "Benjamin Kohl, DT-Technik"
+        },
+        "akoester": {
+          "dir": "/home/akoester",
+          "gid": 500,
+          "uid": 2626,
+          "shell": "/bin/bash",
+          "gecos": "Andre Koester, PD52"
+        },
+        "lauffher": {
+          "dir": "/home/lauffher",
+          "gid": 500,
+          "uid": 2628,
+          "shell": "/bin/bash",
+          "gecos": "Wolfgang Laufher, GHQ"
+        },
+        "maethner": {
+          "dir": "/home/maethner",
+          "gid": 500,
+          "uid": 2630,
+          "shell": "/bin/bash",
+          "gecos": "Nils Maethner, PD25"
+        },
+        "dschmitz": {
+          "dir": "/home/dschmitz",
+          "gid": 500,
+          "uid": 2632,
+          "shell": "/bin/bash",
+          "gecos": "Dieter Schmitz, TI-NL West"
+        },
+        "usporn": {
+          "dir": "/home/usporn",
+          "gid": 500,
+          "uid": 2634,
+          "shell": "/bin/bash",
+          "gecos": "Ulrich Sporn, PD12"
+        },
+        "martinik": {
+          "dir": "/home/martinik",
+          "gid": 500,
+          "uid": 2636,
+          "shell": "/bin/bash",
+          "gecos": "Tomas Martinik, Cleverlance"
+        },
+        "dschroet": {
+          "dir": "/home/dschroet",
+          "gid": 500,
+          "uid": 2638,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Schroeter, PD11"
+        },
+        "lvana": {
+          "dir": "/home/lvana",
+          "gid": 500,
+          "uid": 2640,
+          "shell": "/bin/bash",
+          "gecos": "Lukas Vana, External cleverance.com"
+        },
+        "sanikomm": {
+          "dir": "/home/sanikomm",
+          "gid": 500,
+          "uid": 2642,
+          "shell": "/bin/bash",
+          "gecos": "Lakshmi Ragini Sanikommu, Infosys"
+        },
+        "shabbir": {
+          "dir": "/home/shabbir",
+          "gid": 500,
+          "uid": 2644,
+          "shell": "/bin/bash",
+          "gecos": "Syeda Irrum Shabbir, Infosys"
+        },
+        "cheineke": {
+          "dir": "/home/cheineke",
+          "gid": 500,
+          "uid": 2646,
+          "shell": "/bin/bash",
+          "gecos": "Hans Christian Heineke, Tester"
+        },
+        "erichter": {
+          "dir": "/home/erichter",
+          "gid": 500,
+          "uid": 2648,
+          "shell": "/bin/bash",
+          "gecos": "Edgar Richter, Tester"
+        },
+        "stuehren": {
+          "dir": "/home/stuehren",
+          "gid": 500,
+          "uid": 2650,
+          "shell": "/bin/bash",
+          "gecos": "Kurt Stuehrenberg, SM31"
+        },
+        "nbohnen": {
+          "dir": "/home/nbohnen",
+          "gid": 500,
+          "uid": 2652,
+          "shell": "/bin/bash",
+          "gecos": "Niko Bohnen, SM31"
+        },
+        "zajic": {
+          "dir": "/home/zajic",
+          "gid": 500,
+          "uid": 2654,
+          "shell": "/bin/bash",
+          "gecos": "Radek Zajic, PD15, TMCZ"
+        },
+        "tandon": {
+          "dir": "/home/tandon",
+          "gid": 500,
+          "uid": 2656,
+          "shell": "/bin/bash",
+          "gecos": "Rachit Tandon, Infosys"
+        },
+        "patil": {
+          "dir": "/home/patil",
+          "gid": 500,
+          "uid": 2658,
+          "shell": "/bin/bash",
+          "gecos": "Patil, Infosys"
+        },
+        "jserrano": {
+          "dir": "/home/jserrano",
+          "gid": 500,
+          "uid": 2660,
+          "shell": "/bin/bash",
+          "gecos": "Jesus Real Serrano, PD21"
+        },
+        "hweeger": {
+          "dir": "/home/hweeger",
+          "gid": 500,
+          "uid": 2662,
+          "shell": "/bin/bash",
+          "gecos": "Helmut Weeger, NSO-VASM"
+        },
+        "mpoupa": {
+          "dir": "/home/mpoupa",
+          "gid": 500,
+          "uid": 2664,
+          "shell": "/bin/bash",
+          "gecos": "Michal Poupa, TMCZ PD"
+        },
+        "anennker": {
+          "dir": "/home/anennker",
+          "gid": 500,
+          "uid": 2666,
+          "shell": "/bin/bash",
+          "gecos": "Axel Nennker, Telekom Berlin"
+        },
+        "nettekov": {
+          "dir": "/home/nettekov",
+          "gid": 500,
+          "uid": 2668,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Nettekoven, PD41"
+        },
+        "sapna": {
+          "dir": "/home/sapna",
+          "gid": 500,
+          "uid": 2670,
+          "shell": "/bin/bash",
+          "gecos": "Sapna Deraje Radhakrishna, Infosys"
+        },
+        "borovkov": {
+          "dir": "/home/borovkov",
+          "gid": 500,
+          "uid": 2672,
+          "shell": "/bin/bash",
+          "gecos": "Vadim Borovkov, PD41"
+        },
+        "shah": {
+          "dir": "/home/shah",
+          "gid": 500,
+          "uid": 2674,
+          "shell": "/bin/bash",
+          "gecos": "Priyanka Gautam Shah, INFOSYS"
+        },
+        "snagar": {
+          "dir": "/home/snagar",
+          "gid": 500,
+          "uid": 2676,
+          "shell": "/bin/bash",
+          "gecos": "Shruti Nagar, INFOSYS"
+        },
+        "mkulbach": {
+          "dir": "/home/mkulbach",
+          "gid": 500,
+          "uid": 2678,
+          "shell": "/bin/bash",
+          "gecos": "Moritz Kulbach, IT5"
+        },
+        "mjung": {
+          "dir": "/home/mjung",
+          "gid": 500,
+          "uid": 2680,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Jung, IT5"
+        },
+        "fpeters": {
+          "dir": "/home/fpeters",
+          "gid": 500,
+          "uid": 2682,
+          "shell": "/bin/bash",
+          "gecos": "Frank Peters, IT5"
+        },
+        "mohly": {
+          "dir": "/home/mohly",
+          "gid": 500,
+          "uid": 2684,
+          "shell": "/bin/bash",
+          "gecos": "Marion Ohly, IT5"
+        },
+        "skuehl": {
+          "dir": "/home/skuehl",
+          "gid": 500,
+          "uid": 2686,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Kuehl, CCS Neustadt"
+        },
+        "cscholz": {
+          "dir": "/home/cscholz",
+          "gid": 500,
+          "uid": 2688,
+          "shell": "/bin/bash",
+          "gecos": "Christian Scholz, ZMLOPA"
+        },
+        "poepping": {
+          "dir": "/home/poepping",
+          "gid": 500,
+          "uid": 2690,
+          "shell": "/bin/bash",
+          "gecos": "Bernhard Poepping, M-LESP"
+        },
+        "ffoltan": {
+          "dir": "/home/ffoltan",
+          "gid": 500,
+          "uid": 2692,
+          "shell": "/bin/bash",
+          "gecos": "Frank Foltan, Z-MD Bonn"
+        },
+        "pfischer": {
+          "dir": "/home/pfischer",
+          "gid": 500,
+          "uid": 2694,
+          "shell": "/bin/bash",
+          "gecos": "Philippe Fischer, PD51"
+        },
+        "aspaul": {
+          "dir": "/home/aspaul",
+          "gid": 500,
+          "uid": 2696,
+          "shell": "/bin/bash",
+          "gecos": "Anja Schwarzpaul, PD52"
+        },
+        "tyborski": {
+          "dir": "/home/tyborski",
+          "gid": 500,
+          "uid": 2698,
+          "shell": "/bin/bash",
+          "gecos": "Alexander Tyborski, PD44"
+        },
+        "rjaensch": {
+          "dir": "/home/rjaensch",
+          "gid": 500,
+          "uid": 2700,
+          "shell": "/bin/bash",
+          "gecos": "Ruediger Jaensch, PD12"
+        },
+        "mdupre": {
+          "dir": "/home/mdupre",
+          "gid": 500,
+          "uid": 2702,
+          "shell": "/bin/bash",
+          "gecos": "Michael Dupre, PD12"
+        },
+        "tsonntag": {
+          "dir": "/home/tsonntag",
+          "gid": 500,
+          "uid": 2704,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Sonntag, PD12"
+        },
+        "vanselow": {
+          "dir": "/home/vanselow",
+          "gid": 500,
+          "uid": 2706,
+          "shell": "/bin/bash",
+          "gecos": "Marco Vanselow, PD33"
+        },
+        "sarizwan": {
+          "dir": "/home/sarizwan",
+          "gid": 500,
+          "uid": 2708,
+          "shell": "/bin/bash",
+          "gecos": "Syed Abubakkar Rizwan, INFOSYS"
+        },
+        "schommer": {
+          "dir": "/home/schommer",
+          "gid": 500,
+          "uid": 2710,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Schommer, PD41"
+        },
+        "pecha": {
+          "dir": "/home/pecha",
+          "gid": 500,
+          "uid": 2712,
+          "shell": "/bin/bash",
+          "gecos": "Lukas Pecha, PD15"
+        },
+        "jaworski": {
+          "dir": "/home/jaworski",
+          "gid": 500,
+          "uid": 2714,
+          "shell": "/bin/bash",
+          "gecos": "Marian Jaworski, PD15"
+        },
+        "vojtisek": {
+          "dir": "/home/vojtisek",
+          "gid": 500,
+          "uid": 2716,
+          "shell": "/bin/bash",
+          "gecos": "Michal Vojtisek, PD15"
+        },
+        "volkmann": {
+          "dir": "/home/volkmann",
+          "gid": 500,
+          "uid": 2718,
+          "shell": "/bin/bash",
+          "gecos": "Jan Volkmann, T-PD41"
+        },
+        "juetten": {
+          "dir": "/home/juetten",
+          "gid": 500,
+          "uid": 2720,
+          "shell": "/bin/bash",
+          "gecos": "Lars Juetten, T-PD52"
+        },
+        "amlnieto": {
+          "dir": "/home/amlnieto",
+          "gid": 500,
+          "uid": 2722,
+          "shell": "/bin/bash",
+          "gecos": "Ana Maria Lopez Nieto, PD31"
+        },
+        "mkeipert": {
+          "dir": "/home/mkeipert",
+          "gid": 500,
+          "uid": 2724,
+          "shell": "/bin/bash",
+          "gecos": "Manuel Keipert, PD31"
+        },
+        "sitnikov": {
+          "dir": "/home/sitnikov",
+          "gid": 500,
+          "uid": 2726,
+          "shell": "/bin/bash",
+          "gecos": "Georgyi Sitnikov, PD31"
+        },
+        "tbissel": {
+          "dir": "/home/tbissel",
+          "gid": 500,
+          "uid": 2730,
+          "shell": "/bin/bash",
+          "gecos": "Torsten Bissel, PD31"
+        },
+        "wiskirch": {
+          "dir": "/home/wiskirch",
+          "gid": 500,
+          "uid": 2732,
+          "shell": "/bin/bash",
+          "gecos": "Ulrich Wiskirchen, PD51"
+        },
+        "loevenic": {
+          "dir": "/home/loevenic",
+          "gid": 500,
+          "uid": 2734,
+          "shell": "/bin/bash",
+          "gecos": "Tobias Loevenich, PD51"
+        },
+        "udoklein": {
+          "dir": "/home/udoklein",
+          "gid": 500,
+          "uid": 2736,
+          "shell": "/bin/bash",
+          "gecos": "Udo Klein, PD51"
+        },
+        "windsch": {
+          "dir": "/home/windsch",
+          "gid": 500,
+          "uid": 2738,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Windscheiff, PD51"
+        },
+        "soemmer": {
+          "dir": "/home/soemmer",
+          "gid": 500,
+          "uid": 2740,
+          "shell": "/bin/bash",
+          "gecos": "Martin Soemmer, PD51"
+        },
+        "mricer": {
+          "dir": "/home/mricer",
+          "gid": 500,
+          "uid": 2742,
+          "shell": "/bin/bash",
+          "gecos": "Michael Ricer, PD51"
+        },
+        "schmickl": {
+          "dir": "/home/schmickl",
+          "gid": 500,
+          "uid": 2744,
+          "shell": "/bin/bash",
+          "gecos": "Leonhard Schmickler, PD72"
+        },
+        "jonas": {
+          "dir": "/home/jonas",
+          "gid": 500,
+          "uid": 2746,
+          "shell": "/bin/bash",
+          "gecos": "Jakub Jonas, PD15"
+        },
+        "pwozniak": {
+          "dir": "/home/pwozniak",
+          "gid": 500,
+          "uid": 2748,
+          "shell": "/bin/bash",
+          "gecos": "Piotr Wozniak,CTO-TIV2"
+        },
+        "aschmitz": {
+          "dir": "/home/aschmitz",
+          "gid": 500,
+          "uid": 2750,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Schmitz, PD11"
+        },
+        "nippa": {
+          "dir": "/home/nippa",
+          "gid": 500,
+          "uid": 2752,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Nippa, PD52"
+        },
+        "grabs": {
+          "dir": "/home/grabs",
+          "gid": 500,
+          "uid": 2754,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Grabs, PD52"
+        },
+        "iczaja": {
+          "dir": "/home/iczaja",
+          "gid": 500,
+          "uid": 2756,
+          "shell": "/bin/bash",
+          "gecos": "Ingo Czaja, GIS SES-1"
+        },
+        "akhanna": {
+          "dir": "/home/akhanna",
+          "gid": 500,
+          "uid": 2758,
+          "shell": "/bin/bash",
+          "gecos": "Ankush Khanna, PD44"
+        },
+        "reigner": {
+          "dir": "/home/reigner",
+          "gid": 500,
+          "uid": 2760,
+          "shell": "/bin/bash",
+          "gecos": "Reinhard Eigner, NSO-VASM"
+        },
+        "edregehr": {
+          "dir": "/home/edregehr",
+          "gid": 500,
+          "uid": 2762,
+          "shell": "/bin/bash",
+          "gecos": "Eduard Regehr, NSO-VASM"
+        },
+        "speukert": {
+          "dir": "/home/speukert",
+          "gid": 500,
+          "uid": 2764,
+          "shell": "/bin/bash",
+          "gecos": "Siegfried Peukert, NSO-VASM"
+        },
+        "haberman": {
+          "dir": "/home/haberman",
+          "gid": 500,
+          "uid": 2766,
+          "shell": "/bin/bash",
+          "gecos": "Steffen Habermann, PD23"
+        },
+        "makumar": {
+          "dir": "/home/makumar",
+          "gid": 500,
+          "uid": 2768,
+          "shell": "/bin/bash",
+          "gecos": "Manish Kumar, INFOSYS"
+        },
+        "mschroet": {
+          "dir": "/home/mschroet",
+          "gid": 500,
+          "uid": 2770,
+          "shell": "/bin/bash",
+          "gecos": "Marlon Schroeter, PD41"
+        },
+        "dkrebs": {
+          "dir": "/home/dkrebs",
+          "gid": 500,
+          "uid": 2772,
+          "shell": "/bin/bash",
+          "gecos": "David Krebs,PD-NP"
+        },
+        "bjuelich": {
+          "dir": "/home/bjuelich",
+          "gid": 500,
+          "uid": 2774,
+          "shell": "/bin/bash",
+          "gecos": "Bernd Juelich, PD-33"
+        },
+        "muainouz": {
+          "dir": "/home/muainouz",
+          "gid": 500,
+          "uid": 2776,
+          "shell": "/bin/bash",
+          "gecos": "Mustapha Ainouz, PD-33"
+        },
+        "tripathi": {
+          "dir": "/home/tripathi",
+          "gid": 500,
+          "uid": 2778,
+          "shell": "/bin/bash",
+          "gecos": "Gouri Tripathi, Infosys"
+        },
+        "abhaudam": {
+          "dir": "/home/abhaudam",
+          "gid": 500,
+          "uid": 2780,
+          "shell": "/bin/bash",
+          "gecos": "Abhimanyu Audam, Infosys"
+        },
+        "herrsche": {
+          "dir": "/home/herrsche",
+          "gid": 500,
+          "uid": 2782,
+          "shell": "/bin/bash",
+          "gecos": "Martin Herrscher, PD23"
+        },
+        "schuerge": {
+          "dir": "/home/schuerge",
+          "gid": 500,
+          "uid": 2784,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Schuerger, PD51"
+        },
+        "ahuja": {
+          "dir": "/home/ahuja",
+          "gid": 500,
+          "uid": 2786,
+          "shell": "/bin/bash",
+          "gecos": "Deepak Ahuja,INFOSYS"
+        },
+        "goyal": {
+          "dir": "/home/goyal",
+          "gid": 500,
+          "uid": 2788,
+          "shell": "/bin/bash",
+          "gecos": "Ghanshyam Goyal, INFOSYS"
+        },
+        "trendaf": {
+          "dir": "/home/trendaf",
+          "gid": 500,
+          "uid": 2790,
+          "shell": "/bin/bash",
+          "gecos": "Vladimir Trendafilov, Pay-P-MW"
+        },
+        "chaitany": {
+          "dir": "/home/chaitany",
+          "gid": 500,
+          "uid": 2792,
+          "shell": "/bin/bash",
+          "gecos": "Chaitanya Kamsu, INFOSYS"
+        },
+        "abhishek": {
+          "dir": "/home/abhishek",
+          "gid": 500,
+          "uid": 2794,
+          "shell": "/bin/bash",
+          "gecos": "Abhishek Chatterjee, INFOSYS"
+        },
+        "amit": {
+          "dir": "/home/amit",
+          "gid": 500,
+          "uid": 2796,
+          "shell": "/bin/bash",
+          "gecos": "Amit Kumar Dixit, INFOSYS"
+        },
+        "harjeet": {
+          "dir": "/home/harjeet",
+          "gid": 500,
+          "uid": 2798,
+          "shell": "/bin/bash",
+          "gecos": "Harjeet Singh, INFOSYS"
+        },
+        "selvam": {
+          "dir": "/home/selvam",
+          "gid": 500,
+          "uid": 2800,
+          "shell": "/bin/bash",
+          "gecos": "srinivasan Selvam, INFOSYS"
+        },
+        "arunava": {
+          "dir": "/home/arunava",
+          "gid": 500,
+          "uid": 2802,
+          "shell": "/bin/bash",
+          "gecos": "Arunava Biswas, INFOSYS"
+        },
+        "nagpal": {
+          "dir": "/home/nagpal",
+          "gid": 500,
+          "uid": 2804,
+          "shell": "/bin/bash",
+          "gecos": "Richa Nagpal,INFOSYS"
+        },
+        "ashish": {
+          "dir": "/home/ashish",
+          "gid": 500,
+          "uid": 2806,
+          "shell": "/bin/bash",
+          "gecos": "Ashish Jain, INFOSYS"
+        },
+        "plaha": {
+          "dir": "/home/plaha",
+          "gid": 500,
+          "uid": 2808,
+          "shell": "/bin/bash",
+          "gecos": "Amit Plaha, INFOSYS"
+        },
+        "amarjot": {
+          "dir": "/home/amarjot",
+          "gid": 500,
+          "uid": 2810,
+          "shell": "/bin/bash",
+          "gecos": "Amarjot Jaur, INFOSYS"
+        },
+        "sapnaks": {
+          "dir": "/home/sapnaks",
+          "gid": 500,
+          "uid": 2814,
+          "shell": "/bin/bash",
+          "gecos": "Sapna K S, INFOSYS"
+        },
+        "alwinter": {
+          "dir": "/home/alwinter",
+          "gid": 500,
+          "uid": 2816,
+          "shell": "/bin/bash",
+          "gecos": "Alexander WInter, PD23"
+        },
+        "amal": {
+          "dir": "/home/amal",
+          "gid": 500,
+          "uid": 2818,
+          "shell": "/bin/bash",
+          "gecos": "Amal Joy Chemparathy, INFOSYS"
+        },
+        "dilipl": {
+          "dir": "/home/dilipl",
+          "gid": 500,
+          "uid": 2820,
+          "shell": "/bin/bash",
+          "gecos": "Dilip Lingaraju, INFOSYS"
+        },
+        "nyambi": {
+          "dir": "/home/nyambi",
+          "gid": 500,
+          "uid": 2822,
+          "shell": "/bin/bash",
+          "gecos": "Kenneth Dyambi, PD51"
+        },
+        "suresh": {
+          "dir": "/home/suresh",
+          "gid": 500,
+          "uid": 2824,
+          "shell": "/bin/bash",
+          "gecos": "Suresh Vallamsetty, INFOSYS"
+        },
+        "dschroed": {
+          "dir": "/home/dschroed",
+          "gid": 500,
+          "uid": 2826,
+          "shell": "/bin/bash",
+          "gecos": "Doerte Schroeder, PD81"
+        },
+        "breuer": {
+          "dir": "/home/breuer",
+          "gid": 500,
+          "uid": 2828,
+          "shell": "/bin/bash",
+          "gecos": "Benjamin Breuer, PD41"
+        },
+        "doubek": {
+          "dir": "/home/doubek",
+          "gid": 500,
+          "uid": 2830,
+          "shell": "/bin/bash",
+          "gecos": "Milan Doubek,Cleverlance"
+        },
+        "trump": {
+          "dir": "/home/trump",
+          "gid": 500,
+          "uid": 2832,
+          "shell": "/bin/bash",
+          "gecos": "Christoph Trump,PD11"
+        },
+        "bsokol": {
+          "dir": "/home/bsokol",
+          "gid": 500,
+          "uid": 2834,
+          "shell": "/bin/bash",
+          "gecos": "Bartosz Sokolowski,PD1"
+        },
+        "reiter": {
+          "dir": "/home/reiter",
+          "gid": 500,
+          "uid": 2836,
+          "shell": "/bin/bash",
+          "gecos": "Michal Reiter, Cleverlance"
+        },
+        "skrbek": {
+          "dir": "/home/skrbek",
+          "gid": 500,
+          "uid": 2838,
+          "shell": "/bin/bash",
+          "gecos": "David Skrbek, Cleverlance"
+        },
+        "witzel": {
+          "dir": "/home/witzel",
+          "gid": 500,
+          "uid": 2840,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Witzel, PD21"
+        },
+        "feiter": {
+          "dir": "/home/feiter",
+          "gid": 500,
+          "uid": 2842,
+          "shell": "/bin/bash",
+          "gecos": "Florian Feiter, P&I"
+        },
+        "ehses": {
+          "dir": "/home/ehses",
+          "gid": 500,
+          "uid": 2844,
+          "shell": "/bin/bash",
+          "gecos": "Simon Ehses, P&I"
+        },
+        "zinkl": {
+          "dir": "/home/zinkl",
+          "gid": 500,
+          "uid": 2846,
+          "shell": "/bin/bash",
+          "gecos": "Jannik Zinkl, TA"
+        },
+        "styazhki": {
+          "dir": "/home/styazhki",
+          "gid": 500,
+          "uid": 2848,
+          "shell": "/bin/bash",
+          "gecos": "Igor Syazhkin, PD33"
+        },
+        "somasund": {
+          "dir": "/home/somasund",
+          "gid": 500,
+          "uid": 2850,
+          "shell": "/bin/bash",
+          "gecos": "Divya Somasundaram, INFOSYS"
+        },
+        "uekemp": {
+          "dir": "/home/uekemp",
+          "gid": 500,
+          "uid": 2852,
+          "shell": "/bin/bash",
+          "gecos": "Ulrich Ernst Kemp, PD11"
+        },
+        "lerch": {
+          "dir": "/home/lerch",
+          "gid": 500,
+          "uid": 2854,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Lerch, PD11"
+        },
+        "malcher": {
+          "dir": "/home/malcher",
+          "gid": 500,
+          "uid": 2856,
+          "shell": "/bin/bash",
+          "gecos": "Roman Malcher, PD11"
+        },
+        "cschmitth": {
+          "dir": "/home/cschmitth",
+          "gid": 500,
+          "uid": 2858,
+          "shell": "/bin/bash",
+          "gecos": "Carsten Schmitt Hoeppner, PD11"
+        },
+        "tleitao": {
+          "dir": "/home/tleitao",
+          "gid": 500,
+          "uid": 2860,
+          "shell": "/bin/bash",
+          "gecos": "Tiago Leitao,PD11_WIT"
+        },
+        "mignunes": {
+          "dir": "/home/mignunes",
+          "gid": 500,
+          "uid": 2862,
+          "shell": "/bin/bash",
+          "gecos": "Miguel Nunes,PD11_WIT"
+        },
+        "restrela": {
+          "dir": "/home/restrela",
+          "gid": 500,
+          "uid": 2864,
+          "shell": "/bin/bash",
+          "gecos": "Ruben Estrela, PD11_WIT"
+        },
+        "alsantos": {
+          "dir": "/home/alsantos",
+          "gid": 500,
+          "uid": 2866,
+          "shell": "/bin/bash",
+          "gecos": "Alex Santos, PD11_WIT"
+        },
+        "mannunes": {
+          "dir": "/home/mannunes",
+          "gid": 500,
+          "uid": 2868,
+          "shell": "/bin/bash",
+          "gecos": "Manuel Nunes, PD11_WIT"
+        },
+        "joaosa": {
+          "dir": "/home/joaosa",
+          "gid": 500,
+          "uid": 2870,
+          "shell": "/bin/bash",
+          "gecos": "Joao Sa, PD11_WIT"
+        },
+        "mredmann": {
+          "dir": "/home/mredmann",
+          "gid": 500,
+          "uid": 2872,
+          "shell": "/bin/bash",
+          "gecos": "Marc Redmann, 7p-group"
+        },
+        "mlesch": {
+          "dir": "/home/mlesch",
+          "gid": 500,
+          "uid": 2874,
+          "shell": "/bin/bash",
+          "gecos": "Marcus Lesch, DT-Technik"
+        },
+        "shunck": {
+          "dir": "/home/shunck",
+          "gid": 500,
+          "uid": 2876,
+          "shell": "/bin/bash",
+          "gecos": "Sascha Hunck,DT-Technik"
+        },
+        "fazel": {
+          "dir": "/home/fazel",
+          "gid": 500,
+          "uid": 2878,
+          "shell": "/bin/bash",
+          "gecos": "Navid Fazel, CTO-CIO"
+        },
+        "oseifert": {
+          "dir": "/home/oseifert",
+          "gid": 500,
+          "uid": 2880,
+          "shell": "/bin/bash",
+          "gecos": "Olaf Seifert, PD11"
+        },
+        "kahnt": {
+          "dir": "/home/kahnt",
+          "gid": 500,
+          "uid": 2882,
+          "shell": "/bin/bash",
+          "gecos": "Holger Kahnt, P&I"
+        },
+        "rittler": {
+          "dir": "/home/rittler",
+          "gid": 500,
+          "uid": 2884,
+          "shell": "/bin/bash",
+          "gecos": "Ingo Rittler, P&I"
+        },
+        "dbeckers": {
+          "dir": "/home/dbeckers",
+          "gid": 500,
+          "uid": 2886,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Beckers, External"
+        },
+        "benes": {
+          "dir": "/home/benes",
+          "gid": 500,
+          "uid": 2888,
+          "shell": "/bin/bash",
+          "gecos": "Ondrej Benes, Cleverlance"
+        },
+        "kalis": {
+          "dir": "/home/kalis",
+          "gid": 500,
+          "uid": 2890,
+          "shell": "/bin/bash",
+          "gecos": "Michal kalis, Cleverlance"
+        },
+        "ofabian": {
+          "dir": "/home/ofabian",
+          "gid": 500,
+          "uid": 2892,
+          "shell": "/bin/bash",
+          "gecos": "Ondrej Fabian, Cleverlance"
+        },
+        "jockisch": {
+          "dir": "/home/jockisch",
+          "gid": 500,
+          "uid": 2894,
+          "shell": "/bin/bash",
+          "gecos": "Bernd Jockisch, PD51ext"
+        },
+        "oschneid": {
+          "dir": "/home/oschneid",
+          "gid": 500,
+          "uid": 2896,
+          "shell": "/bin/bash",
+          "gecos": "Oliver Schneider, PD51ext"
+        },
+        "ttepasse": {
+          "dir": "/home/ttepasse",
+          "gid": 500,
+          "uid": 2898,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Tepasse, PD51ext"
+        },
+        "gawlik": {
+          "dir": "/home/gawlik",
+          "gid": 500,
+          "uid": 2900,
+          "shell": "/bin/bash",
+          "gecos": "Michael Gawlik, PD51"
+        },
+        "luedtke": {
+          "dir": "/home/luedtke",
+          "gid": 500,
+          "uid": 2902,
+          "shell": "/bin/bash",
+          "gecos": "Sven Luedke, PD43"
+        },
+        "lochum": {
+          "dir": "/home/lochum",
+          "gid": 500,
+          "uid": 2904,
+          "shell": "/bin/bash",
+          "gecos": "Christian van Lochum, PD31"
+        },
+        "spoerl": {
+          "dir": "/home/spoerl",
+          "gid": 500,
+          "uid": 2906,
+          "shell": "/bin/bash",
+          "gecos": "Michael Spoerl, PD21"
+        },
+        "mohandas": {
+          "dir": "/home/mohandas",
+          "gid": 500,
+          "uid": 2908,
+          "shell": "/bin/bash",
+          "gecos": "Nithu Mohandas, Infosys"
+        },
+        "buscher": {
+          "dir": "/home/buscher",
+          "gid": 500,
+          "uid": 2910,
+          "shell": "/bin/bash",
+          "gecos": "Gandalf Buscher, PD52"
+        },
+        "dsteinke": {
+          "dir": "/home/dsteinke",
+          "gid": 500,
+          "uid": 2912,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Steinke, PD11"
+        },
+        "viswanat": {
+          "dir": "/home/viswanat",
+          "gid": 500,
+          "uid": 2914,
+          "shell": "/bin/bash",
+          "gecos": "Buvana Viswanath, Infosys"
+        },
+        "johari": {
+          "dir": "/home/johari",
+          "gid": 500,
+          "uid": 2916,
+          "shell": "/bin/bash",
+          "gecos": "Shikhar Johari, Infosys"
+        },
+        "jain": {
+          "dir": "/home/jain",
+          "gid": 500,
+          "uid": 2918,
+          "shell": "/bin/bash",
+          "gecos": "Rohit Jain, Infosys"
+        },
+        "anto": {
+          "dir": "/home/anto",
+          "gid": 500,
+          "uid": 2920,
+          "shell": "/bin/bash",
+          "gecos": "Anto Marcinkovic, PD41"
+        },
+        "rofkar": {
+          "dir": "/home/rofkar",
+          "gid": 500,
+          "uid": 2922,
+          "shell": "/bin/bash",
+          "gecos": "Bernd Rofkar, PD55"
+        },
+        "lange": {
+          "dir": "/home/lange",
+          "gid": 500,
+          "uid": 2924,
+          "shell": "/bin/bash",
+          "gecos": "Bernd Lange, PD55"
+        },
+        "wehrmann": {
+          "dir": "/home/wehrmann",
+          "gid": 500,
+          "uid": 2926,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Wehrmann, PD55"
+        },
+        "stoeckln": {
+          "dir": "/home/stoeckln",
+          "gid": 500,
+          "uid": 2928,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Stoecklin, PI"
+        },
+        "ververgaert": {
+          "dir": "/home/ververgaert",
+          "gid": 500,
+          "uid": 2930,
+          "shell": "/bin/bash",
+          "gecos": "Rene Ververgaert, PD23"
+        },
+        "mkaiser": {
+          "dir": "/home/mkaiser",
+          "gid": 500,
+          "uid": 2932,
+          "shell": "/bin/bash",
+          "gecos": "Michael Kaiser, P&I"
+        },
+        "smagin": {
+          "dir": "/home/smagin",
+          "gid": 500,
+          "uid": 2934,
+          "shell": "/bin/bash",
+          "gecos": "Sarah Magin, P&I"
+        },
+        "ihassani": {
+          "dir": "/home/ihassani",
+          "gid": 500,
+          "uid": 2936,
+          "shell": "/bin/bash",
+          "gecos": "Imad Hassani, P&I"
+        },
+        "dscheuer": {
+          "dir": "/home/dscheuer",
+          "gid": 500,
+          "uid": 2938,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Scheuermann, P&I"
+        },
+        "dbecker": {
+          "dir": "/home/dbecker",
+          "gid": 500,
+          "uid": 2940,
+          "shell": "/bin/bash",
+          "gecos": "Daniel Becker, PD-CTP"
+        },
+        "weinhardt": {
+          "dir": "/home/weinhardt",
+          "gid": 500,
+          "uid": 2942,
+          "shell": "/bin/bash",
+          "gecos": "Holger Weinhardt, pd72"
+        },
+        "bracke": {
+          "dir": "/home/bracke",
+          "gid": 500,
+          "uid": 2944,
+          "shell": "/bin/bash",
+          "gecos": "Joerg Bracke, pd11"
+        },
+        "kittlas": {
+          "dir": "/home/kittlas",
+          "gid": 500,
+          "uid": 2946,
+          "shell": "/bin/bash",
+          "gecos": "Rainer Kittlas, PD52"
+        },
+        "wilmer": {
+          "dir": "/home/wilmer",
+          "gid": 500,
+          "uid": 2948,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Wilmer, P&I"
+        },
+        "tuerschm": {
+          "dir": "/home/tuerschm",
+          "gid": 500,
+          "uid": 2950,
+          "shell": "/bin/bash",
+          "gecos": "Alexandra Tuerschmann, T-PD2"
+        },
+        "capellm": {
+          "dir": "/home/capellm",
+          "gid": 500,
+          "uid": 2952,
+          "shell": "/bin/bash",
+          "gecos": "Carla Capellmann, T-PD21"
+        },
+        "bahrainy": {
+          "dir": "/home/bahrainy",
+          "gid": 500,
+          "uid": 2954,
+          "shell": "/bin/bash",
+          "gecos": "Mohamed Bahrainy, T-PD54"
+        },
+        "semler": {
+          "dir": "/home/semler",
+          "gid": 500,
+          "uid": 2956,
+          "shell": "/bin/bash",
+          "gecos": "Dirk Semler, T-PD54"
+        },
+        "nilsson": {
+          "dir": "/home/nilsson",
+          "gid": 500,
+          "uid": 2958,
+          "shell": "/bin/bash",
+          "gecos": "Jens Nilsson, T-PD21"
+        },
+        "preuss": {
+          "dir": "/home/preuss",
+          "gid": 500,
+          "uid": 2960,
+          "shell": "/bin/bash",
+          "gecos": "Dorothee Preuss, PD11"
+        },
+        "loewe": {
+          "dir": "/home/loewe",
+          "gid": 500,
+          "uid": 2962,
+          "shell": "/bin/bash",
+          "gecos": "Bianca Loewemann, PD11"
+        },
+        "jebili": {
+          "dir": "/home/jebili",
+          "gid": 500,
+          "uid": 2964,
+          "shell": "/bin/bash",
+          "gecos": "Marouan Jebili, Altran for PD11"
+        },
+        "bojanp": {
+          "dir": "/home/bojanp",
+          "gid": 500,
+          "uid": 2966,
+          "shell": "/bin/bash",
+          "gecos": "Bojan Puskarevic, T-PD23"
+        },
+        "uwendler": {
+          "dir": "/home/uwendler",
+          "gid": 500,
+          "uid": 2968,
+          "shell": "/bin/bash",
+          "gecos": "Uwe Wendler, PD11"
+        },
+        "bielau": {
+          "dir": "/home/bielau",
+          "gid": 500,
+          "uid": 2970,
+          "shell": "/bin/bash",
+          "gecos": "Patrick Bielau, P&I"
+        },
+        "hcoban": {
+          "dir": "/home/hcoban",
+          "gid": 500,
+          "uid": 2972,
+          "shell": "/bin/bash",
+          "gecos": "Halil Coban, CTO-SI"
+        },
+        "yuniarto": {
+          "dir": "/home/yuniarto",
+          "gid": 500,
+          "uid": 2974,
+          "shell": "/bin/bash",
+          "gecos": "Andre Yuniarto, CTO-SI"
+        },
+        "muellerj": {
+          "dir": "/home/muellerj",
+          "gid": 500,
+          "uid": 2976,
+          "shell": "/bin/bash",
+          "gecos": "Marcus Mueller-Jung, TE-PMM-SIM"
+        },
+        "saidp": {
+          "dir": "/home/saidp",
+          "gid": 500,
+          "uid": 2978,
+          "shell": "/bin/bash",
+          "gecos": "Philippe Said, PD-CT&CD-AD"
+        },
+        "rschwarz": {
+          "dir": "/home/rschwarz",
+          "gid": 500,
+          "uid": 2980,
+          "shell": "/bin/bash",
+          "gecos": "Reiner Schwarz, CT-AP-A-N"
+        },
+        "kimbango": {
+          "dir": "/home/kimbango",
+          "gid": 500,
+          "uid": 2982,
+          "shell": "/bin/bash",
+          "gecos": "Mateus Armando Kimbango, CTO-TIV2"
+        },
+        "kkrebs": {
+          "dir": "/home/kkrebs",
+          "gid": 500,
+          "uid": 2984,
+          "shell": "/bin/bash",
+          "gecos": "Klaus Krebs, PD12"
+        },
+        "schuma": {
+          "dir": "/home/schuma",
+          "gid": 500,
+          "uid": 2986,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Schumacher, T-PD52"
+        },
+        "mkoester": {
+          "dir": "/home/mkoester",
+          "gid": 500,
+          "uid": 2988,
+          "shell": "/bin/bash",
+          "gecos": "Michael Koester, T-PD23"
+        },
+        "kacalek": {
+          "dir": "/home/kacalek",
+          "gid": 500,
+          "uid": 2990,
+          "shell": "/bin/bash",
+          "gecos": "lubomir kacalek, TM-CZ"
+        },
+        "baatz": {
+          "dir": "/home/baatz",
+          "gid": 500,
+          "uid": 2992,
+          "shell": "/bin/bash",
+          "gecos": "Simon baatz, T-PD33"
+        },
+        "weingart": {
+          "dir": "/home/weingart",
+          "gid": 500,
+          "uid": 2994,
+          "shell": "/bin/bash",
+          "gecos": "Raoul Weingart, PD41"
+        },
+        "svavra": {
+          "dir": "/home/svavra",
+          "gid": 500,
+          "uid": 2996,
+          "shell": "/bin/bash",
+          "gecos": "Stepan Vavra, TMCZ"
+        },
+        "hbauer": {
+          "dir": "/home/hbauer",
+          "gid": 500,
+          "uid": 2998,
+          "shell": "/bin/bash",
+          "gecos": "Heinrich Bauer, PD33"
+        },
+        "mwohlf": {
+          "dir": "/home/mwohlf",
+          "gid": 500,
+          "uid": 3040,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Wohlfahrt, PD72"
+        },
+        "dierdorf": {
+          "dir": "/home/dierdorf",
+          "gid": 500,
+          "uid": 3042,
+          "shell": "/bin/bash",
+          "gecos": "Guido Dierdorf, PD72"
+        },
+        "havel": {
+          "dir": "/home/havel",
+          "gid": 500,
+          "uid": 3044,
+          "shell": "/bin/bash",
+          "gecos": "Stepan Havel, 4-IntProjMgT"
+        },
+        "sinning": {
+          "dir": "/home/sinning",
+          "gid": 500,
+          "uid": 3046,
+          "shell": "/bin/bash",
+          "gecos": "Anna Sinning, PD72"
+        },
+        "wells": {
+          "dir": "/home/wells",
+          "gid": 500,
+          "uid": 3048,
+          "shell": "/bin/bash",
+          "gecos": "James Wells, PD72"
+        },
+        "budnik": {
+          "dir": "/home/budnik",
+          "gid": 500,
+          "uid": 3050,
+          "shell": "/bin/bash",
+          "gecos": "Bernhard Budnik, PD72"
+        },
+        "sikora": {
+          "dir": "/home/sikora",
+          "gid": 500,
+          "uid": 3052,
+          "shell": "/bin/bash",
+          "gecos": "Maciej Sikora, 4-IntProjMgT"
+        },
+        "paas": {
+          "dir": "/home/paas",
+          "gid": 500,
+          "uid": 3054,
+          "shell": "/bin/bash",
+          "gecos": "Ralf Paas, PD5"
+        },
+        "bollmann": {
+          "dir": "/home/bollmann",
+          "gid": 500,
+          "uid": 3056,
+          "shell": "/bin/bash",
+          "gecos": "Marc Bollmann, PD55"
+        },
+        "mepperl": {
+          "dir": "/home/mepperl",
+          "gid": 500,
+          "uid": 3058,
+          "shell": "/bin/bash",
+          "gecos": "Matthias Epperlein, PD54"
+        },
+        "rath": {
+          "dir": "/home/rath",
+          "gid": 500,
+          "uid": 3060,
+          "shell": "/bin/bash",
+          "gecos": "Dieter Rath, PD72"
+        },
+        "bemmer": {
+          "dir": "/home/bemmer",
+          "gid": 500,
+          "uid": 2318,
+          "shell": "/bin/bash",
+          "gecos": "Rene Bemmer, PD55"
+        },
+        "awaterm": {
+          "dir": "/home/awaterm",
+          "gid": 500,
+          "uid": 3064,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Watermann, PD55"
+        },
+        "muellerd": {
+          "dir": "/home/muellerd",
+          "gid": 500,
+          "uid": 3066,
+          "shell": "/bin/bash",
+          "gecos": "Dietmar Mueller, PD25"
+        },
+        "gundurao": {
+          "dir": "/home/gundurao",
+          "gid": 500,
+          "uid": 3068,
+          "shell": "/bin/bash",
+          "gecos": "Chaithra Gundu Rao, Infosys"
+        },
+        "bockenti": {
+          "dir": "/home/bockenti",
+          "gid": 500,
+          "uid": 3070,
+          "shell": "/bin/bash",
+          "gecos": "Andreas Bockentin, PD72"
+        },
+        "hamdi": {
+          "dir": "/home/hamdi",
+          "gid": 500,
+          "uid": 3072,
+          "shell": "/bin/bash",
+          "gecos": "Oualid Hamdi, PD11"
+        },
+        "haselwan": {
+          "dir": "/home/haselwan",
+          "gid": 500,
+          "uid": 3074,
+          "shell": "/bin/bash",
+          "gecos": "Edmund Haselwanter, iteh.at"
+        },
+        "bbauch": {
+          "dir": "/home/bbauch",
+          "gid": 500,
+          "uid": 3076,
+          "shell": "/bin/bash",
+          "gecos": "Bettina Bauch, PD55"
+        },
+        "kochma": {
+          "dir": "/home/kochma",
+          "gid": 500,
+          "uid": 3080,
+          "shell": "/bin/bash",
+          "gecos": "Martin Koch, PD54"
+        },
+        "botlagud": {
+          "dir": "/home/botlagud",
+          "gid": 500,
+          "uid": 3082,
+          "shell": "/bin/bash",
+          "gecos": "Sravanthi Botlaguduru, Infosys"
+        },
+        "ahirrao": {
+          "dir": "/home/ahirrao",
+          "gid": 500,
+          "uid": 3084,
+          "shell": "/bin/bash",
+          "gecos": "Rupali Vilasrao Ahirrao, Infosys"
+        },
+        "robinson": {
+          "dir": "/home/robinson",
+          "gid": 500,
+          "uid": 3086,
+          "shell": "/bin/bash",
+          "gecos": "Chris Robinson, PD73"
+        },
+        "seidl": {
+          "dir": "/home/seidl",
+          "gid": 500,
+          "uid": 3088,
+          "shell": "/bin/bash",
+          "gecos": "Michael Seidl, PD21"
+        },
+        "jlanger": {
+          "dir": "/home/jlanger",
+          "gid": 500,
+          "uid": 3090,
+          "shell": "/bin/bash",
+          "gecos": "Johannes Langer, PD43"
+        },
+        "siegert": {
+          "dir": "/home/siegert",
+          "gid": 500,
+          "uid": 3092,
+          "shell": "/bin/bash",
+          "gecos": "Claus Siegert, PD73"
+        },
+        "reuhl": {
+          "dir": "/home/reuhl",
+          "gid": 500,
+          "uid": 3094,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Reuhl, PD44"
+        },
+        "rakesh": {
+          "dir": "/home/rakesh",
+          "gid": 500,
+          "uid": 3096,
+          "shell": "/bin/bash",
+          "gecos": "Rakesh Kumar Mahato, Infosys"
+        },
+        "vidyam": {
+          "dir": "/home/vidyam",
+          "gid": 500,
+          "uid": 3098,
+          "shell": "/bin/bash",
+          "gecos": "Vidyam Munde-Mueller, PI"
+        },
+        "ferdogan": {
+          "dir": "/home/ferdogan",
+          "gid": 500,
+          "uid": 3100,
+          "shell": "/bin/bash",
+          "gecos": "Ferhat Erdogan, PD53"
+        },
+        "sobania": {
+          "dir": "/home/sobania",
+          "gid": 500,
+          "uid": 3102,
+          "shell": "/bin/bash",
+          "gecos": "Alexander Sobania,CTO-PRO"
+        },
+        "kulik": {
+          "dir": "/home/kulik",
+          "gid": 500,
+          "uid": 3104,
+          "shell": "/bin/bash",
+          "gecos": "Thomas Kulik,CTO-PRO"
+        },
+        "kwasnitz": {
+          "dir": "/home/kwasnitz",
+          "gid": 500,
+          "uid": 3106,
+          "shell": "/bin/bash",
+          "gecos": "Susanne Kwasnitza, NSO-OSPS"
+        },
+        "urbach": {
+          "dir": "/home/urbach",
+          "gid": 500,
+          "uid": 3108,
+          "shell": "/bin/bash",
+          "gecos": "Martin Urbach, NSO-OSPS"
+        },
+        "gellert": {
+          "dir": "/home/gellert",
+          "gid": 500,
+          "uid": 3110,
+          "shell": "/bin/bash",
+          "gecos": "Stefan Gellert, PD55"
+        },
+        "phkremer": {
+          "dir": "/home/phkremer",
+          "gid": 500,
+          "uid": 3112,
+          "shell": "/bin/bash",
+          "gecos": "Phil Kremer, Orbit"
+        },
+        "macejov": {
+          "dir": "/home/macejov",
+          "gid": 500,
+          "uid": 3114,
+          "shell": "/bin/bash",
+          "gecos": "Dominik Macejovsky, Cleverlance"
+        },
+        "leuchten": {
+          "dir": "/home/leuchten",
+          "gid": 500,
+          "uid": 3116,
+          "shell": "/bin/bash",
+          "gecos": "Kai Leuchtenberg, Praktikant"
+        },
+        "lourenco": {
+          "dir": "/home/lourenco",
+          "gid": 500,
+          "uid": 3118,
+          "shell": "/bin/bash",
+          "gecos": "Andre Lourenco, PD11_WIT"
+        },
+        "ahirsch": {
+          "dir": "/home/ahirsch",
+          "gid": 500,
+          "uid": 3120,
+          "shell": "/bin/bash",
+          "gecos": "Andre Hirsch, T-Systems"
+        },
+        "grossm": {
+          "dir": "/home/grossm",
+          "gid": 500,
+          "uid": 3122,
+          "shell": "/bin/bash",
+          "gecos": "Martin Grossmann, T-Systems"
+        },
+        "dmtrain": {
+          "dir": "/home/dmtrain",
+          "gid": 500,
+          "uid": 3124,
+          "shell": "/bin/bash",
+          "gecos": "Trainingsuser"
+        },
+        "artem": {
+          "dir": "/home/artem",
+          "gid": 500,
+          "uid": 3126,
+          "shell": "/bin/bash",
+          "gecos": "Artem Sidorenko, PD23"
+        },
+        "andel": {
+          "dir": "/home/andel",
+          "gid": 500,
+          "uid": 3128,
+          "shell": "/bin/bash",
+          "gecos": "Michal Andel, T-Mobile CZ"
+        },
+        "wirths": {
+          "dir": "/home/wirths",
+          "gid": 500,
+          "uid": 3130,
+          "shell": "/bin/bash",
+          "gecos": "Wolfgang Wirths, PD25"
+        },
+        "wschneid": {
+          "dir": "/home/wschneid",
+          "gid": 500,
+          "uid": 3132,
+          "shell": "/bin/bash",
+          "gecos": "Wilbert Schneider, PD7"
+        },
+        "vkumar": {
+          "dir": "/home/vkumar",
+          "gid": 500,
+          "uid": 3134,
+          "shell": "/bin/bash",
+          "gecos": "Vinay Kumar, Infosys"
+        },
+        "schoeneb": {
+          "dir": "/home/schoeneb",
+          "gid": 500,
+          "uid": 3136,
+          "shell": "/bin/bash",
+          "gecos": "Dietmar Schoeneberg, PD52"
+        },
+        "makowski": {
+          "dir": "/home/makowski",
+          "gid": 500,
+          "uid": 3138,
+          "shell": "/bin/bash",
+          "gecos": "Andre Makowski, P&I"
+        },
+        "tolarovi": {
+          "dir": "/home/tolarovi",
+          "gid": 500,
+          "uid": 3140,
+          "shell": "/bin/bash",
+          "gecos": "Peter Tolarovic, T-Mobile CZ"
+        },
+        "nidhi": {
+          "dir": "/home/nidhi",
+          "gid": 500,
+          "uid": 3142,
+          "shell": "/bin/bash",
+          "gecos": "Nidhi K Premasundaran, Infosys"
+        },
+        "nishant": {
+          "dir": "/home/nishant",
+          "gid": 500,
+          "uid": 3144,
+          "shell": "/bin/bash",
+          "gecos": "Nishant Midha, Infosys"
+        },
+        "durgutov": {
+          "dir": "/home/durgutov",
+          "gid": 500,
+          "uid": 3146,
+          "shell": "/bin/bash",
+          "gecos": "Durgutovic Semir, CTO-SIO1"
+        },
+        "singhal": {
+          "dir": "/home/singhal",
+          "gid": 500,
+          "uid": 3148,
+          "shell": "/bin/bash",
+          "gecos": "Rahul Singhal, Infosys"
+        },
+        "breitba": {
+          "dir": "/home/breitba",
+          "gid": 500,
+          "uid": 3150,
+          "shell": "/bin/bash",
+          "gecos": "Martin Breitbach, PD11"
+        },
+        "sychra": {
+          "dir": "/home/sychra",
+          "gid": 500,
+          "uid": 3152,
+          "shell": "/bin/bash",
+          "gecos": "Matej Sychra, TMCZ"
+        },
+        "mroter": {
+          "dir": "/home/mroter",
+          "gid": 500,
+          "uid": 3154,
+          "shell": "/bin/bash",
+          "gecos": "Martin Roter, PD52"
+        },
+        "faber": {
+          "dir": "/home/faber",
+          "gid": 500,
+          "uid": 3156,
+          "shell": "/bin/bash",
+          "gecos": "Nils Faber, PD21"
+        },
+        "koderer": {
+          "dir": "/home/koderer",
+          "gid": 500,
+          "uid": 3158,
+          "shell": "/bin/bash",
+          "gecos": "Marc Koderer, FMED-2"
+        },
+        "svoboda": {
+          "dir": "/home/svoboda",
+          "gid": 500,
+          "uid": 3160,
+          "shell": "/bin/bash",
+          "gecos": "Svoboda Jan, TMCZ"
+        },
+        "janecek": {
+          "dir": "/home/janecek",
+          "gid": 500,
+          "uid": 3162,
+          "shell": "/bin/bash",
+          "gecos": "Janecek Tomas, TMCZ"
+        },
+        "krishna": {
+          "dir": "/home/krishna",
+          "gid": 500,
+          "uid": 3164,
+          "shell": "/bin/bash",
+          "gecos": "Vamshi Krishna Mididuddi, Infosys"
+        },
+        "aseidel": {
+          "dir": "/home/aseidel",
+          "gid": 500,
+          "uid": 3166,
+          "shell": "/bin/bash",
+          "gecos": "Andree Seidel, SEVEN PRINCIPLES"
+        },
+        "heger": {
+          "dir": "/home/heger",
+          "gid": 500,
+          "uid": 3168,
+          "shell": "/bin/bash",
+          "gecos": "Ina Heger, PD82"
+        },
+        "postgres": {
+          "dir": "/var/lib/pgsql",
+          "gid": 26,
+          "uid": 26,
+          "shell": "/bin/bash",
+          "gecos": "PostgreSQL Server"
+        }
+      },
+      "group": {
+        "root": {
+          "gid": 0,
+          "members": [
+
+          ]
+        },
+        "bin": {
+          "gid": 1,
+          "members": [
+
+          ]
+        },
+        "daemon": {
+          "gid": 2,
+          "members": [
+
+          ]
+        },
+        "sys": {
+          "gid": 3,
+          "members": [
+
+          ]
+        },
+        "adm": {
+          "gid": 4,
+          "members": [
+
+          ]
+        },
+        "tty": {
+          "gid": 5,
+          "members": [
+
+          ]
+        },
+        "disk": {
+          "gid": 6,
+          "members": [
+
+          ]
+        },
+        "lp": {
+          "gid": 7,
+          "members": [
+
+          ]
+        },
+        "mem": {
+          "gid": 8,
+          "members": [
+
+          ]
+        },
+        "kmem": {
+          "gid": 9,
+          "members": [
+
+          ]
+        },
+        "wheel": {
+          "gid": 10,
+          "members": [
+            "potenski",
+            "breuer",
+            "schaub",
+            "sgr"
+          ]
+        },
+        "cdrom": {
+          "gid": 11,
+          "members": [
+
+          ]
+        },
+        "mail": {
+          "gid": 12,
+          "members": [
+
+          ]
+        },
+        "man": {
+          "gid": 15,
+          "members": [
+
+          ]
+        },
+        "dialout": {
+          "gid": 18,
+          "members": [
+
+          ]
+        },
+        "floppy": {
+          "gid": 19,
+          "members": [
+
+          ]
+        },
+        "games": {
+          "gid": 20,
+          "members": [
+
+          ]
+        },
+        "tape": {
+          "gid": 30,
+          "members": [
+
+          ]
+        },
+        "video": {
+          "gid": 39,
+          "members": [
+
+          ]
+        },
+        "ftp": {
+          "gid": 50,
+          "members": [
+
+          ]
+        },
+        "lock": {
+          "gid": 54,
+          "members": [
+
+          ]
+        },
+        "audio": {
+          "gid": 63,
+          "members": [
+
+          ]
+        },
+        "nobody": {
+          "gid": 99,
+          "members": [
+
+          ]
+        },
+        "users": {
+          "gid": 100,
+          "members": [
+
+          ]
+        },
+        "utmp": {
+          "gid": 22,
+          "members": [
+
+          ]
+        },
+        "utempter": {
+          "gid": 35,
+          "members": [
+
+          ]
+        },
+        "avahi-autoipd": {
+          "gid": 170,
+          "members": [
+
+          ]
+        },
+        "systemd-journal": {
+          "gid": 190,
+          "members": [
+
+          ]
+        },
+        "dbus": {
+          "gid": 81,
+          "members": [
+
+          ]
+        },
+        "polkitd": {
+          "gid": 999,
+          "members": [
+
+          ]
+        },
+        "abrt": {
+          "gid": 173,
+          "members": [
+
+          ]
+        },
+        "dip": {
+          "gid": 40,
+          "members": [
+
+          ]
+        },
+        "usbmuxd": {
+          "gid": 113,
+          "members": [
+
+          ]
+        },
+        "colord": {
+          "gid": 998,
+          "members": [
+
+          ]
+        },
+        "geoclue": {
+          "gid": 997,
+          "members": [
+
+          ]
+        },
+        "ssh_keys": {
+          "gid": 996,
+          "members": [
+
+          ]
+        },
+        "rpc": {
+          "gid": 32,
+          "members": [
+
+          ]
+        },
+        "rpcuser": {
+          "gid": 29,
+          "members": [
+
+          ]
+        },
+        "nfsnobody": {
+          "gid": 65534,
+          "members": [
+
+          ]
+        },
+        "kvm": {
+          "gid": 36,
+          "members": [
+            "qemu"
+          ]
+        },
+        "qemu": {
+          "gid": 107,
+          "members": [
+
+          ]
+        },
+        "rtkit": {
+          "gid": 172,
+          "members": [
+
+          ]
+        },
+        "radvd": {
+          "gid": 75,
+          "members": [
+
+          ]
+        },
+        "tss": {
+          "gid": 59,
+          "members": [
+
+          ]
+        },
+        "unbound": {
+          "gid": 995,
+          "members": [
+
+          ]
+        },
+        "openvpn": {
+          "gid": 994,
+          "members": [
+
+          ]
+        },
+        "saslauth": {
+          "gid": 76,
+          "members": [
+
+          ]
+        },
+        "avahi": {
+          "gid": 70,
+          "members": [
+
+          ]
+        },
+        "brlapi": {
+          "gid": 993,
+          "members": [
+
+          ]
+        },
+        "pulse": {
+          "gid": 992,
+          "members": [
+
+          ]
+        },
+        "pulse-access": {
+          "gid": 991,
+          "members": [
+
+          ]
+        },
+        "gdm": {
+          "gid": 42,
+          "members": [
+
+          ]
+        },
+        "gnome-initial-setup": {
+          "gid": 990,
+          "members": [
+
+          ]
+        },
+        "nm-openconnect": {
+          "gid": 989,
+          "members": [
+
+          ]
+        },
+        "sshd": {
+          "gid": 74,
+          "members": [
+
+          ]
+        },
+        "slocate": {
+          "gid": 21,
+          "members": [
+
+          ]
+        },
+        "chrony": {
+          "gid": 988,
+          "members": [
+
+          ]
+        },
+        "tcpdump": {
+          "gid": 72,
+          "members": [
+
+          ]
+        },
+        "allusers": {
+          "gid": 500,
+          "members": [
+
+          ]
+        },
+        "vboxusers": {
+          "gid": 499,
+          "members": [
+            "reuhl"
+          ]
+        },
+        "stapusr": {
+          "gid": 156,
+          "members": [
+
+          ]
+        },
+        "stapsys": {
+          "gid": 157,
+          "members": [
+
+          ]
+        },
+        "stapdev": {
+          "gid": 158,
+          "members": [
+
+          ]
+        },
+        "postgres": {
+          "gid": 26,
+          "members": [
+
+          ]
+        }
+      }
+    },
+    "current_user": "reuhl",
+    "ohai_time": 1426075580.6028738,
+    "block_device": {
+      "sda": {
+        "size": "500118192",
+        "removable": "0",
+        "model": "SAMSUNG SSD PM85",
+        "rev": "EXT4",
+        "state": "running",
+        "timeout": "30",
+        "vendor": "ATA"
+      },
+      "dm-0": {
+        "size": "448731136",
+        "removable": "0"
+      }
+    },
+    "root_group": "root",
+    "recipes": [
+      "cheftutorial::template"
+    ],
+    "roles": [
+
+    ]
+  },
+  "run_list": [
+    "recipe[cheftutorial::template]"
+  ]
+}
