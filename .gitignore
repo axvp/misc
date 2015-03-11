@@ -33,3 +33,6 @@ local.properties
 # Chef-solo
 *.pid
 *.out
+
+# Chef
+nodes
