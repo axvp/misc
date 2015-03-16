@@ -16,7 +16,7 @@
 			<groupId>com.jeeatwork.maven.examples</groupId>
 			<artifactId>sample-model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>pom</type>
+			<type>xsd</type>
 		</dependency>
 	</dependencies>
 </project>

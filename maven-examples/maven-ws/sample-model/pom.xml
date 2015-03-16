@@ -27,7 +27,7 @@
 				<configuration>
 					<file>${project.artifactId}.xsd</file>
 					<groupId>${project.groupId}</groupId>
-					<artifactId>${project.artifactId}-xsd</artifactId>
+					<artifactId>${project.artifactId}</artifactId>
 					<version>${project.version}</version>
 					<type>xsd</type>
 					<packaging>xsd</packaging>
