@@ -58,13 +58,19 @@
 										<resource>sample-model2.xsd</resource>
 									</dependencyResource>
 								</schema>
+<!-- 								<schema>
+									<dependencyResource>
+										<groupId>com.jeeatwork.maven.examples</groupId>
+										<artifactId>sample-model</artifactId>
+										<version>${project.version}</version>
+										<type>xsd</type>
+										<resource>sample-model-${project.version}.xsd</resource>
+									</dependencyResource>
+								</schema> -->
 							</schemas>
 						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<packageName>com.jeeatwork.maven.examples.schema2</packageName>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
