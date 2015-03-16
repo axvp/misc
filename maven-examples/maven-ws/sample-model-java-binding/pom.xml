@@ -24,6 +24,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.12.4</version>
 				</plugin>
+				<plugin>
+					<groupId>org.jvnet.jaxb2.maven2</groupId>
+					<artifactId>maven-jaxb2-plugin</artifactId>
+					<version>0.11.0</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -34,6 +39,33 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemas>
+								<schema>
+									<dependencyResource>
+										<groupId>com.jeeatwork.maven.examples</groupId>
+										<artifactId>sample-model2</artifactId>
+										<version>${project.version}</version>
+										<resource>sample-model2.xsd</resource>
+									</dependencyResource>
+								</schema>
+							</schemas>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<packageName>com.jeeatwork.maven.examples.schema2</packageName>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -41,8 +73,13 @@
 		<dependency>
 			<groupId>com.jeeatwork.maven.examples</groupId>
 			<artifactId>sample-model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 			<type>xsd</type>
+		</dependency>
+		<dependency>
+			<groupId>com.jeeatwork.maven.examples</groupId>
+			<artifactId>sample-model2</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>
