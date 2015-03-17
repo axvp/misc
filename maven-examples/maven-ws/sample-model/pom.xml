@@ -9,7 +9,6 @@
 	<packaging>pom</packaging>
 	<name>sample-model</name>
 
-
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -27,7 +26,7 @@
 				<configuration>
 					<file>${project.artifactId}.xsd</file>
 					<groupId>${project.groupId}</groupId>
-					<artifactId>${project.artifactId}</artifactId>
+					<artifactId>${project.artifactId}-xsd</artifactId>
 					<version>${project.version}</version>
 					<type>xsd</type>
 					<packaging>xsd</packaging>
