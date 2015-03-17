@@ -53,14 +53,26 @@
 								<schema>
 									<dependencyResource>
 										<groupId>com.jeeatwork.maven.examples</groupId>
+										<artifactId>sample-model-xsd</artifactId>
+										<version>${project.version}</version>
+										<type>xsd</type>
+										<resource>sample-model-xsd.xsd</resource>
+									</dependencyResource>
+								</schema>
+								<schema>
+									<dependencyResource>
+										<groupId>com.jeeatwork.maven.examples</groupId>
 										<artifactId>sample-model2</artifactId>
 										<version>${project.version}</version>
 										<resource>sample-model2.xsd</resource>
 									</dependencyResource>
 								</schema>
 								<schema>
- 									<url>maven:com.jeeatwork.maven.examples:sample-model2!/sample-model3.xsd</url>
+									<url>maven:com.jeeatwork.maven.examples:sample-model2:!/sample-model3.xsd</url>
 								</schema>
+								<!-- TODO: Find out why this is not working -->
+								<!-- <schema> <url>maven:com.jeeatwork.maven.examples:sample-model-xsd:xsd::${project.version}!/sample-model-xsd.xsd</url> 
+									</schema> -->
 							</schemas>
 						</configuration>
 					</execution>
@@ -72,7 +84,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.jeeatwork.maven.examples</groupId>
-			<artifactId>sample-xsd3</artifactId>
+			<artifactId>sample-model-xsd</artifactId>
 			<version>${project.version}</version>
 			<type>xsd</type>
 		</dependency>
