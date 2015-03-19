@@ -1,5 +1,5 @@
-elasticsearhc-cookbook Cookbook
-===============================
+elasticsearch Cookbook
+======================
 TODO: Enter the cookbook description here.
 
 e.g.
@@ -11,14 +11,14 @@ TODO: List your cookbook requirements. Be sure to include any requirements this 
 
 e.g.
 #### packages
-- `toaster` - elasticsearhc-cookbook needs toaster to brown your bagel.
+- `toaster` - elasticsearch needs toaster to brown your bagel.
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
 e.g.
-#### elasticsearhc-cookbook::default
+#### elasticsearch::default
 <table>
   <tr>
     <th>Key</th>
@@ -27,7 +27,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['elasticsearhc-cookbook']['bacon']</tt></td>
+    <td><tt>['elasticsearch']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -36,17 +36,17 @@ e.g.
 
 Usage
 -----
-#### elasticsearhc-cookbook::default
+#### elasticsearch::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `elasticsearhc-cookbook` in your node's `run_list`:
+Just include `elasticsearch` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[elasticsearhc-cookbook]"
+    "recipe[elasticsearch]"
   ]
 }
 ```

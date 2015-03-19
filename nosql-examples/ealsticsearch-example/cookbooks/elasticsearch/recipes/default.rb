@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: elasticsearhc-cookbook
+# Cookbook Name:: elasticsearch
 # Recipe:: default
 #
 # Copyright 2015, YOUR_COMPANY_NAME
