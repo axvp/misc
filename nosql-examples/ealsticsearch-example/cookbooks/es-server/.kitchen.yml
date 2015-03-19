@@ -1,0 +1,40 @@
+---
+driver:
+  name: vagrant
+  vm_hostname: es-server.jeeatwork.com
+  customize:
+    memory: 2048
+    cpus: 4
+  network:
+  - ["forwarded_port", {guest: 9200, host: 9200}]
+
+driver_config:
+  http_proxy:  <%= ENV['http_proxy'] %>
+  https_proxy:  <%= ENV['https_proxy'] %>
+  no_proxy:  <%= ENV['no_proxy'] %>,es-server.jeeatwork.com
+
+provisioner:
+  name: chef_solo
+  solo_rb:
+    http_proxy:  <%= ENV['http_proxy'] %>
+    https_proxy:  <%= ENV['https_proxy'] %>
+    no_proxy:  <%= ENV['no_proxy'] %>,es-server.jeeatwork.com
+  client_rb:
+    http_proxy:  <%= ENV['http_proxy'] %>
+    https_proxy:  <%= ENV['https_proxy'] %>
+    no_proxy:  <%= ENV['no_proxy'] %>,es-server.jeeatwork.com
+
+platforms:
+- name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+    - recipe[es-server::default]
+    attributes:
+      es-server:
+        all_proxy:  <%= ENV['http_proxy'] %>
+        ftp_proxy:  <%= ENV['http_proxy'] %>
+        http_proxy:  <%= ENV['http_proxy'] %>
+        https_proxy:  <%= ENV['https_proxy'] %>
+        no_proxy:  <%= ENV['no_proxy'] %>,es-server,es-server.jeeatwork.com
