@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>cucumber-spring</name>
-	
+
 	<properties>
 		<spring.version>4.1.5.RELEASE</spring.version>
 	</properties>
@@ -48,6 +48,11 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.15</version>
 		</dependency>
 
 	</dependencies>

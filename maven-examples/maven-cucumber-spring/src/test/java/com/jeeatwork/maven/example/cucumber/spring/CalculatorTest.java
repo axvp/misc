@@ -13,8 +13,8 @@ import cucumber.api.junit.Cucumber;
  *
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "pretty", "html:target/cucumber" }, 
-	features = "classpath:calculator.feature", strict = true)
+@CucumberOptions(plugin = { "pretty", "html:target/cucumber"}, 
+	features = "classpath:calculator.feature", strict = true, monochrome = true)
 public class CalculatorTest {
 
 }
