@@ -62,11 +62,6 @@
 							<goal>start-server</goal>
 						</goals>
 						<configuration>
-							<systemProperties>
-								<webdriver.chrome.driver>/opt/google/chrome/chromedriver</webdriver.chrome.driver>
-							</systemProperties>
-							<debug>false</debug>
-							<background>true</background>
 							<port>${selenium.server.port}</port>
 						</configuration>
 					</execution>

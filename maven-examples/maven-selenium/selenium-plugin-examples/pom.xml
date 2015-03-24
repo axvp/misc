@@ -24,6 +24,13 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>selenium-maven-plugin</artifactId>
 					<version>2.3</version>
+					<configuration>
+						<systemProperties>
+							<webdriver.chrome.driver>/opt/google/chrome/chromedriver</webdriver.chrome.driver>
+						</systemProperties>
+						<debug>false</debug>
+						<background>true</background>
+					</configuration>
 					<dependencies>
 						<dependency>
 							<groupId>org.seleniumhq.selenium</groupId>
