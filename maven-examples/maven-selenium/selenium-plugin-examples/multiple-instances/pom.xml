@@ -19,17 +19,7 @@
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
-					<scanIntervalSeconds>60</scanIntervalSeconds>
-					<webApp>
-						<contextPath>/test</contextPath>
-						<tempDirectory>${project.build.directory}/work</tempDirectory>
-					</webApp>
-					<loginServices>
-						<loginService implementation="org.eclipse.jetty.security.HashLoginService">
-							<name>Test Realm</name>
-							<config>${basedir}/realm.properties</config>
-						</loginService>
-					</loginServices>
+					<jettyXml>jetty.xml</jettyXml>
 				</configuration>
 			</plugin>
 
