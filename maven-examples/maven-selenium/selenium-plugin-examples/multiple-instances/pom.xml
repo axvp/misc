@@ -19,37 +19,18 @@
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
-					<systemProperties>
-						<systemProperty>
-							<name>logback.configurationFile</name>
-							<value>/home/reuhl/git/misc/maven-examples/maven-selenium/selenium-plugin-examples/multiple-instances/src/main/resources/logback.xml</value>
-						</systemProperty>
-					</systemProperties>
-					<!-- <scanIntervalSeconds>1</scanIntervalSeconds> -->
+					<scanIntervalSeconds>60</scanIntervalSeconds>
 					<webApp>
 						<contextPath>/test</contextPath>
 						<tempDirectory>${project.build.directory}/work</tempDirectory>
-						<sessionHandler implementation="org.eclipse.jetty.server.session.SessionHandler">
-							<sessionManager
-								implementation="org.eclipse.jetty.server.session.HashSessionManager">
-								<storeDirectory>${basedir}/target/sessions</storeDirectory>
-							</sessionManager>
-						</sessionHandler>
 					</webApp>
 					<loginServices>
 						<loginService implementation="org.eclipse.jetty.security.HashLoginService">
 							<name>Test Realm</name>
-							<config>/home/reuhl/git/misc/maven-examples/maven-selenium/selenium-plugin-examples/multiple-instances/realm.properties</config>
+							<config>${basedir}/realm.properties</config>
 						</loginService>
 					</loginServices>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>ch.qos.logback</groupId>
-						<artifactId>logback-classic</artifactId>
-						<version>0.9.15</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 
 		</plugins>
