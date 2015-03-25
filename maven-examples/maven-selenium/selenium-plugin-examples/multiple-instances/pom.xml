@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>multiple-instances</artifactId>
+	<packaging>war</packaging>
+	<name>multiple-instances</name>
+
+	<parent>
+		<groupId>com.jeeatwork.ci.maven.examples.selenium.examples</groupId>
+		<artifactId>selenium-plugin-examples</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<build>
+		<finalName>MultipleInstancesWebApp</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<systemProperties>
+						<systemProperty>
+							<name>logback.configurationFile</name>
+							<value>/home/reuhl/git/misc/maven-examples/maven-selenium/selenium-plugin-examples/multiple-instances/src/main/resources/logback.xml</value>
+						</systemProperty>
+					</systemProperties>
+					<!-- <scanIntervalSeconds>1</scanIntervalSeconds> -->
+					<webApp>
+						<contextPath>/test</contextPath>
+						<tempDirectory>${project.build.directory}/work</tempDirectory>
+						<sessionHandler implementation="org.eclipse.jetty.server.session.SessionHandler">
+							<sessionManager
+								implementation="org.eclipse.jetty.server.session.HashSessionManager">
+								<storeDirectory>${basedir}/target/sessions</storeDirectory>
+							</sessionManager>
+						</sessionHandler>
+					</webApp>
+					<loginServices>
+						<loginService implementation="org.eclipse.jetty.security.HashLoginService">
+							<name>Test Realm</name>
+							<config>/home/reuhl/git/misc/maven-examples/maven-selenium/selenium-plugin-examples/multiple-instances/realm.properties</config>
+						</loginService>
+					</loginServices>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>ch.qos.logback</groupId>
+						<artifactId>logback-classic</artifactId>
+						<version>0.9.15</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+
+</project>
