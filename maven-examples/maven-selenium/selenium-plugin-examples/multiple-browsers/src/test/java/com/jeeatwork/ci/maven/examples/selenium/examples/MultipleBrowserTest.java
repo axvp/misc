@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
  *
  *         A first test using selenium for a multipe browsers.
  */
-public class SingleBrowserTest {
+public class MultipleBrowserTest {
 
 	private static WebDriver FIREFOX;
 	private static WebDriver CHROME;
@@ -27,7 +27,7 @@ public class SingleBrowserTest {
 	/**
 	 * 
 	 */
-	public SingleBrowserTest() {
+	public MultipleBrowserTest() {
 		super();
 	}
 
