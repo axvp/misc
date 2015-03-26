@@ -35,6 +35,7 @@
 							<skip>false</skip>
 							<systemPropertyVariables>
 								<selenium.server.port>${selenium.server.port}</selenium.server.port>
+								<jetty.port>${jetty.port}</jetty.port>
 							</systemPropertyVariables>
 						</configuration>
 					</execution>
@@ -60,7 +61,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+ 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
