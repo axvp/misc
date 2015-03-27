@@ -60,10 +60,7 @@
 				<plugin>
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
-					<!-- When using this version the daemon mode is no longer working -->
-					<version>9.2.3.v20140905</version>
-
-					<!-- <version>9.2.2.v20140723</version> -->
+					<version>9.3.0.M2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
