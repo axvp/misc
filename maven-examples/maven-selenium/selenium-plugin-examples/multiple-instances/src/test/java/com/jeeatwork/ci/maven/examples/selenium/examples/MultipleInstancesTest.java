@@ -46,15 +46,19 @@ public class MultipleInstancesTest {
 			WEBAPP_PORT = Integer.parseInt(webAppPort);
 		}
 		
+		String browser = System.getProperty("browser");
+		if (browser == null || browser.isEmpty()) {
+			browser = "htmlunit";
+		}
+		
 		String seleniumServerPort = System.getProperty("selenium.server.port");
-		startFirefox(seleniumServerPort);
-		startFirefox(seleniumServerPort);
+		startBrowsser(seleniumServerPort, browser);
+		startBrowsser(seleniumServerPort, browser);
 	}
 
-	private static void startFirefox(String seleniumServerPort)
+	private static void startBrowsser(String seleniumServerPort, String browser)
 			throws MalformedURLException {
-		DesiredCapabilities dr = null;
-		dr = DesiredCapabilities.firefox();
+		DesiredCapabilities dr = new DesiredCapabilities(browser, null, null);
 		INSTANCES.add(new RemoteWebDriver(new URL("http://localhost:"
 				+ seleniumServerPort + "/wd/hub"), dr));
 	}
