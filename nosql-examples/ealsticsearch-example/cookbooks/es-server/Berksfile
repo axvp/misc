@@ -5,5 +5,4 @@ metadata
 cookbook 'magic_shell', '~> 1.0.0'
 cookbook 'yum', '~> 3.5.3'
 cookbook 'java', '~> 1.31.0'
-cookbook 'elasticsearch', '= 0.2.7'
 cookbook 'mysql', '= 5.6.1'

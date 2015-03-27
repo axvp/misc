@@ -8,5 +8,4 @@ version          '0.1.0'
 
 depends          'magic_shell'
 depends          'java'
-depends		 'elasticsearch'
 depends		 'mysql'
