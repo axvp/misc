@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -102,12 +103,12 @@ public class MultipleInstancesTest {
 		webDriver.findElement(By.id("submit")).click();
 	}
 	
-//	@AfterClass
-//	public static void stopSelenium() {
-//		for (WebDriver webDriver : INSTANCES) {
-//			webDriver.close();
-//		}
-//	}
+	@AfterClass
+	public static void stopSelenium() {
+		for (WebDriver webDriver : INSTANCES) {
+			webDriver.close();
+		}
+	}
 	
 	private WebElement waitForElement(By condition, WebDriver webDriver) throws Exception {
         long end = System.currentTimeMillis() + 10000;

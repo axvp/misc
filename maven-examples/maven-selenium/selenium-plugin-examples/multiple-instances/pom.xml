@@ -71,7 +71,7 @@
 					<httpConnector>
 						<port>${jetty.port}</port>
 					</httpConnector>
-					<jettyXml>jetty.xml</jettyXml>
+					<jettyXml>${basedir}/jetty.xml</jettyXml>
 				</configuration>
 				<executions>
 					<execution>
@@ -81,8 +81,8 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-							<scanIntervalSeconds>0</scanIntervalSeconds>
 							<daemon>true</daemon>
+							<scanIntervalSeconds>5</scanIntervalSeconds>
 						</configuration>
 					</execution>
 					<execution>
