@@ -1,0 +1,5 @@
+<% if !ENV['http_proxy'].nil? && !ENV['http_proxy'].empty? %>
+exec "$JAVA" $JAVA_OPTS $ES_JAVA_OPTS -Xmx64m -Xms16m -Dhttp.proxyHost=<%= /(?:[0-9]{1,3}\.){3}[0-9]{1,3}/.match(ENV['http_proxy']).to_s %> -Dhttp.proxyPort=<%= /[0-9]{4}/.match(ENV['http_proxy']).to_s %> -Delasticsearch -Des.path.home="$ES_HOME" $properties -cp "$ES_HOME/lib/*" org.elasticsearch.plugins.PluginManager $args
+<% else %>
+exec "$JAVA" $JAVA_OPTS $ES_JAVA_OPTS -Xmx64m -Xms16m -Delasticsearch -Des.path.home="$ES_HOME" $properties -cp "$ES_HOME/lib/*" org.elasticsearch.plugins.PluginManager $args
+<% end %>
