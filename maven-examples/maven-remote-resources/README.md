@@ -1,0 +1,2 @@
+## Maven remote resources plugin
+This project contains a example for using the [Maven remote resource plugi](http://maven.apache.org/plugins/maven-remote-resources-plugin/ "Maven remote resource plugin") to share resources from another maven project
