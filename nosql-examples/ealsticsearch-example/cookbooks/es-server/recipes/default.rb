@@ -32,3 +32,20 @@ end
 execute "Installing sample database" do
    command "mysql -u root -p" + node['mysql']['server_root_password'] + " < " + "#{Chef::Config[:file_cache_path]}/mysqlsampledatabase.sql"
 end
+
+# Install river for sample db.
+template "#{Chef::Config[:file_cache_path]}/createriver.sh" do
+  source "createriver.sh.erb"
+  mode "0755"
+  action :create
+end
+
+# Wait for elastic serach to be ready
+execute "wait foe elasticsearch" do
+  command "sleep 20"
+  action :run
+end
+
+bash "create river" do
+  code "#{Chef::Config[:file_cache_path]}/createriver.sh"
+end

@@ -1,0 +1,9 @@
+/usr/bin/curl -XPUT 'localhost:9200/_river/my_jdbc_river/_meta' -d '{
+    "type" : "jdbc",
+    "jdbc" : {
+        "url" : "jdbc:mysql://localhost:3308/classicmodels",
+        "user" : "root",
+        "password" : "<%= node['mysql']['server_root_password'] %>",
+        "sql" : "select products.productName as \"name\", products.buyPrice as \"buyPrice\", products.productDescription as \"description\" from products"
+    }
+}'
