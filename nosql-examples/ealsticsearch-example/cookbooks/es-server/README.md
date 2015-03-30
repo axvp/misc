@@ -28,4 +28,8 @@ To delete all jdbc river indexes use the following command:
 
 See also [here](https://github.com/jprante/elasticsearch-river-jdbc)
 
-In order to use this example with a more advanced gui you may use
+In order to use this example with a more advanced gui you may use [Calaca](https://github.com/romansanchez/Calaca) for a start.
+
+To see the detailed configuration of the elastic search server goto:
+
+	http://localhost:9200/_nodes?settings=true&pretty=true
