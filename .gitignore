@@ -37,4 +37,8 @@ local.properties
 # Chef
 nodes
 
+# Maven
 target/
+
+# Test ng reports
+test-output

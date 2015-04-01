@@ -35,6 +35,6 @@ public class CalculatorSteps2 {
 	@Then("^the result should be -(\\d+)$")
 	public void the_result_should_be(int arg1) throws Throwable {
 		assertEquals(this.result, arg1);
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 	}
 }

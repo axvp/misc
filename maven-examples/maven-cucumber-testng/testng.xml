@@ -1,10 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Pi calculator unit test suite" parallel="classes" thread-count="2">
-    <test name="PiCalculatorTest">
-        <classes>
-            <class name="com.jeeatwork.maven.example.cucumber.testng.CalculatorTest"/>
-            <class name="com.jeeatwork.maven.example.cucumber.testng2.CalculatorTest2"/>
-        </classes>
-    </test>
+<suite name="Pi calculator unit test suite" parallel="classes"
+	thread-count="3">
+	<test name="PiCalculatorTest">
+		<classes>
+			<class name="com.jeeatwork.maven.example.cucumber.testng.CalculatorTest" />
+			<class name="com.jeeatwork.maven.example.cucumber.testng2.CalculatorTest2" />
+			<class name="com.jeeatwork.maven.example.cucumber.testng3.CalculatorTest3" />
+		</classes>
+	</test>
 </suite>
