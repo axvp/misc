@@ -1,11 +1,12 @@
 /**
  * 
  */
-package com.jeeatwork.maven.example.cucumber.spring;
-
-import com.jeeatwork.maven.example.cucumber.spring.components.DefaultCalculatorImpl;
+package com.jeeatwork.maven.example.cucumber.testng2;
 
 import static org.testng.AssertJUnit.assertEquals;
+
+import com.jeeatwork.maven.example.cucumber.testng.Calculator;
+import com.jeeatwork.maven.example.cucumber.testng.components.DefaultCalculatorImpl;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,7 +16,7 @@ import cucumber.api.java.en.When;
  * @author tom1299
  *
  */
-public class CalculatorSteps {
+public class CalculatorSteps2 {
 	
 	private long result;
 	
@@ -26,14 +27,14 @@ public class CalculatorSteps {
 		this.calculator = new DefaultCalculatorImpl();
 	}
 
-	@When("^I add (\\d+) and (\\d+)$")
+	@When("^I add -(\\d+) and -(\\d+)$")
 	public void i_add_and(int arg1, int arg2) throws Throwable {
 		this.result = this.calculator.add(arg1, arg2);
 	}
 
-	@Then("^the result should be (\\d+)$")
+	@Then("^the result should be -(\\d+)$")
 	public void the_result_should_be(int arg1) throws Throwable {
 		assertEquals(this.result, arg1);
+		Thread.sleep(1000);
 	}
-
 }

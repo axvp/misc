@@ -1,4 +1,4 @@
-package com.jeeatwork.maven.example.cucumber.spring;
+package com.jeeatwork.maven.example.cucumber.testng;
 
 public interface Calculator {
 	

@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.jeeatwork.maven.example.cucumber.spring.components;
+package com.jeeatwork.maven.example.cucumber.testng.components;
 
-import com.jeeatwork.maven.example.cucumber.spring.Calculator;
+import com.jeeatwork.maven.example.cucumber.testng.Calculator;
 
 /**
  * @author tom1299
