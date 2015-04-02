@@ -7,12 +7,12 @@
       http://maven.apache.org/xsd/assembly-1.1.2.xsd">
 	<id>static-content</id>
 	<formats>
-		<format>tar.gz</format>
+		<format>zip</format>
 	</formats>
 	<fileSets>
 		<fileSet>
 			<outputDirectory>/</outputDirectory>
-			<directory>content</directory>
+			<directory>content/images</directory>
 		</fileSet>
 	</fileSets>
 </assembly>

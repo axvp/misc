@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>static-content</artifactId>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<name>static-content</name>
 
 	<parent>
@@ -28,6 +28,8 @@
 								<descriptors>
 									<descriptor>${basedir}/src/assembly/static-content.xml</descriptor>
 								</descriptors>
+								<finalName>content</finalName>
+								<appendAssemblyId>false</appendAssemblyId>
 							</configuration>
 						</execution>
 					</executions>
