@@ -12,3 +12,11 @@ default['logstash-server']['http_proxy'] = nil
 default['logstash-server']['https_proxy'] = nil 
 default['logstash-server']['no_proxy'] = nil 
 
+# Version of elasticsearch to use
+default['elasticsearch']['version'] = '1.5.0'
+
+# Version of Kibana to usb
+default['logstash-server']['kibana_version'] = '4.0.2' 
+
+# TODO: Replace with namespace version
+default['logstash-version'] = '1.4.2'
