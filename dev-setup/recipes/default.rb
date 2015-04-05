@@ -8,3 +8,4 @@
 #
 include_recipe "java::default"
 include_recipe "java::default_java_symlink"
+include_recipe "maven::default"
