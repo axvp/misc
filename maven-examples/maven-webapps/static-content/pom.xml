@@ -28,7 +28,7 @@
 								<descriptors>
 									<descriptor>${basedir}/src/assembly/static-content.xml</descriptor>
 								</descriptors>
-								<finalName>content</finalName>
+								<finalName>images</finalName>
 								<appendAssemblyId>false</appendAssemblyId>
 							</configuration>
 						</execution>

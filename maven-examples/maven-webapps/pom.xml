@@ -15,6 +15,7 @@
 	<modules>
 		<module>webapp</module>
 		<module>static-content</module>
+		<module>remote-resources</module>
 	</modules>
 
 	<build>
@@ -35,6 +36,10 @@
 				<plugin>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.6</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-remote-resources-plugin</artifactId>
+					<version>1.5</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

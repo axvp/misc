@@ -31,6 +31,25 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-remote-resources-plugin</artifactId>
+				<configuration>
+					<resourceBundles>
+						<resourceBundle>com.jeeatwork.ci.maven.examples.webapp.examples:remote-resources:${project.version}</resourceBundle>
+					</resourceBundles>
+				</configuration>
+				<executions>
+					<execution>
+						<id>process-remote-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>process</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencies>
@@ -40,6 +59,11 @@
 			<version>${project.version}</version>
 			<type>zip</type>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jeeatwork.ci.maven.examples.webapp.examples</groupId>
+			<artifactId>remote-resources</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 
