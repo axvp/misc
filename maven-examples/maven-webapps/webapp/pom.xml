@@ -27,6 +27,11 @@
 								<type>zip</type>
 							</overlay>
 						</overlays>
+ 						<webResources>
+							<resource>
+								<directory>${project.build.directory}/remote-resources</directory>
+							</resource>
+						</webResources>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -38,11 +43,12 @@
 					<resourceBundles>
 						<resourceBundle>com.jeeatwork.ci.maven.examples.webapp.examples:remote-resources:${project.version}</resourceBundle>
 					</resourceBundles>
+					<outputDirectory>${project.build.directory}/remote-resources</outputDirectory>
 				</configuration>
 				<executions>
 					<execution>
 						<id>process-remote-resources</id>
-						<phase>validate</phase>
+						<phase>process-sources</phase>
 						<goals>
 							<goal>process</goal>
 						</goals>
@@ -64,6 +70,7 @@
 			<groupId>com.jeeatwork.ci.maven.examples.webapp.examples</groupId>
 			<artifactId>remote-resources</artifactId>
 			<version>${project.version}</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
