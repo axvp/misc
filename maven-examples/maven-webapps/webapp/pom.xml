@@ -27,7 +27,7 @@
 								<type>zip</type>
 							</overlay>
 						</overlays>
- 						<webResources>
+  						<webResources>
 							<resource>
 								<directory>${project.build.directory}/remote-resources</directory>
 							</resource>
@@ -48,7 +48,7 @@
 				<executions>
 					<execution>
 						<id>process-remote-resources</id>
-						<phase>process-sources</phase>
+						<phase>process-classes</phase>
 						<goals>
 							<goal>process</goal>
 						</goals>
@@ -64,12 +64,6 @@
 			<artifactId>static-content</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.jeeatwork.ci.maven.examples.webapp.examples</groupId>
-			<artifactId>remote-resources</artifactId>
-			<version>${project.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
