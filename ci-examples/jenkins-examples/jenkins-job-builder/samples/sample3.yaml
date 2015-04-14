@@ -1,0 +1,13 @@
+- job:
+    name: Job with git repo clone
+    defaults: global
+    description: 'This job clones a git repository'
+    scm:
+      - git:
+          url: https://github.com/tom1299/misc
+          branches:
+            - origin/master
+          shallow-clone: true
+    builders:
+      - shell: !include-raw scripts/helloworld.sh
+

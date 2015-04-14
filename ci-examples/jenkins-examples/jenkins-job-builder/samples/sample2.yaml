@@ -1,0 +1,8 @@
+- job:
+    defaults: global
+    name: Job with script include 
+    description: Contains an include of a script
+    project-type: freestyle 
+    builders:
+      - shell: !include-raw scripts/helloworld.sh
+
