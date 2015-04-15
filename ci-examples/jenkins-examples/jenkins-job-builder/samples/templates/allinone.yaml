@@ -1,0 +1,22 @@
+- defaults:
+    name: 'template_defaults'
+    scm:
+        - git:
+            url: 'https://github.com/tom1299/misc'
+
+- job-template:
+    defaults: 'template_defaults'
+    name: '{name}-allinone-build'
+    description: 'Description of the job named {name}-build'
+
+- project:
+    name: allinone_example1
+
+    jobs:
+      - '{name}-allinone-build'
+
+- project:
+    name: allinone_example2
+
+    jobs:
+      - '{name}-allinone-build'
