@@ -1,0 +1,17 @@
+- builder:
+    name: add
+    builders:
+     - shell: "echo Adding {number}"
+
+- job:
+    name: A job that uses marcors
+    project-type: freestyle
+    defaults: global
+    description: 'Contains marco definition and usage'
+    builders:
+      - add:
+          number: "one"
+      - add:
+          number: "two"
+      - add:
+          number: "three"
