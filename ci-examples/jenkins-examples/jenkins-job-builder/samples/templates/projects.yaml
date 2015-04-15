@@ -12,10 +12,10 @@
 
 - project:
    name: example3
-   pyver:
+   branches:
     - 'Master branch':
        branch_name: master
     - 'Feature A branch':
        branch_name: feature_a
    jobs:
-    - '{name}-{pyver}'
+    - '{name}-{branches}'

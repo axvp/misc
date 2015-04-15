@@ -3,7 +3,7 @@
     description: 'Description of the job named {name}-build'
 
 - job-template:
-    name: '{name}-{pyver}'
+    name: '{name}-{branches}'
     description: 'Builds branch {branch_name}'
     builders:
       - shell: 'git co {branch_name}'
