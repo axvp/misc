@@ -1,0 +1,9 @@
+- project:
+    name: Template test job 1
+    jobs:
+      - {name}-job
+
+- project:
+    name: Template test job 2
+    jobs:
+      - {name}-job

@@ -1,0 +1,3 @@
+- job-template:
+    name: '{name}-job'
+    description: 'Description of the job named "{name}"'
