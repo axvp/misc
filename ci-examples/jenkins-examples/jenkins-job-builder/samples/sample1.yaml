@@ -1,7 +1,6 @@
 - job:
     name: Very basic freestyle job
     project-type: freestyle
-    defaults: global
     description: 'Just contais a very basic jenkins job that echos "Hello world"'
     builders:
       - shell: echo 'Hello world!'
