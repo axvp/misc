@@ -1,9 +1,21 @@
 - project:
-    name: Template test job 1
+    name: example1
+
     jobs:
-      - {name}-job
+      - '{name}-build'
 
 - project:
-    name: Template test job 2
+    name: example2
+
     jobs:
-      - {name}-job
+      - '{name}-build'
+
+- project:
+   name: example3
+   pyver:
+    - 26:
+       branch_name: old_branch
+    - 27:
+       branch_name: new_branch
+   jobs:
+    - '{name}-{pyver}'

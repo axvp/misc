@@ -1,0 +1,9 @@
+- job-template:
+    name: '{name}-build'
+    description: 'Description of the job named {name}-build'
+
+- job-template:
+    name: '{name}-{pyver}'
+    description: 'Builds branch {branch_name}'
+    builders:
+      - shell: 'git co {branch_name}'
