@@ -1,0 +1,1 @@
+println jenkins.model.Jenkins.instance.getRootUrl()
