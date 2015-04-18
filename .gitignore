@@ -42,3 +42,6 @@ target/
 
 # Test ng reports
 test-output
+
+# Kitchen
+.kitchen/
