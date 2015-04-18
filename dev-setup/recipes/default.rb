@@ -50,3 +50,11 @@ end
 # http://stackoverflow.com/questions/16879469/using-a-chef-recipe-to-append-multiple-lines-to-a-config-file
 # http://stackoverflow.com/questions/14848110/how-i-can-change-a-file-with-chef/19167106#19167106
 #
+ruby_block "set vim as default editor in /etc/bashrc" do
+  block do
+    fe = Chef::Util::FileEdit.new("/etc/bashrc")
+    fe.insert_line_if_no_match(/alias vi='vim'/,
+                               "alias vi='vim'")
+    fe.write_file
+  end
+end
