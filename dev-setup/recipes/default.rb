@@ -32,9 +32,9 @@ end
 #
 # Create link to eclipse. See https://docs.chef.io/resource_link.html#examples
 #
-link "/opt/eclipse/eclipse" do
-  to "/usr/bin/eclipse"
-  not_if { ::File.exists?("/opt/eclipse/eclipse") }
+link "/usr/bin/eclipse" do
+  to "/opt/eclipse/eclipse"
+  not_if { ::File.exists?("/usr/bin/eclipse") }
 end
 
 #
@@ -57,4 +57,34 @@ ruby_block "set vim as default editor in /etc/bashrc" do
                                "alias vi='vim'")
     fe.write_file
   end
+end
+
+#
+# Gradle installation
+#
+gradle_archive = "#{Chef::Config[:file_cache_path]}/gradle.zip"
+gradle_install_dir = "/opt"
+
+remote_file gradle_archive do
+  source node['dev-setup']['gradle-download-url']
+end
+
+#
+# TODO: Assign name of gradle folder to variable.
+# See: http://stackoverflow.com/questions/17082791/chef-how-to-get-the-output-of-a-command-to-a-ruby-variable
+#      https://github.com/chef/mixlib-shellout
+#
+bash "install gradle" do
+  code <<-EOH
+    unzip #{gradle_archive} -d #{gradle_install_dir}
+    EOH
+  not_if { ::File.exists?("#{gradle_install_dir}/gradle-2.3") }
+end
+
+#
+# Create link to gradle.
+#
+link "/usr/bin/gradle" do
+  to "#{gradle_install_dir}/gradle-2.3/bin/gradle"
+  not_if { ::File.exists?("/usr/bin/gradle") }
 end
