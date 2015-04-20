@@ -1,68 +1,21 @@
 logstash-server Cookbook
 ========================
-TODO: Enter the cookbook description here.
+A simple cookbook for demonstrating the [ELK stack](https://www.elastic.co/webinars/elk-stack-devops-environment).
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+The image is configured using port forwarding.
 
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+To access elastic serch use the url
 
-e.g.
-#### packages
-- `toaster` - logstash-server needs toaster to brown your bagel.
+[http://localhost:9200/](http://localhost:9200/) 
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
+To see a list of indexes in elasticserch use the url
 
-e.g.
-#### logstash-server::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['logstash-server']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+[http://localhost:9200/_aliases?pretty=1](http://localhost:9200/_aliases?pretty=1) 
 
-Usage
------
-#### logstash-server::default
-TODO: Write usage instructions for each cookbook.
+If no logstash index is displayed this might indicated that the logstash process has not been started correctly. See [recipes/configure-logstash.rb](recipes/configure-logstash.rb) 
 
-e.g.
-Just include `logstash-server` in your node's `run_list`:
+To access kibana use the url
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[logstash-server]"
-  ]
-}
-```
+[http://localhost:5601/](http://localhost:5601/) 
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
+If everything is running correctly the logstash index should be displayed.
