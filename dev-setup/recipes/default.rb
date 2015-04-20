@@ -38,6 +38,11 @@ link "/usr/bin/eclipse" do
 end
 
 #
+# Install eclipse plugins
+# See: http://blog.vogella.com/2012/04/04/installing-eclipse-features-via-the-command-line-with-the-p2-director/
+#
+
+#
 # Install vim
 #
 package "vim" do
