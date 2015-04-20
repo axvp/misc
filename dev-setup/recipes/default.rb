@@ -45,6 +45,13 @@ package "vim" do
 end
 
 #
+# terminator installation
+#
+package "terminator" do
+  action :install
+end
+
+#
 # Set vim as default editor in /etc/bashrc
 # alias vi='vim'. See:
 # http://stackoverflow.com/questions/16879469/using-a-chef-recipe-to-append-multiple-lines-to-a-config-file
