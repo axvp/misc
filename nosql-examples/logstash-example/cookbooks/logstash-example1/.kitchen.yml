@@ -43,3 +43,4 @@ suites:
         no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com"
       tomcat:
         base_version: '7'
+        port: 8889
