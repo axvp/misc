@@ -14,18 +14,18 @@ driver:
 driver_config:
   http_proxy:  <%= ENV['http_proxy'] %>
   https_proxy:  <%= ENV['https_proxy'] %>
-  no_proxy:  <%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com
+  no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com"
 
 provisioner:
   name: chef_solo
   solo_rb:
     http_proxy:  <%= ENV['http_proxy'] %>
     https_proxy:  <%= ENV['https_proxy'] %>
-    no_proxy:  <%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com
+    no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com"
   client_rb:
     http_proxy:  <%= ENV['http_proxy'] %>
     https_proxy:  <%= ENV['https_proxy'] %>
-    no_proxy:  <%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com
+    no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1.jeeatwork.com"
 
 platforms:
 - name: centos-6.4
@@ -40,4 +40,7 @@ suites:
         ftp_proxy:  <%= ENV['http_proxy'] %>
         http_proxy:  <%= ENV['http_proxy'] %>
         https_proxy:  <%= ENV['https_proxy'] %>
-        no_proxy:  <%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com
+        no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com"
+      tomcat:
+        base_version: '7'
+        port: 8889
