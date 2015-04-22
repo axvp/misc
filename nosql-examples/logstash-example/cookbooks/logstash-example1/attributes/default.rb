@@ -20,3 +20,8 @@ default['logstash-example1']['kibana_version'] = '4.0.2'
 
 # TODO: Replace with namespace version
 default['logstash-version'] = '1.4.2'
+
+# Version of tomcat to use
+default['tomcat']['major_version'] = '7'
+default['tomcat']['exact_version'] = '7.0.61'
+default['tomcat']['install_folder'] = '/opt'
