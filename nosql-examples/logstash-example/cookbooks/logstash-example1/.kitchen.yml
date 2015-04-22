@@ -32,6 +32,7 @@ platforms:
 
 suites:
   - name: default
+    data_bag_path: "data_bags"
     run_list:
     - recipe[logstash-example1::default]
     attributes:
@@ -41,6 +42,3 @@ suites:
         http_proxy:  <%= ENV['http_proxy'] %>
         https_proxy:  <%= ENV['https_proxy'] %>
         no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com"
-      tomcat:
-        base_version: '7'
-        port: 8889
