@@ -32,7 +32,6 @@ platforms:
 
 suites:
   - name: default
-    data_bag_path: "data_bags"
     run_list:
     - recipe[logstash-example1::default]
     attributes:
