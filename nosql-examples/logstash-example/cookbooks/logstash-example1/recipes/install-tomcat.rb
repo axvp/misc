@@ -13,5 +13,5 @@ end
 # Untar to target folder
 #
 execute "Unzipping #{tomcatTarName}" do
-  command "tar -C {#node['tomcat']['install_folder']} -xzf {#tomcatTarName}"
+  command "tar -C #{node['tomcat']['install_folder']} -xzf #{tomcatTarName}"
 end
