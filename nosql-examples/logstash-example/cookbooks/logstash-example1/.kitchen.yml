@@ -33,6 +33,7 @@ platforms:
 suites:
   - name: default
     run_list:
+    - recipe[selinux::disabled]
     - recipe[logstash-example1::default]
     attributes:
       logstash-example1:
