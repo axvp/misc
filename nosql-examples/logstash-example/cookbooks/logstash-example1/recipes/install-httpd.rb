@@ -18,3 +18,15 @@ end
 rpm_package modjk_rpm do
   action :install
 end
+
+#
+# Configure mod_jk
+#
+tomcat_mod_jk_conf = "#{node['tomcat']['install_folder']}/apache-tomcat-#{node['tomcat']['exact_version']}/conf/jk/mod_jk.conf-auto"
+httpd_config 'mod_jk' do
+  source 'mod_jk.erb'
+  variables ({
+    :tomcat_mod_jk_conf => tomcat_mod_jk_conf
+  })
+  action :create
+end
