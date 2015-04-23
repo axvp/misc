@@ -37,5 +37,5 @@ default['tomcat']['write_access_log'] = false
 default['tomcat']['access_log_pattern'] = '%h %l %u %t &quot;%r&quot; %s %b'
 
 # Attribues for tomcat roles
-default['tomcat']['roles'] = ['tomcat', 'test']
-default['tomcat']['users'] = [{'id' => 'admin', 'password' => 'admin', 'roles' => ['tomcat', 'test']}]
+default['tomcat']['roles'] = ['manager-gui', 'admin-gui']
+default['tomcat']['users'] = [{'id' => 'admin', 'password' => 'admin', 'roles' => ['manager-gui', 'admin-gui']}]
