@@ -6,6 +6,13 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+yum_repository 'jpackage' do
+  description "jpackage"
+  baseurl "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/repodata"
+  gpgkey 'http://jpackage.org/jpackage.asc'
+  action :create
+end
+
 include_recipe "logstash-example1::set-proxy"
 include_recipe "java::default"
 include_recipe "java::default_java_symlink"
