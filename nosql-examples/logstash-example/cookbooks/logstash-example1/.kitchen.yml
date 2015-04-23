@@ -41,3 +41,6 @@ suites:
         http_proxy:  <%= ENV['http_proxy'] %>
         https_proxy:  <%= ENV['https_proxy'] %>
         no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com"
+      tomcat:
+        write_access_log:  'true'
+        access_log_pattern:  '%t %I %m %s %a %u %S %r'
