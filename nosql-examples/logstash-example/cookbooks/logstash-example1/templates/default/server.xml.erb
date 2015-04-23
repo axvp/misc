@@ -68,10 +68,12 @@
 
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
-
+      
+      <% if @write_access_log -%>
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
               prefix="localhost_access_log." suffix=".txt"
-              pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+              pattern="<%= @acess_log_pattern %>" />
+      <% end -%>
 
       </Host>
     </Engine>

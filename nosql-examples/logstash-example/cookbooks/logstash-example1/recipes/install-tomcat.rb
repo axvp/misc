@@ -29,7 +29,9 @@ source 'server.xml.erb'
     :ssl_port => node['tomcat']['ssl_port'],
     :ajp_port => node['tomcat']['ajp_port'],
     :shutdown_port => node['tomcat']['shutdown_port'],
-    :max_threads => node['tomcat']['max_threads']
+    :max_threads => node['tomcat']['max_threads'],
+    :write_access_log => node['tomcat']['write_access_log'],
+    :access_log_pattern => node['tomcat']['access_log_pattern']
   })
   owner 'root'
   group 'root'
