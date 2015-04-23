@@ -37,3 +37,17 @@ source 'server.xml.erb'
   group 'root'
   mode '0644'
 end
+
+#
+# https://github.com/opscode-cookbooks/tomcat/blob/master/recipes/users.rb
+#
+template "#{tomcatTargetDir}/conf/tomcat-users.xml" do
+  source 'tomcat-users.xml.erb'
+  variables(
+    :users => node['tomcat']['users'],
+    :roles => node['tomcat']['roles']
+  )
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
