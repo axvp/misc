@@ -3,6 +3,11 @@ httpd_service node['httpd']['config_name'] do
   action [:create]
 end 
 
+httpd_config 'logging' do
+  source 'logging.cnf.erb'
+  action :create
+end
+
 #
 # Install mod jk
 #
