@@ -40,6 +40,11 @@ default['tomcat']['access_log_pattern'] = '%h %l %u %t &quot;%r&quot; %s %b'
 default['tomcat']['roles'] = ['manager-gui', 'admin-gui']
 default['tomcat']['users'] = [{'id' => 'admin', 'password' => 'admin', 'roles' => ['manager-gui', 'admin	-gui']}]
 
-# Mod jk download url.
+# http config name to create
+default['httpd']['config_name'] = 'default'
+
+# Mod jk file name
 default['mod_jk']['filename'] = "apache2-mod_jk-1.2.37-4.1.x86_64.rpm"
-default['mod_jk']['download_url'] = "ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/adesso/CentOS_CentOS-6/x86_64/#{node['mod_jk']['filename']}"
+
+# worker.properties location
+default['httpd']['worker_properties_location'] = "/etc/httpd-#{node['httpd']['config_name']}/conf.d/worker.properties"

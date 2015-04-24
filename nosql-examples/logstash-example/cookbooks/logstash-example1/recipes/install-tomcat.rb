@@ -51,3 +51,11 @@ template "#{tomcatTargetDir}/conf/tomcat-users.xml" do
   group 'root'
   mode '0644'
 end
+
+#
+# Start tomcat
+#
+execute "Starting tomcat" do
+  command "#{tomcatTargetDir}/bin/catalina.sh start"
+  not_if "/sbin/fuser #{node['tomcat']['port']}/tcp"
+end

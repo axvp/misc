@@ -1,4 +1,5 @@
-httpd_service 'default' do
+httpd_service node['httpd']['config_name'] do
+  listen_ports ['8888']
   action [:create]
 end 
 
@@ -9,24 +10,37 @@ end
 #
 modjk_rpm = "#{Chef::Config[:file_cache_path]}/" + node['mod_jk']['filename']
 
-execute "Downloading #{node['mod_jk']['filename']}" do
-   cwd Chef::Config[:file_cache_path]
-   command "wget #{node['mod_jk']['download_url']}"
-   not_if { ::File.exists?("#{modjk_rpm}")}
+cookbook_file node['mod_jk']['filename'] do
+  path modjk_rpm
+  action :create_if_missing
 end
 
 rpm_package modjk_rpm do
   action :install
 end
 
+template node['httpd']['worker_properties_location'] do
+  source 'worker.properties.erb'
+    variables ({
+      :ajp_port => node['tomcat']['ajp_port']
+    })
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
+
 #
 # Configure mod_jk
 #
-tomcat_mod_jk_conf = "#{node['tomcat']['install_folder']}/apache-tomcat-#{node['tomcat']['exact_version']}/conf/jk/mod_jk.conf-auto"
 httpd_config 'mod_jk' do
   source 'mod_jk.erb'
   variables ({
-    :tomcat_mod_jk_conf => tomcat_mod_jk_conf
+    :worker_properties_location => node['httpd']['worker_properties_location'],
+    :config_name => node['httpd']['config_name']
   })
   action :create
 end
+
+httpd_service node['httpd']['config_name'] do
+  action [:start]
+end 

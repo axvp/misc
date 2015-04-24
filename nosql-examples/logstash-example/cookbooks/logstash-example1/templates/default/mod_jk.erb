@@ -1,1 +1,13 @@
-Include <%= @tomcat_mod_jk_conf %>
+LoadModule    jk_module  modules/mod_jk.so
+
+JkWorkersFile <%= @worker_properties_location %>
+
+JkShmFile     /var/log/httpd-<%= @config_name %>/mod_jk.shm
+
+JkLogFile     /var/log/httpd-<%= @config_name %>/mod_jk.log
+
+JkLogLevel    debug
+
+JkLogStampFormat "[%a %b %d %H:%M:%S.%Q %Y]"
+
+JkMount  /* worker1

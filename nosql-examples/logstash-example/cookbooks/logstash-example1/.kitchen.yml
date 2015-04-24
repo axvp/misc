@@ -8,7 +8,7 @@ driver:
   network:
   - ["forwarded_port", {guest: 9200, host: 9200}]
   - ["forwarded_port", {guest: 5601, host: 5601}]
-  - ["forwarded_port", {guest: 80, host: 8888}]
+  - ["forwarded_port", {guest: 8888, host: 8888}]
   - ["forwarded_port", {guest: 8889, host: 8889}]
 
 driver_config:
