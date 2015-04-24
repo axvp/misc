@@ -38,7 +38,7 @@ default['tomcat']['access_log_pattern'] = '%h %l %u %t &quot;%r&quot; %s %b'
 
 # Attribues for tomcat roles
 default['tomcat']['roles'] = ['manager-gui', 'admin-gui']
-default['tomcat']['users'] = [{'id' => 'admin', 'password' => 'admin', 'roles' => ['manager-gui', 'admin	-gui']}]
+default['tomcat']['users'] = [{'id' => 'admin', 'password' => 'admin', 'roles' => ['manager-gui', 'admin-gui']}]
 
 # http config name to create
 default['httpd']['config_name'] = 'default'
