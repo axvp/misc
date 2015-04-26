@@ -100,3 +100,33 @@ link "/usr/bin/gradle" do
   to "#{gradle_install_dir}/gradle-2.3/bin/gradle"
   not_if { ::File.exists?("/usr/bin/gradle") }
 end
+
+#
+# Groovy installation
+#
+groovy_archive = "#{Chef::Config[:file_cache_path]}/groovy.zip"
+groovy_install_dir = "/opt"
+
+remote_file groovy_archive do
+  source node['dev-setup']['groovy-download-url']
+end
+
+#
+# TODO: Assign name of groovy folder to variable.
+# See: http://stackoverflow.com/questions/17082791/chef-how-to-get-the-output-of-a-command-to-a-ruby-variable
+#      https://github.com/chef/mixlib-shellout
+#
+bash "install groovy" do
+  code <<-EOH
+    unzip #{groovy_archive} -d #{groovy_install_dir}
+    EOH
+  not_if { ::File.exists?("#{groovy_install_dir}/groovy-2.4.3") }
+end
+
+#
+# Create link to groovy.
+#
+link "/usr/bin/groovy" do
+  to "#{gradle_install_dir}/gradle-2.4.3/bin/groovy"
+  not_if { ::File.exists?("/usr/bin/groovy") }
+end
