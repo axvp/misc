@@ -14,3 +14,6 @@ default['dev-setup']['eclipse-download-url']= 'https://www.eclipse.org/downloads
 
 # Details of the gralde version to install
 default['dev-setup']['gradle-download-url']= 'https://services.gradle.org/distributions/gradle-2.3-all.zip'
+
+# Details of the groovy version to install
+default['dev-setup']['groovy-download-url']= 'http://dl.bintray.com/groovy/maven/groovy-sdk-2.4.3.zip'
