@@ -10,10 +10,10 @@ template "/opt/logstash-" + node['logstash-version'] + "/logging.conf" do
   action :create
 end
 
-# bash 'start logstash' do
-#   user 'root'
-#   cwd "/opt/logstash-" + node['logstash-version']
-#   code <<-EOH
-#   nohup bin/logstash -f logging.conf &
-#   EOH
-# end
+bash 'start logstash' do
+  user 'root'
+  cwd "/opt/logstash-" + node['logstash-version']
+  code <<-EOH
+  nohup bin/logstash -f logging.conf &
+  EOH
+end
