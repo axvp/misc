@@ -34,7 +34,7 @@ default['tomcat']['max_threads'] = nil
 
 # Parameters for tomcat access log
 default['tomcat']['write_access_log'] = false
-default['tomcat']['access_log_pattern'] = '%h %l %u %t &quot;%r&quot; %s %b'
+default['tomcat']['access_log_pattern'] = "%h %l '%u' %t &quot;%r&quot; %s %b"
 
 # Attribues for tomcat roles
 default['tomcat']['roles'] = ['manager-gui', 'admin-gui']
