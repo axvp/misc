@@ -71,7 +71,7 @@
       
       <% if @write_access_log -%>
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-              prefix="localhost_access_log." suffix=".txt"
+              prefix="tomcata_log." suffix=".txt"
               pattern="<%= @access_log_pattern %>" />
       <% end -%>
 
