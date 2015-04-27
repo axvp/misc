@@ -53,5 +53,8 @@ filter {
 
 output {
   stdout { codec => rubydebug }
+  elasticsearch {
+    host => "127.0.0.1"
+  }
 }
 
