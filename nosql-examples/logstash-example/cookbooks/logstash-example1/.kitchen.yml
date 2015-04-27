@@ -44,4 +44,4 @@ suites:
         no_proxy:  "<%= ENV['no_proxy'] %>,logstash-example1,logstash-example1.jeeatwork.com"
       tomcat:
         write_access_log:  'true'
-        access_log_pattern:  '%t %I %m %s %a %u %S %r'
+        access_log_pattern:  "%h %l '%u' %S %t %r %s %b"
