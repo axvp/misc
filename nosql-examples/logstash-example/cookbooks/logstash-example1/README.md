@@ -13,4 +13,6 @@ For more information about the setup see [this post](http://www.jeeatwork.com/?p
 #### Urls
 The following list contains the urls and what they should display.
 
-- 
+- [http://localhost:9200](http://localhost:9200): Elasticsearch start page
+- [http://localhost:9200/_nodes?settings=true&pretty=true](http://localhost:9200/_nodes?settings=true&pretty=true): Elasticserach configuration
+- [http://localhost:9200/_aliases?pretty=1](http://localhost:9200/_aliases?pretty=1). Displays all index aliases. Should display logstash index once it has been created.
