@@ -16,3 +16,6 @@ The following list contains the urls and what they should display.
 - [http://localhost:9200](http://localhost:9200): Elasticsearch start page
 - [http://localhost:9200/_nodes?settings=true&pretty=true](http://localhost:9200/_nodes?settings=true&pretty=true): Elasticserach configuration
 - [http://localhost:9200/_aliases?pretty=1](http://localhost:9200/_aliases?pretty=1). Displays all index aliases. Should display logstash index once it has been created.
+- [http://localhost:8888/](http://localhost:8888/). Tomcat through httpd
+- [http://localhost:8889/](http://localhost:8889/). Tomcat
+- [http://localhost:5601/](http://localhost:5601/). Kibana start page
