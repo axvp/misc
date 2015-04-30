@@ -8,22 +8,28 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>spring-user</name>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.jeeatwork.maven.examples</groupId>
+				<artifactId>spring-libs</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
-  <dependencyManagement>
-    <dependencies>
-<dependency>
-	<groupId>com.jeeatwork.maven.examples</groupId>
-	<artifactId>spring-libs</artifactId>
-	<version>${project.version}</version>
-	<type>pom</type>
-	<scope>impoer</scope>
-</dependency>
-
-    </dependencies>
-  </dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>com.jeeatwork.maven.examples</groupId>
+			<artifactId>spring-libs</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>
 
