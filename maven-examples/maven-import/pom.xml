@@ -31,7 +31,6 @@
 				<artifactId>spring-web</artifactId>
 				<version>${spring.framework.version}</version>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 </project>
