@@ -4,19 +4,23 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jeeatwork.maven.examples</groupId>
-	<artifactId>spring-libs</artifactId>
+	<artifactId>spring-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>spring-libs</name>
+	<packaging>jar</packaging>
+	<name>spring-user</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
- <properties><spring.boot.version>1.2.3.RELEASE</spring.boot.version></properties>
 
   <dependencyManagement>
     <dependencies>
 <dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter</artifactId>
-	<version>${spring.boot.version}</version>
+	<groupId>com.jeeatwork.maven.examples</groupId>
+	<artifactId>spring-libs</artifactId>
+	<version>${project.version}</version>
+	<type>pom</type>
+	<scope>impoer</scope>
 </dependency>
 
     </dependencies>
