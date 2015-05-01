@@ -1,0 +1,2 @@
+# Two-phase-commit
+This is a simple example for a two phase commit. It contains s transaction that covers two statefeul session beans. If the transaction fails it is expected that the state of the beans is rolled back as well.

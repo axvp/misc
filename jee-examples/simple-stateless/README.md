@@ -1,0 +1,2 @@
+# Simple-stateless
+This example contains a simple stateless session bean along with a unit test. The example is derived from the great examples for tomee on [github](https://github.com/apache/tomee/tree/master/examples/simple-stateless).
