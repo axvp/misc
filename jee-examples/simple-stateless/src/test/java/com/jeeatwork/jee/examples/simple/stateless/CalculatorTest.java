@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jeeatwor.jee.examples.simple.stateless;
+package com.jeeatwork.jee.examples.simple.stateless;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jeeatwor.jee.examples.simple.stateless.CalculatorBean;
+import com.jeeatwork.jee.examples.simple.stateless.CalculatorBean;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.NamingException;
