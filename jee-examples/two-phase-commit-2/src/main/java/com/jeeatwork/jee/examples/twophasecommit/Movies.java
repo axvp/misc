@@ -15,7 +15,7 @@
  *  limitations under the License.
  */
 //START SNIPPET: code
-package org.superbiz.injection;
+package com.jeeatwork.jee.examples.twophasecommit;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;

@@ -14,12 +14,16 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.superbiz.injection;
+package com.jeeatwork.jee.examples.twophasecommit;
 
 import junit.framework.TestCase;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
+
+import com.jeeatwork.jee.examples.twophasecommit.Movie;
+import com.jeeatwork.jee.examples.twophasecommit.Movies;
+
 import java.util.List;
 import java.util.Properties;
 
