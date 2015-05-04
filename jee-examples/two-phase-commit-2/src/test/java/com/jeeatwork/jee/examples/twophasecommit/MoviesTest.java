@@ -39,7 +39,7 @@ public class MoviesTest extends TestCase {
 
         Context context = EJBContainer.createEJBContainer(p).getContext();
 
-        Movies movies = (Movies) context.lookup("java:global/injection-of-datasource/Movies");
+        Movies movies = (Movies) context.lookup("java:global/two-phase-commit-2/Movies");
 
         movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
         movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
