@@ -1,6 +1,7 @@
 package com.jeeatwork.jee.examples.twophasecommit;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,33 @@ public class TwoPhaseCommitMoviesTest {
 		
 		List<Movie> movs = moviesFacade.getMovies(DB.MOVIES1);
 		assertEquals(1, movs.size());
+		
+		moviesFacade.deleteMovie(movies.get(0), DB.MOVIES1, false);
+		
+		movs = moviesFacade.getMovies(DB.MOVIES1);
+		assertEquals(0, movs.size());
+	}
+	
+	@Test
+	public void test2() throws Exception {
+		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) TEST_CONTEXT
+				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesFacade");
+		
+		List<Movie> movies = new ArrayList<Movie>();
+		movies.add(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
+		
+		boolean excpetionThrown = false;
+		try {
+			moviesFacade.addMovie(movies, DB.MOVIES1, true);
+		}
+		catch (Exception e) {
+			excpetionThrown = true;
+		}
+		
+		assertTrue(excpetionThrown);
+		
+		List<Movie> movs = moviesFacade.getMovies(DB.MOVIES1);
+		assertEquals(0, movs.size());
 	}
 
 }

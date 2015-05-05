@@ -49,7 +49,7 @@ public class TwoPhaseCommitMoviesFacade {
 		}
 		
 		if (throwException) {
-			throw new Exception();
+			throw new RuntimeException();
 		}
 	}
 	
