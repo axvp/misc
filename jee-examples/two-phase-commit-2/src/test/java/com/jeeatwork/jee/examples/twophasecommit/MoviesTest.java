@@ -16,20 +16,20 @@
  */
 package com.jeeatwork.jee.examples.twophasecommit;
 
-import junit.framework.TestCase;
-
-import javax.ejb.embeddable.EJBContainer;
-import javax.naming.Context;
-
-import com.jeeatwork.jee.examples.twophasecommit.Movie;
-import com.jeeatwork.jee.examples.twophasecommit.Movies;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 import java.util.Properties;
 
-//START SNIPPET: code
-public class MoviesTest extends TestCase {
+import javax.ejb.embeddable.EJBContainer;
+import javax.naming.Context;
 
+import org.junit.Test;
+
+//START SNIPPET: code
+public class MoviesTest {
+
+	@Test
     public void test() throws Exception {
 
         Properties p = new Properties();
@@ -54,5 +54,5 @@ public class MoviesTest extends TestCase {
 
         assertEquals("Movies.getMovies()", 0, movies.getMovies().size());
     }
-}
+}	
 //END SNIPPET: code
