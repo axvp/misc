@@ -1,5 +1,9 @@
 package com.jeeatwork.jee.examples.twophasecommit;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -7,6 +11,8 @@ import javax.naming.Context;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.jeeatwork.jee.examples.twophasecommit.TwoPhaseCommitMoviesFacade.DB;
 
 public class TwoPhaseCommitMoviesTest {
 
@@ -32,9 +38,16 @@ public class TwoPhaseCommitMoviesTest {
 
 	@Test
 	public void test1() throws Exception {
-
 		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) TEST_CONTEXT
 				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesFacade");
+		
+		List<Movie> movies = new ArrayList<Movie>();
+		movies.add(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
+		
+		moviesFacade.addMovie(movies, DB.MOVIES1, false);
+		
+		List<Movie> movs = moviesFacade.getMovies(DB.MOVIES1);
+		assertEquals(1, movs.size());
 	}
 
 }

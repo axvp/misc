@@ -19,6 +19,11 @@ import javax.sql.DataSource;
 @Stateless
 public class TwoPhaseCommitMoviesFacade {
 	
+	public static enum DB {
+		MOVIES1,
+		MOVIES2
+	}
+	
     @EJB
     private TwoPhaseCommitMovies twoPhaseCommitMovies;
     
@@ -37,14 +42,42 @@ public class TwoPhaseCommitMoviesFacade {
 	}
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
-	public void insertIntoFirstDB(List<Movie> movies, boolean throwException) throws Exception {
+	public void addMovie(List<Movie> movies, DB db, boolean throwException) throws Exception {
+		DataSource dataSource = this.getDataSource(db);
 		for (Movie movie : movies) {
-			this.twoPhaseCommitMovies.addMovie(movie, movieDatabase);
+			this.twoPhaseCommitMovies.addMovie(movie, dataSource);
 		}
 		
 		if (throwException) {
 			throw new Exception();
 		}
 	}
-
+	
+	private DataSource getDataSource(DB db) throws Exception {
+		if (db.equals(DB.MOVIES1)) {
+			return movieDatabase;
+		}
+		else if (db.equals(DB.MOVIES2)) {
+			return movieDatabase2;
+		}
+		else {
+			throw new Exception("No datasource found for db " + db);
+		}
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void deleteMovie(Movie movie, DB db, boolean throwException) throws Exception {
+		DataSource dataSource = this.getDataSource(db);
+		this.twoPhaseCommitMovies.deleteMovie(movie, dataSource);
+		
+		if (throwException) {
+			throw new Exception();
+		}
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public List<Movie> getMovies(DB db) throws Exception {
+		DataSource dataSource = this.getDataSource(db);
+		return this.twoPhaseCommitMovies.getMovies(dataSource);
+	}
 }
