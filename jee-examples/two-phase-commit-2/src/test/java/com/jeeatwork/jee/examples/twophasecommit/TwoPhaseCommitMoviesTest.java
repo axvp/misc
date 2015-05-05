@@ -77,5 +77,4 @@ public class TwoPhaseCommitMoviesTest {
 		List<Movie> movs = moviesFacade.getMovies(DB.MOVIES1);
 		assertEquals(0, movs.size());
 	}
-
 }
