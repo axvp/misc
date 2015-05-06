@@ -10,17 +10,20 @@ import java.util.Properties;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import com.jeeatwork.jee.examples.twophasecommit.TwoPhaseCommitMoviesFacade.DB;
 
 public class TwoPhaseCommitMoviesTest {
 
-	private static Context TEST_CONTEXT;
+	private Context context;
+	
+	private EJBContainer ejbContainer;
 
-	@BeforeClass
-	public static void createDBs() throws Exception {
+	@Before
+	public void initDBs() throws Exception {
 		Properties p = new Properties();
 		p.put("movieDatabase", "new://Resource?type=DataSource");
 		p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
@@ -30,16 +33,24 @@ public class TwoPhaseCommitMoviesTest {
 		p.put("movieDatabase2.JdbcDriver", "org.hsqldb.jdbcDriver");
 		p.put("movieDatabase2.JdbcUrl", "jdbc:hsqldb:mem:moviedb2");
 
-		TEST_CONTEXT = EJBContainer.createEJBContainer(p).getContext();
+		this.ejbContainer = EJBContainer.createEJBContainer(p);
+		this.context = this.ejbContainer.getContext();
 		
-		TwoPhaseCommitMoviesDBCreator moviesDBCreator = (TwoPhaseCommitMoviesDBCreator) TEST_CONTEXT
+		TwoPhaseCommitMoviesDBCreator moviesDBCreator = (TwoPhaseCommitMoviesDBCreator) context
 				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesDBCreator");
 		moviesDBCreator.createDatabases();
+	}
+	
+	@After
+	public void dropDBS() throws Exception {
+		TwoPhaseCommitMoviesDBCreator moviesDBCreator = (TwoPhaseCommitMoviesDBCreator) context
+				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesDBCreator");
+		moviesDBCreator.dropDatabases();
 	}
 
 	@Test
 	public void test1() throws Exception {
-		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) TEST_CONTEXT
+		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) context
 				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesFacade");
 		
 		List<Movie> movies = new ArrayList<Movie>();
@@ -58,7 +69,7 @@ public class TwoPhaseCommitMoviesTest {
 	
 	@Test
 	public void test2() throws Exception {
-		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) TEST_CONTEXT
+		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) context
 				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesFacade");
 		
 		List<Movie> movies = new ArrayList<Movie>();
@@ -80,9 +91,25 @@ public class TwoPhaseCommitMoviesTest {
 	
 	@Test
 	public void test3() throws Exception {
-		TwoPhaseCommitMoviesTestEJB testEJB = (TwoPhaseCommitMoviesTestEJB) TEST_CONTEXT
+		TwoPhaseCommitMoviesTestEJB testEJB = (TwoPhaseCommitMoviesTestEJB) context
 				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesTestEJB");
 		
 		testEJB.testTwoPhaseCommit1();
+	}
+	
+	@Test
+	public void test4() throws Exception {
+		TwoPhaseCommitMoviesTestEJB testEJB = (TwoPhaseCommitMoviesTestEJB) context
+				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesTestEJB");
+		
+		boolean exception = false;
+		try {
+			testEJB.testTwoPhaseCommit2();
+		}
+		catch (Exception e) {
+			exception = true;
+		}
+		
+		assertTrue(exception);
 	}
 }

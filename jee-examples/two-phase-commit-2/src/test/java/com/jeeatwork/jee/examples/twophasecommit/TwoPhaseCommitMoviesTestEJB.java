@@ -48,6 +48,24 @@ public class TwoPhaseCommitMoviesTestEJB {
 		
 		assertEquals(1, movies.size());
 	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void testTwoPhaseCommit2() throws Exception {
+		
+		Movie movie = new Movie("Quentin Tarantino", "Reservoir Dogs", 1992);
+		twoPhaseCommitMovies.addMovie(movie, movieDatabase, false);
+		
+		List<Movie> movies = twoPhaseCommitMovies.getMovies(movieDatabase);
+		
+		assertEquals(1, movies.size());
+		
+		movie = new Movie("Quentin Tarantino", "Reservoir Dogs", 1992);
+		twoPhaseCommitMovies2.addMovie(movie, movieDatabase2, true);
+		
+		movies = twoPhaseCommitMovies2.getMovies(movieDatabase2);
+		
+		assertEquals(1, movies.size());
+	}
 
 }
 	

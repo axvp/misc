@@ -44,6 +44,10 @@ public class TwoPhaseCommitMovies {
 		} finally {
 			conn.close();
 		}
+		
+		if (throwException) {
+			throw new RuntimeException();
+		}
 	}
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
@@ -59,6 +63,11 @@ public class TwoPhaseCommitMovies {
 		} finally {
 			conn.close();
 		}
+
+		if (throwException) {
+			throw new RuntimeException();
+		}
+
 	}
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)

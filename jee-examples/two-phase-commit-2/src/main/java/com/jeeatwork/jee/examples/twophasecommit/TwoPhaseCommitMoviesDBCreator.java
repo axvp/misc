@@ -40,6 +40,15 @@ public class TwoPhaseCommitMoviesDBCreator {
         connection = movieDatabase2.getConnection();
         createDatabase(connection);
 	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void dropDatabases() throws Exception {
+        Connection connection = movieDatabase.getConnection();
+        dropDatabase(connection);
+        connection = movieDatabase2.getConnection();
+        dropDatabase(connection);
+	}
+
 
 	private void createDatabase(Connection connection) throws SQLException {
 		try {
@@ -50,5 +59,16 @@ public class TwoPhaseCommitMoviesDBCreator {
             connection.close();
         }
 	}
+	
+	private void dropDatabase(Connection connection) throws SQLException {
+		try {
+            PreparedStatement stmt = connection.prepareStatement("DROP TABLE movie");
+            stmt.execute();
+        }
+        finally {
+            connection.close();
+        }
+	}
+
 
 }
