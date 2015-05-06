@@ -10,6 +10,7 @@ import javax.ejb.TransactionAttributeType;
 import javax.sql.DataSource;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 @Stateless	
 public class TwoPhaseCommitMoviesTestEJB {
@@ -62,9 +63,7 @@ public class TwoPhaseCommitMoviesTestEJB {
 		movie = new Movie("Quentin Tarantino", "Reservoir Dogs", 1992);
 		twoPhaseCommitMovies2.addMovie(movie, movieDatabase2, true);
 		
-		movies = twoPhaseCommitMovies2.getMovies(movieDatabase2);
-		
-		assertEquals(1, movies.size());
+		fail("Excpetion has not been thrown");
 	}
 
 }

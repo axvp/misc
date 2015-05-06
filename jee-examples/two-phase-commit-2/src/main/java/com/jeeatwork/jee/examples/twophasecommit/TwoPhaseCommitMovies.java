@@ -46,7 +46,7 @@ public class TwoPhaseCommitMovies {
 		}
 		
 		if (throwException) {
-			throw new RuntimeException();
+			throw new TwoPhaseCommitRuntimeException();
 		}
 	}
 
@@ -65,7 +65,7 @@ public class TwoPhaseCommitMovies {
 		}
 
 		if (throwException) {
-			throw new RuntimeException();
+			throw new TwoPhaseCommitRuntimeException();
 		}
 
 	}

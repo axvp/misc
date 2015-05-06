@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import javax.ejb.EJBException;
+import javax.ejb.EJBTransactionRequiredException;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 
@@ -79,7 +81,7 @@ public class TwoPhaseCommitMoviesTest {
 		try {
 			moviesFacade.addMovie(movies, DB.MOVIES1, true);
 		}
-		catch (Exception e) {
+		catch (EJBException e) {
 			excpetionThrown = true;
 		}
 		
@@ -106,10 +108,16 @@ public class TwoPhaseCommitMoviesTest {
 		try {
 			testEJB.testTwoPhaseCommit2();
 		}
-		catch (Exception e) {
+		catch (EJBException e) {
 			exception = true;
 		}
 		
 		assertTrue(exception);
+		
+		TwoPhaseCommitMoviesFacade moviesFacade = (TwoPhaseCommitMoviesFacade) context
+				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesFacade");
+		
+		List<Movie> movies = moviesFacade.getMovies(DB.MOVIES1);
+		assertEquals(0, movies.size());
 	}
 }
