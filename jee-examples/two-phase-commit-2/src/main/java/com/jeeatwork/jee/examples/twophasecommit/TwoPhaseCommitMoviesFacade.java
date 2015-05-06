@@ -45,11 +45,7 @@ public class TwoPhaseCommitMoviesFacade {
 	public void addMovie(List<Movie> movies, DB db, boolean throwException) throws Exception {
 		DataSource dataSource = this.getDataSource(db);
 		for (Movie movie : movies) {
-			this.twoPhaseCommitMovies.addMovie(movie, dataSource);
-		}
-		
-		if (throwException) {
-			throw new RuntimeException();
+			this.twoPhaseCommitMovies.addMovie(movie, dataSource, throwException);
 		}
 	}
 	
@@ -68,11 +64,7 @@ public class TwoPhaseCommitMoviesFacade {
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void deleteMovie(Movie movie, DB db, boolean throwException) throws Exception {
 		DataSource dataSource = this.getDataSource(db);
-		this.twoPhaseCommitMovies.deleteMovie(movie, dataSource);
-		
-		if (throwException) {
-			throw new Exception();
-		}
+		this.twoPhaseCommitMovies.deleteMovie(movie, dataSource, throwException);
 	}
 	
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)

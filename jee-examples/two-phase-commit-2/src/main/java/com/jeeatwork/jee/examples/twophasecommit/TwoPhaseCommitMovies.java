@@ -32,7 +32,7 @@ import javax.sql.DataSource;
 public class TwoPhaseCommitMovies {
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
-	public void addMovie(Movie movie, DataSource movieDatabase) throws Exception {
+	public void addMovie(Movie movie, DataSource movieDatabase, boolean throwException) throws Exception {
 		Connection conn = movieDatabase.getConnection();
 		try {
 			PreparedStatement sql = conn
@@ -47,7 +47,7 @@ public class TwoPhaseCommitMovies {
 	}
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
-	public void deleteMovie(Movie movie, DataSource movieDatabase) throws Exception {
+	public void deleteMovie(Movie movie, DataSource movieDatabase, boolean throwException) throws Exception {
 		Connection conn = movieDatabase.getConnection();
 		try {
 			PreparedStatement sql = conn
