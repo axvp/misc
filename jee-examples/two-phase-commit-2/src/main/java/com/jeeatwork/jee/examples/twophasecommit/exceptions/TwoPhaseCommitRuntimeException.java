@@ -4,7 +4,7 @@
 package com.jeeatwork.jee.examples.twophasecommit.exceptions;
 
 /**
- * @author reuhl
+ * @author tom1299
  *
  */
 public class TwoPhaseCommitRuntimeException extends RuntimeException {

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.ejb.EJBException;
+import javax.ejb.EJBTransactionRolledbackException;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 
@@ -16,6 +17,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.jeeatwork.jee.examples.twophasecommit.TwoPhaseCommitMoviesFacade.DB;
+import com.jeeatwork.jee.examples.twophasecommit.exceptions.TwoPhaseCommitRuntimeException;
 
 public class TwoPhaseCommitMoviesTest {
 
@@ -108,6 +110,8 @@ public class TwoPhaseCommitMoviesTest {
 			testEJB.testTwoPhaseCommit2();
 		}
 		catch (EJBException e) {
+			assertTrue(e.getCause() instanceof EJBTransactionRolledbackException);
+			assertTrue(e.getCause().getCause() instanceof TwoPhaseCommitRuntimeException);
 			exception = true;
 		}
 		
