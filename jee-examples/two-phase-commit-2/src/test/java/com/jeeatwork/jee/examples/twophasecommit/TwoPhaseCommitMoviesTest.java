@@ -77,4 +77,12 @@ public class TwoPhaseCommitMoviesTest {
 		List<Movie> movs = moviesFacade.getMovies(DB.MOVIES1);
 		assertEquals(0, movs.size());
 	}
+	
+	@Test
+	public void test3() throws Exception {
+		TwoPhaseCommitMoviesTestEJB testEJB = (TwoPhaseCommitMoviesTestEJB) TEST_CONTEXT
+				.lookup("java:global/two-phase-commit-2/TwoPhaseCommitMoviesTestEJB");
+		
+		testEJB.testTwoPhaseCommit1();
+	}
 }

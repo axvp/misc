@@ -40,6 +40,13 @@ public class TwoPhaseCommitMoviesTestEJB {
 		List<Movie> movies = twoPhaseCommitMovies.getMovies(movieDatabase);
 		
 		assertEquals(1, movies.size());
+		
+		movie = new Movie("Quentin Tarantino", "Reservoir Dogs", 1992);
+		twoPhaseCommitMovies2.addMovie(movie, movieDatabase2);
+		
+		movies = twoPhaseCommitMovies2.getMovies(movieDatabase2);
+		
+		assertEquals(1, movies.size());
 	}
 
 }
