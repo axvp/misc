@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.ejb.EJBException;
-import javax.ejb.EJBTransactionRequiredException;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 
