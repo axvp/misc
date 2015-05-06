@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeeatwork.jee.examples.twophasecommit;
+package com.jeeatwork.jee.examples.twophasecommit.exceptions;
 
 /**
  * @author reuhl

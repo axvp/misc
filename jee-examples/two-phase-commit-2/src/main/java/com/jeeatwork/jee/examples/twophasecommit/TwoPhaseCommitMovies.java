@@ -28,6 +28,8 @@ import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.sql.DataSource;
 
+import com.jeeatwork.jee.examples.twophasecommit.exceptions.TwoPhaseCommitRuntimeException;
+
 @Stateless
 public class TwoPhaseCommitMovies {
 
