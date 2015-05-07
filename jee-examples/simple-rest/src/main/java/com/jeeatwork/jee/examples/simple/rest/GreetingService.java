@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.superbiz.rest;
+package com.jeeatwork.jee.examples.simple.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;

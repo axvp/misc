@@ -14,7 +14,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.superbiz.rest;
+package com.jeeatwork.jee.examples.simple.rest;
 
 import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.openejb.jee.WebApp;
@@ -24,6 +24,8 @@ import org.apache.openejb.testing.EnableServices;
 import org.apache.openejb.testing.Module;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.jeeatwork.jee.examples.simple.rest.GreetingService;
 
 import java.io.IOException;
 
