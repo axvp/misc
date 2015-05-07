@@ -40,7 +40,71 @@
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<!-- put your configurations here -->
+					<transformers>
+						<transformer
+							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+							<mainClass>com.jeeatwork.jee.examples.simple.rest.EmbeddedOpenEJB</mainClass>
+						</transformer>
+					</transformers>
+					<createDependencyReducedPom>false</createDependencyReducedPom>
+					<filters>
+						<filter>
+							<artifact>org.apache.openejb:javaee-api</artifact>
+							<excludes>
+								<exclude>org/apache/geronimo/specs/activation/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.geronimo.specs:geronimo-j2ee-connector_1.6_spec</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.openejb:openejb-core</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.openejb:openejb-client</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>stax:stax-api</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.geronimo.specs:geronimo-activation_1.1_spec</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>org.apache.geronimo.specs:geronimo-stax-api_1.0_spec</artifact>
+							<excludes>
+								<exclude>javax/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>commons-beanutils:commons-beanutils-core</artifact>
+							<excludes>
+								<exclude>org/apache/commons/collections/**</exclude>
+							</excludes>
+						</filter>
+						<filter>
+							<artifact>*:*</artifact>
+							<excludes>
+								<exclude>META-INF/*.SF</exclude>
+								<exclude>META-INF/*.DSA</exclude>
+								<exclude>META-INF/*.RSA</exclude>
+							</excludes>
+						</filter>
+					</filters>
 				</configuration>
 				<executions>
 					<execution>
@@ -66,9 +130,9 @@
 		<dependency>
 			<groupId>org.apache.openejb</groupId>
 			<artifactId>javaee-api</artifactId>
-			<version>7.0-SNAPSHOT</version>
-			<scope>provided</scope>
+			<version>6.0-6</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -82,6 +146,28 @@
 			<artifactId>openejb-cxf-rs</artifactId>
 			<version>4.7.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.abdera</groupId>
+			<artifactId>abdera-core</artifactId>
+			<version>1.1.3</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.6.0</version>
+			<scope>runtime</scope>
+		</dependency>
+
 
 	</dependencies>
 </project>

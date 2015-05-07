@@ -29,6 +29,10 @@ public class EmbeddedOpenEJB {
     	p.put("httpejbd", "cxf-rs");
     	p.put("openejb.embedded.remotable", "true");
     	
+    	p.put("log4j.category.OpenEJB.options", "debug");
+    	p.put("log4j.category.OpenEJB.startup", "debug");
+    	p.put("log4j.category.OpenEJB.startup.config", "debug");
+    	
         EJBContainer.createEJBContainer(p).getContext();
 	}
 
