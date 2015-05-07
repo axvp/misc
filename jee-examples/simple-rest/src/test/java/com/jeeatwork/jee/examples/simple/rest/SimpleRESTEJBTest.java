@@ -3,39 +3,34 @@ package com.jeeatwork.jee.examples.simple.rest;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import javax.ejb.embeddable.EJBContainer;
-import javax.naming.NamingException;
+import java.util.Properties;
 
-import org.junit.AfterClass;
-import org.junit.Before;
+import javax.ejb.embeddable.EJBContainer;
+import javax.naming.Context;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SimpleRESTEJBTest {
 
-    private static EJBContainer ejbContainer;
+    private static Context context;
 
-    private SimpleRESTEJB restEJB;
+    private static SimpleRESTEJB restEJB;
 
     @BeforeClass
-    public static void startTheContainer() {
-        ejbContainer = EJBContainer.createEJBContainer();
-    }
+    public static void startTheContainer() throws Exception {
+    	Properties p = new Properties();
 
-    @Before
-    public void lookupABean() throws NamingException {
-        Object object = ejbContainer.getContext().lookup("java:global/simple-rest/SimpleRESTEJB");
+    	p.put("httpejbd", "cxf-rs");
+    	p.put("openejb.embedded.remotable", "true");
+    	
+        context = EJBContainer.createEJBContainer(p).getContext();
+        
+        Object object = context.lookup("java:global/simple-rest/SimpleRESTEJB");
 
         assertTrue(object instanceof SimpleRESTEJB);
 
         restEJB = (SimpleRESTEJB) object;
-    }
-
-    @AfterClass
-    public static void stopTheContainer() {
-        if (ejbContainer != null) {
-            ejbContainer.close();
-        }
     }
 
     /**
@@ -43,7 +38,7 @@ public class SimpleRESTEJBTest {
      */
     @Test
     public void test() {
-    	String message = this.restEJB.ejb();
+    	String message = restEJB.ejb();
     	assertNotNull(message);
     }
 
