@@ -16,10 +16,12 @@
  */
 package com.jeeatwork.jee.examples.simple.rest;
 
+import javax.ejb.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
+@Singleton
 @Path("/greeting")
 public class GreetingService {
 
