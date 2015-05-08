@@ -37,81 +37,18 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<transformers>
-						<transformer
-							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-							<mainClass>com.jeeatwork.jee.examples.simple.rest.EmbeddedOpenEJB</mainClass>
-						</transformer>
-					</transformers>
-					<createDependencyReducedPom>false</createDependencyReducedPom>
-					<filters>
-						<filter>
-							<artifact>org.apache.openejb:javaee-api</artifact>
-							<excludes>
-								<exclude>org/apache/geronimo/specs/activation/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>org.apache.geronimo.specs:geronimo-j2ee-connector_1.6_spec</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>org.apache.openejb:openejb-core</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>org.apache.openejb:openejb-client</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>stax:stax-api</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>org.apache.geronimo.specs:geronimo-activation_1.1_spec</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>org.apache.geronimo.specs:geronimo-stax-api_1.0_spec</artifact>
-							<excludes>
-								<exclude>javax/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>commons-beanutils:commons-beanutils-core</artifact>
-							<excludes>
-								<exclude>org/apache/commons/collections/**</exclude>
-							</excludes>
-						</filter>
-						<filter>
-							<artifact>*:*</artifact>
-							<excludes>
-								<exclude>META-INF/*.SF</exclude>
-								<exclude>META-INF/*.DSA</exclude>
-								<exclude>META-INF/*.RSA</exclude>
-							</excludes>
-						</filter>
-					</filters>
-				</configuration>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
 				<executions>
 					<execution>
+						<id>copy-dependencies</id>
 						<phase>package</phase>
 						<goals>
-							<goal>shade</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/libs</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
