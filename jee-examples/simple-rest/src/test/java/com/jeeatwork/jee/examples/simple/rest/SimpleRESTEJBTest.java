@@ -1,5 +1,6 @@
 package com.jeeatwork.jee.examples.simple.rest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -8,6 +9,7 @@ import java.util.Properties;
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 
+import org.apache.cxf.jaxrs.client.WebClient;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -38,8 +40,13 @@ public class SimpleRESTEJBTest {
      */
     @Test
     public void test() {
-    	String message = restEJB.ejb();
-    	assertNotNull(message);
+    	String messageFromEJB = restEJB.ejb();
+    	assertNotNull(messageFromEJB);
+    	System.out.println(messageFromEJB);
+    	
+        String messageFromRESTService = WebClient.create("http://localhost:4204").path("/simple-rest/ejb/").get(String.class);
+        assertEquals(messageFromEJB, messageFromRESTService);
+        System.out.println(messageFromRESTService);
     }
 
 }
