@@ -45,3 +45,6 @@ test-output
 
 # Kitchen
 .kitchen/
+
+# Linux stuff
+nohup
