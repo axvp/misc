@@ -1,4 +1,4 @@
-#Miscellaneous <img src="http://upload.wikimedia.org/wikipedia/commons/5/54/Under_construction_icon-green.svg" alt="Under Construction" style="width: 50px;"/>
+#Miscellaneous
 
 This repository contains some technology diverse examples that did not really fit into one of the other top level repository. Or in short:
 
