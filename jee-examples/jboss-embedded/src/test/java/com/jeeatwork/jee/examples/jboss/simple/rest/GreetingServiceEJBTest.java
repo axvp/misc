@@ -20,14 +20,14 @@ import org.junit.runner.RunWith;
  *
  */
 @RunWith(Arquillian.class)
-public class GreetingServiceTest {
+public class GreetingServiceEJBTest {
 
 	@Inject
 	GreetingService greetingService;
 
 	@Deployment
 	public static JavaArchive createDeployment() {
-		return ShrinkWrap.create(JavaArchive.class)
+		return ShrinkWrap.create(JavaArchive.class, "GreetingServiceEJB.jar")
 				.addClass(GreetingService.class)
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	}
