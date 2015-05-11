@@ -1,12 +1,17 @@
 package com.jeeatwork.jee.examples.jboss.simple.rest;
 
-import javax.ejb.Singleton;
+import javax.ejb.Stateless;
+import javax.enterprise.context.Dependent;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
-@Singleton
+@Stateless
 @Path("/greeting")
+@Dependent
+@Produces(MediaType.APPLICATION_JSON)
 public class GreetingService {
 
     @GET
