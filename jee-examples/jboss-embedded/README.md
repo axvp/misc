@@ -8,6 +8,24 @@ See if test of rest service succeedes with:
 
 http://stackoverflow.com/questions/18360596/how-can-i-test-restful-methods-with-arquillian
 
+Problem is with:
+	@Deployment(testable = false)
+	
+=> If set to false the rest service can be tested:
+
+	@Test
+	public void create_account_validation_test(@ArquillianResource URL baseURI) {
+		System.out.println(baseURI);
+	}
+
+=> if set to true the ejb service can  be added:
+
+	@Test
+	public void testEJB() {
+		String message = this.greetingService.message();
+		assertEquals("Hi REST!", message);
+	} 
+
 
 REST-Service access url:
 http://localhost:8080/jboss-embedded-web/rest/greeting
