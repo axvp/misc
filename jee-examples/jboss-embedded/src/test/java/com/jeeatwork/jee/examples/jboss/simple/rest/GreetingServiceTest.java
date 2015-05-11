@@ -31,7 +31,7 @@ public class GreetingServiceTest {
 				.addClass(GreetingService.class)
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	}
-
+	
 	@Test
 	public void test() {
 		String message = this.greetingService.message();
