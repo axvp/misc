@@ -33,3 +33,8 @@ http://localhost:8080/jboss-embedded-web/rest/greeting
 
 Use ShrinkWrap to create whole application:
 http://www.hostettler.net/blog/2012/04/05/programmatically-build-web-archives-using-shrinkwrap/
+
+
+Useful web resources:
+http://arquillian.org/blog/2014/07/02/arquillian-extension-rest-1-0-0-Alpha3/
+https://github.com/arquillian/arquillian-extension-rest/tree/master/rest-client
