@@ -1,3 +1,9 @@
+# JBoss Maven Integration
+
+This folder contains an example on how to ues JBoss with Maven and JUnit to quickly and easily develop JEE applications.
+
+The goal was to provide an easy way to develop and test JEE components without the need to have a JBoss installed. 
+
 Examples derived from here:
 
 http://arquillian.org/guides/getting_started/
