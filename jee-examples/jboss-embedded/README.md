@@ -11,6 +11,10 @@ One of the mayor problems encountered was, that I could not test EJBs and REST-f
 
 	@Deployment(testable = false)
 
+After creating two unit tests one that sets the testable flag to false and one to true, I could test the rest service:
+
+
+
 ## Further tests
 Examine [ShrinkWrap](https://github.com/shrinkwrap) and how it can aid testing and deployment of JEE applications.
 
