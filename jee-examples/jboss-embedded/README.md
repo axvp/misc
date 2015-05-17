@@ -1,13 +1,15 @@
 # JBoss Maven Integration
 
-This folder contains an example on how to ues JBoss with Maven and JUnit to quickly and easily develop JEE applications.
+This folder contains an example on how to ues [JBoss/Wildfly](http://wildfly.org/) with [Maven](https://maven.apache.org/) and [JUnit](http://junit.org/) to quickly and easily develop JEE applications.
 
-The goal was to provide an easy way to develop and test JEE components without the need to have a JBoss installed. 
+The goal was to provide an easy way to develop and test JEE components without the need to have a JBoss installed. Primarily for components that provide REST-ful services.
 
-Examples derived from here:
+The basis for the examples is the [Getting started Guide](http://arquillian.org/guides/getting_started/) from [Arquillian](http://arquillian.org/).
 
-http://arquillian.org/guides/getting_started/
+## Pitfalls
 
+## Further tests
+Examine [ShrinkWrap](https://github.com/shrinkwrap) and how it can aid testing and deployment of JEE applications.
 
 TODO:
 See if test of rest service succeedes with:
