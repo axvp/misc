@@ -33,7 +33,7 @@ public class GreetingServiceRESTTest {
 	}
 
 	@Test
-	public void banCustomerRaw(@ArquillianResteasyResource WebTarget webTarget) {
+	public void testREST(@ArquillianResteasyResource WebTarget webTarget) {
 		String message = webTarget.path("/greeting").request().get().readEntity(String.class);
 		assertEquals("Hi REST!", message);
 	}

@@ -7,7 +7,9 @@ The goal was to provide an easy way to develop and test JEE components without t
 The basis for the examples is the [Getting started Guide](http://arquillian.org/guides/getting_started/) from [Arquillian](http://arquillian.org/).
 
 ## Pitfalls
-One of the mayor problems encountered was, that I could not test EJBs and REST-ful services in the same Unit test. After testing I found out that I had the wrong client mode as described [here](https://docs.jboss.org/author/display/ARQ/Test+run+modes?_sscc=t).
+One of the mayor problems encountered was, that I could not test EJBs and REST-ful services in the same Unit test. After testing I found out that I had the wrong client mode as described [here](https://docs.jboss.org/author/display/ARQ/Test+run+modes?_sscc=t):
+
+	@Deployment(testable = false)
 
 ## Further tests
 Examine [ShrinkWrap](https://github.com/shrinkwrap) and how it can aid testing and deployment of JEE applications.
