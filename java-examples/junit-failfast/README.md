@@ -8,3 +8,15 @@ Sample implementations can be found [here](./src/test/java/com/jeeatwork/java/ex
 In order to test the exampls simply run
 
 	mvn clean install
+
+Note that the project has been configured to succeed even if test cases fail. The output of a *successful* run should looke something like this:
+
+	Results :
+	
+	Tests in error: 
+	  FailFastListenerTest.testB:29->testMethod:39->throwExceptionOnSecondTest:45 Runtime
+	
+	Tests run: 2, Failures: 0, Errors: 1, Skipped: 0
+	
+	[ERROR] There are test failures.
+
