@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Hello World swgger example",
+        "description": "Famous hello world example for using swagger",
+        "version": "1.0.0"
+    },
+    "host": "swagger.jeeatwork.com",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/v1",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/helloworld": {
+            "get": {
+                "summary": "Gives you a warm greeting",
+                "description": "Returns a gretting given a name as an input\n",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The name to greet.",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "HelloWorld"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An warm welcome message",
+                        "schema": {
+                            "$ref": "#/definitions/WelcomeMessage"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "WelcomeMessage": {
+            "properties": {
+                "mesage": {
+                    "type": "string",
+                    "description": "The welcome message"
+                }
+            }
+        },
+        "Error": {
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
