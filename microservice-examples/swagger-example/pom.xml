@@ -9,8 +9,6 @@
 	<name>swagger-helloworld</name>
 	<url>http://maven.apache.org</url>
 
-	<build>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
