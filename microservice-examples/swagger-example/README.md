@@ -9,4 +9,4 @@ In order to generate java code from a swagger json the [swagger-codegen](https:/
 
 ### Command for generating Java code:
 
-	java -jar ../../../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar -l java
+	java -jar ../../../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i ./helloWorld.json -l java
