@@ -8,5 +8,7 @@ The [swagger maven plugin](https://github.com/kongchen/swagger-maven-plugin) can
 In order to generate java code from a swagger json the [swagger-codegen](https://github.com/swagger-api/swagger-codegen.git) can be used.
 
 ### Command for generating Java code:
+	java -jar ../../../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i ./helloWorld.json -l java -o ./java
 
-	java -jar ../../../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i ./helloWorld.json -l java
+### Command for generating Spring-MVC code:
+	java -jar ../../../swagger-codegen/modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i ./helloWorld.json -l java -o ./spring-mvc
