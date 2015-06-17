@@ -17,7 +17,7 @@ import com.jeeatwork.microservices.spring.boot.swagger.SampleApplication;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SampleApplication.class)
 @WebIntegrationTest({ "server.port=9999", "management.port=0" })
-public class SampledApplicationTest {
+public class SampleApplicationTest {
 
 	private RestTemplate restTemplate = new TestRestTemplate();
 
