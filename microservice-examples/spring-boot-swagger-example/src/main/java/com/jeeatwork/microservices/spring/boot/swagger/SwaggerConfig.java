@@ -12,23 +12,28 @@ import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 @Configuration
 @EnableSwagger
 public class SwaggerConfig {
-	
+
 	private SpringSwaggerConfig springSwaggerConfig;
 
 	@Autowired
 	public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
 		this.springSwaggerConfig = springSwaggerConfig;
 	}
+
 	@Bean
 	public SwaggerSpringMvcPlugin customImplementation() {
-		return new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(
+		SwaggerSpringMvcPlugin swaggerSpringMvcPlugin= new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(
 				apiInfo()).includePatterns("/customer/.*");
+		return swaggerSpringMvcPlugin;
+		
 	}
-	
+
 	private ApiInfo apiInfo() {
-		ApiInfo apiInfo = new ApiInfo("Customer API", "API for Customer",
-				"Customer API terms of service", "tom1299@jeeatwork.com",
-				"Customer API Licence Type", "Customer API License URL");
-		return apiInfo;
+		return new ApiInfo(
+				"Swagger Spring MVC Sample Api",
+				"Sample application demonstrating how to use swagger-springmvc",
+				"http://en.wikipedia.org/wiki/Terms_of_service",
+				"tom1299@jjeatwork.com", "Apache 2.0",
+				"http://www.apache.org/licenses/LICENSE-2.0.html");
 	}
 }
