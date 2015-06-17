@@ -12,12 +12,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.jeeatwork.microservices.spring.boot.swagger.HelloworldApplication;
+import com.jeeatwork.microservices.spring.boot.swagger.SampleApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = HelloworldApplication.class)
+@SpringApplicationConfiguration(classes = SampleApplication.class)
 @WebIntegrationTest({ "server.port=9999", "management.port=0" })
-public class HelloworldApplicationTest {
+public class SampledApplicationTest {
 
 	private RestTemplate restTemplate = new TestRestTemplate();
 
