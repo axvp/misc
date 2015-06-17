@@ -1,6 +1,7 @@
 package com.jeeatwork.microservices.spring.boot.swagger;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -37,7 +38,9 @@ public class SampleApplication {
     	customer.setId(id);
     	customer.setFirstName("Landon");
     	customer.setLastName("Melvin");
-    	customer.setDateOfBirth(new Date(969660000000l));
+    	Calendar dateOfBirth = new GregorianCalendar();
+    	dateOfBirth.setTimeInMillis(969660000000l);
+    	customer.setDateOfBirth(dateOfBirth);
     	
     	Address shippingAddress = new Address();
     	shippingAddress.setStreet("352 Oxford Road");

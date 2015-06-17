@@ -1,8 +1,11 @@
 package com.jeeatwork.microservices.spring.boot.swagger.model;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 public class Customer {
 
@@ -12,7 +15,7 @@ public class Customer {
 
 	private String lastName;
 
-	private Date dateOfBirth;
+	private Calendar dateOfBirth;
 
 	private Map<AddressType, Address> addresses = new HashMap<AddressType, Address>();
 
@@ -44,11 +47,11 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public Date getDateOfBirth() {
+	public Calendar getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(Calendar dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
