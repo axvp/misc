@@ -1,4 +1,4 @@
-package com.jeeatwork.microservices.spring.boot.swagger;
+package com.jeeatwork.microservices.spring.boot.swagger.model;
 
 import java.util.Date;
 import java.util.List;
