@@ -22,7 +22,7 @@ public class SampleApplication {
         return "Hello World!";
     }
     
-    @RequestMapping(method=RequestMethod.PUT, value="/customer{id}")
+    @RequestMapping(method=RequestMethod.GET, value="/customer/{id}")
     Customer customer(@PathVariable String id) {
     	return this.getCustomer(id);
     }
