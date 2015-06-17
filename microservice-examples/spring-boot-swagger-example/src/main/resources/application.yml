@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: spring-boot-swagger-example
   jackson:
     serialization:
       indent_output: true
