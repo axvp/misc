@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jeeatwork.microservices.spring.boot.swagger.model.Address;
 import com.jeeatwork.microservices.spring.boot.swagger.model.AddressType;
 import com.jeeatwork.microservices.spring.boot.swagger.model.Customer;
+import com.mangofactory.swagger.plugin.EnableSwagger;
 
 @RestController
+@EnableSwagger
 @EnableAutoConfiguration
 public class SampleApplication {
 
