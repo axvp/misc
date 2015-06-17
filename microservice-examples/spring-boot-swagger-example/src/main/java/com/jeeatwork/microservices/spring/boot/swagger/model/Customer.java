@@ -1,11 +1,8 @@
 package com.jeeatwork.microservices.spring.boot.swagger.model;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 public class Customer {
 
