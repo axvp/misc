@@ -5,6 +5,7 @@ import java.util.GregorianCalendar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,11 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jeeatwork.microservices.spring.boot.swagger.model.Address;
 import com.jeeatwork.microservices.spring.boot.swagger.model.AddressType;
 import com.jeeatwork.microservices.spring.boot.swagger.model.Customer;
-import com.mangofactory.swagger.plugin.EnableSwagger;
 
 @RestController
-@EnableSwagger
 @EnableAutoConfiguration
+@ComponentScan
 public class SampleApplication {
 
     @RequestMapping("/helloworld")
