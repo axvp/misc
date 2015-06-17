@@ -78,6 +78,43 @@ The detailed swagger information about the api can in this case be accessed usin
 
 If you do not wish to give any more information about your API you can stop here. If you opt to publish more information you may find the next step useful.
 
+####Providing more info about the api
+In order to make some more information about your api available use a swagger configuration class:
+
+	@Configuration
+	@EnableSwagger
+	public class SwaggerConfig {
+	
+		private SpringSwaggerConfig springSwaggerConfig;
+	
+		@Autowired
+		public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
+			this.springSwaggerConfig = springSwaggerConfig;
+		}
+	
+		@Bean
+		public SwaggerSpringMvcPlugin customImplementation() {
+			SwaggerSpringMvcPlugin swaggerSpringMvcPlugin= new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(
+					apiInfo()).includePatterns("/customer/.*");
+			return swaggerSpringMvcPlugin;
+			
+		}
+	
+		private ApiInfo apiInfo() {
+			return new ApiInfo(
+					"Swagger Spring MVC Sample Api",
+					"Sample application demonstrating how to use swagger-springmvc",
+					"http://en.wikipedia.org/wiki/Terms_of_service",
+					"tom1299@jjeatwork.com", "Apache 2.0",
+					"http://www.apache.org/licenses/LICENSE-2.0.html");
+		}
+	}
+
+**Caution:** If the configuration is done in a separate class, you need to enable scanning of components in spring in the main spring boot application class like this:
+
+	@ComponentScan
+
+Even more information can be provided by adding swagger annotations to the corresponding REST methods.
 
 ###Links for reference
 - How to set date format for REST/Jackson REST services:
